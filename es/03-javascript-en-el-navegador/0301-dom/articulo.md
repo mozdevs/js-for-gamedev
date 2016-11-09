@@ -409,7 +409,7 @@ button.addEventListener('click', sayHi);
 button.removeEventListener('click', sayHi);
 ```
 
-Documentación [en la MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+Documentación [en la MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
 
 
 ### _Bubbling_
