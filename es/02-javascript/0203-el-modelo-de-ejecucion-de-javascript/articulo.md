@@ -180,7 +180,7 @@ Así, viendo sólo la línea:
 
 Ya podemos saber qué significa.
 
-Y si aun tenemos dudas, podemos bajar e investigar qué es esa función.
+Y si aun tenemos dudas, podemos bajar e investigar qué hace la función auxiliar.
 
 ```js
   function isEven(n) {
@@ -256,8 +256,8 @@ var diceUtils = {
 }
 ```
 
-Nuestra intención es poder crear dados y llevar un registro de todas las tiradas
-que se hagan con estos dados.
+La intención es poder crear dados y llevar un registro de todas las tiradas que
+se hagan con estos dados.
 
 Pero esto no funciona:
 
@@ -269,7 +269,7 @@ d10(); // ¡error!
 Y es así porque **`this` siempre es el destinatario del mensaje** y `d10` se
 está llamando como si fuera una función y no un método.
 
-Recordad que podíamos hacer que cualquier función tomara un valor forzoso como
+Recuerda que podíamos hacer que cualquier función tomara un valor forzoso como
 `this` con `.apply()` por lo que esto sí funciona pero es un engorro:
 
 ```js
@@ -281,7 +281,7 @@ diceUtils.history;
 Lo que tenemos que hacer es que la función `die` dentro de `newDie` se refiera
 al `this` del ámbito superior, no al suyo.
 
-Podemos hacer esto de dos maneras. La primera es un mero juego de variables:
+Puedes lograr esto de dos maneras. La primera es un mero juego de variables:
 
 ```js
 var diceUtils = {
@@ -351,14 +351,14 @@ var diceUtils = {
 }
 ```
 
-## Diferencias entre ámbitos en node y el navegador
+## Diferencias entre ámbitos en _node_ y el navegador
 
-Hemos dicho que el ámbito en JavaScript es equivalente a la función pero sabemos
+Se ha dicho que el ámbito en JavaScript es equivalente a la función pero sabemos
 que podemos abrir una consola o un fichero y empezar a declarar variables sin
 necesidad de escribir una función.
 
 Esto es así porque estamos usando el **ámbito global**. El ámbito global está
-**disponible en el navegador y en node**.
+**disponible en el navegador y en _node_**.
 
 ```js
 // Esta es una variable text en el ámbito GLOBAL.
@@ -375,7 +375,7 @@ greetings();
 console.log(text);
 ```
 
-Sin embargo, existe una peculiaridad en node. El ámbito global es realmente
+Sin embargo, existe una peculiaridad en _node_. El ámbito global es realmente
 **local al fichero**. Esto quiere decir que:
 
 ```js
@@ -394,21 +394,22 @@ text;
 ```
 
 ## Módulos
-Esta sección presenta la característica _módulos_ que es específica de node.
+
+Esta sección presenta la característica _módulos_ que es específica de _node_.
 
 Una de las principales desventajas de JavaScript ([hasta la próxima versión](
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/import))
 es que no hay forma de organizar el código en módulos.
 
-Los módulos sirven para aglomerar funcionalidad relacionada: tipos, funciones,
+Los módulos sirven para aislar funcionalidad relacionada: tipos, funciones,
 constantes, configuración...
 
-**Node sí tiene módulos** y, afortunadamente, existen herramientas que simulan
-módulos como los de node en el navegador.
+**_Node_ sí tiene módulos** y, afortunadamente, existen herramientas que simulan
+módulos como los de _node_ en el navegador.
 
-En node, **los ficheros JavaScript acabados en `.js` son módulos**.
+En _node_, **los ficheros JavaScript acabados en `.js` son módulos**.
 
-Node permite exponer o **exportar funcionalidad de un módulo**:
+_Node_ permite exponer o **exportar funcionalidad de un módulo**:
 
 ```js
 // En diceUtils.js
@@ -429,7 +430,7 @@ module.exports.newDie = newDie;
 module.exports.history = history;
 ```
 
-Poniéndola dentro del objeto `module.exports`
+Poniéndola dentro del objeto `module.exports`.
 
 Realmente, lo que se exporta es **siempre `module.exports`**, que en principio
 es un objeto vacío:
@@ -467,7 +468,7 @@ https://nodejs.org/api/modules.html#modules_module_require_id)
 **sin extensión**. La ruta **es relativa al fichero que quiere importar**.
 
 Si en lugar de una ruta, pasamos un nombre, accederemos a la **funcionalidad
-que viene por defecto con node** o la que instalemos de terceras partes.
+que viene por defecto con _node_** o la que instalemos de terceras partes.
 Usaremos esta forma en un par de ocasiones más adelante.
 
 ## Programación asíncrona y eventos
@@ -501,7 +502,8 @@ En el ejemplo de `setTimeout` el resultado es que ha pasado la cantidad de
 tiempo especificada.
 
 ### Eventos
-Esta sección presenta el módulo `readline` que es específico de node.
+
+Esta sección presenta el módulo `readline` que es específico de _node_.
 
 La programación asíncrona en JavaScript y otros lenguajes se usa para **modelar
 eventos**, principalmente **esperas por entrada y salida**.
@@ -514,7 +516,7 @@ una acción del usuario.
 
 Vamos a implementar una consola de diálogo por líneas. Usaremos el módulo
 [`readline`](https://nodejs.org/api/readline.html) que es parte de la
-funcionalidad que vienen con node:
+funcionalidad que vienen con _node_:
 
 ```js
 // En conversational.js
@@ -529,7 +531,7 @@ var cmd = readline.createInterface({
 });
 ```
 
-Lanza ese programa con node y verás que no hace nada **pero tampoco termina**.
+Lanza ese programa con _node_ y verás que no hace nada **pero tampoco termina**.
 Esto es típico de los programas asíncronos. El programa queda esperando a que
 pase algo. Pulsa `ctrl+c` para terminar el programa.
 
@@ -597,25 +599,26 @@ Puedes escuchar por un evento **sólo una vez** con
 https://nodejs.org/api/events.html#events_emitter_once_eventname_listener).
 
 ### Emisores de eventos
-Esta sección presenta la clase EventEmitter que es específica de node.
+
+Esta sección presenta la clase EventEmitter que es específica de _node_.
 
 Los eventos **no son un mecanismo estándar** de JavaScript. Son una forma
 conveniente de modelar determinados tipos de problema pero un objeto JavaScript,
 por sí solo, **no tiene API para emitir eventos**.
 
-**En node**, para que nuestros objetos emitan eventos, tenemos varias
-alternativas:
+**En _node_** contamos con diversas alternativas con el fin de que los objetos
+emitan eventos:
 
 - Implementar nuestra propia API de eventos.
 - Hacer que nuestros objetos **usen** una instancia de `EventEmitter`.
 - Hacer que nuestros objetos **sean instancias** de `EventEmitter`.
 
-La primera supone crear nuestro propio método `on()` y los mecanismos para
+La primera te supondría crear tu propio método `on()` y los mecanismos para
 emitir eventos. El segundo y el tercero usan la clase [`EventEmitter`](
 https://nodejs.org/api/events.html#events_class_eventemitter) que ya implementa
 esta API.
 
-Implementaremos la opción 3 para practicar la herencia:
+Este es un ejemplo de la opción 3, para practicar la herencia:
 
 ```js
 var events = require('events');
@@ -632,8 +635,8 @@ var nave = new Nave();
 nave.on; // ¡existe!
 ```
 
-Ahora que nuestra nave puede emitir eventos, vamos a hacer que dispare y que
-emita un evento.
+Ahora que tu nave puede emitir eventos, vas a hacer que dispare y que emita un
+evento.
 
 ```js
 Nave.prototype.shoot = function () {
