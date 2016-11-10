@@ -3,12 +3,13 @@
 Conocer un lenguaje de programación se traduce básicamente en conocer su
 sintaxis, modelo de datos, modelo de ejecución y estilo.
 
-Durante esta lección, [codficarás lo aprendido en la lección anterior](
+Durante esta lección, [codficarás en JavaScript lo aprendido en la lección
+anterior](
 ../0201-programacion-orientada-a-objetos/articulo.md).
 
 No todos los lenguajes permiten una transcripción 1 a 1 de los conceptos que
 recogemos en el modelo. Por ejemplo, JavaScript no tiene un mecanismo para crear
-tipos nuevos pero tiene otros mecanismos que permiten codificar una
+tipos nuevos pero tiene otros mecanismos que permiten implementar una
 funcionalidad similar.
 
 ## Experimentando con JavaScript
@@ -39,7 +40,8 @@ undefined
 ```
 
 Para limpiar la pantalla presiona `ctrl+l`. Para salir de _node_, presiona
-`ctrl+c` dos veces seguidas.
+`ctrl+c` dos veces seguidas. Si escribiendo una expresión, _node_ parece no
+responder, presiona `ctrl+c` una vez para cancelar la expresión.
 
 Si no quieres lidiar con la consola de _node_, siempre puedes escribir un
 programa y usar `console.log()` para mostrar expresiones por pantalla.
@@ -87,7 +89,8 @@ var object = {}; // [], null
 var code = function () { return 42; };
 ```
 
-Los puedes reconocer porque responden de manera distinta al operador `typeof`:
+Los puedes reconocer porque responden de manera distinta al operador `typeof`.
+Observa como los tipos son cadenas de texto:
 
 ```js
 typeof true;
@@ -98,7 +101,7 @@ typeof function () { return 42; };
 ```
 
 En JavaScript puedes declarar una variable y no asignarle ningún valor. En
-este caso el tipo de la variable será `undefined`.
+este caso el tipo de la variable será `'undefined'`.
 
 ```js
 var x;
@@ -254,7 +257,7 @@ hasta ese índice**.
 
 #### Distinguir entre objetos y arrays
 
-Arrays y objetos tienen tipo `object` así que tendrás que usar el método
+Arrays y objetos tienen tipo `'object'` así que tendrás que usar el método
 [`Array.isArray()`](
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
 para distinguirlos.
@@ -340,7 +343,7 @@ En JavaScript, el operador de igualdad es `===` (el triple igual). Esto permite
 comparar dos objetos y decidir si **son iguales**. También existe el operador de
 desigualdad `!==` que compara dos objetos y decide si **no son iguales**.
 
-Para los tipos `bool`, `string`, `number` y `undefined`, dos valores son
+Para los tipos `'bool'`, `'string'`, `'number'` y `'undefined'`, dos valores son
 iguales si tienen la **misma forma**:
 
 ```js
@@ -377,8 +380,8 @@ orientada a objetos.
 
 ### Codificando el estado
 
-Con lo que se ha visto hasta ahora deberías tener conocimiento suficiente para
-codificar el estado. El **conjunto de atributos** del objeto en el modelo
+Con lo que se ha visto hasta ahora deberías tener el conocimiento suficiente
+para codificar el estado. El **conjunto de atributos** del objeto en el modelo
 orientado a objetos se traduce en el **conjunto de propiedades** de los objetos
 JavaScript.
 
@@ -398,7 +401,7 @@ var enemy = {
 ```
 
 La primera limitación en JavsScript es que **no se puede restringir el acceso
-a las propiedades de un objeto**. Así, nada nos impide poder modificar la
+a las propiedades de un objeto**. Así, nada te impide poder modificar la
 posición directamente.
 
 ```js
@@ -408,7 +411,7 @@ enemy.position.x = 100; // perfectamente válido.
 Lo único que puedes hacer es desaconsejar al usuario que utilice las
 propiedades que califiques de atributos.
 
-Una práctica muy común es añadir un guíon bajo `_` a los atributos como
+Una práctica muy común es añadir un guión bajo `_` a los atributos como
 indicando que son **privados**.
 
 ```js
@@ -420,7 +423,7 @@ var enemy = {
 };
 ```
 
-Pero esto es un convenio, y podemos seguir accediendo a los atributos:
+Pero esto es un convenio y podemos seguir accediendo a los atributos:
 
 ```js
 enemy._position.x = 100; // perfectamente válido también.
@@ -459,8 +462,9 @@ enemy.advance();
 enemy['shoot'](); // es lo mismo, acceder con corchetes y llamar con ().
 ```
 
-Cualquier función puede actuar como método. Y como cualquier propiedad de un
-objeto, puedes cambiarla en cualquier momento:
+Cualquier función puede actuar como método. Para que actúe como un método
+tan sólo **es necesario llamarla desde la propiedad de un objeto**. Y como
+cualquier propiedad de un objeto, puedes cambiarla en cualquier momento:
 
 ```js
 enemy.shoot(); // PICHIUM!
@@ -531,7 +535,7 @@ ship2.method();
 inspect();
 ```
 
-En el último caso, el valor de `this` es **undefined** porque la función no se
+En el último caso, el valor de `this` es `undefined` porque la función no se
 está usando como un método por lo que no hay destinatario.
 
 En JavaScript podemos hacer que cualquier objeto sea `this` en cualquier
@@ -556,7 +560,7 @@ Una **variable es un nombre**. Para el programa, quitando algunas excepciones,
 los nombres no tienen significado.
 
 Un **valor no es un nombre**. De hecho, sólo las funciones pueden tener nombre
-para poder implementar recursividad.
+con el fin de poder implementar recursividad y un par de cosas más.
 
 Así que no es lo mismo el nombre `uno` que el valor `1`, y por supuesto, no
 es obligatoria ninguna relación coherente entre el nombre y el valor.
@@ -624,8 +628,8 @@ Tampoco podemos confundir la referencia a la función `factorial` y la
 llamada a la misma función `factorial(10)`.
 
 Con la primera forma **nos referimos al objeto** que encapsula el código que hay
-que ejecutar. No requiere parámetros porque se quiere ejecutar el código sino
-sólo referirse a la función.
+que ejecutar. No requiere parámetros porque **no se quiere ejecutar el código**
+sino solamente referirse a la función.
 
 Con la segunda **pedimos a la función que se ejecute** y por tanto habrás de
 aportar todos los parámetros necesarios.
@@ -635,7 +639,7 @@ aportar todos los parámetros necesarios.
 Si, como definición alternativa, consideramos como objeto aquello que puede
 responder a un mensaje, resulta que en JavaScript **todo es un objeto**.
 
-Considera los siguiente ejemplos:
+Observa los siguiente ejemplos:
 
 ```js
 true.toString();
@@ -647,13 +651,15 @@ true.toString();
 
 ## Tipos y constructores de objetos
 
-Se adelantaba al comienzo de la lección, que JavaScript no permite modelar
+Se adelantaba al comienzo de la lección que JavaScript no permite modelar
 tipos nuevos y que tendrías que dar un rodeo. Esta es una de las principales
 diferencias con otros lenguajes orientados a objetos.
 
 Lo que se debe hacer es saltarse el concepto de tipo para abordar directamente
 el de constructor.
-![Constructores de objetos](./imgs/space-invaders-constructor-example.png)
+
+![Constructores de objetos](
+../0201-programacion-orientada-a-objetos/images/space-invaders-constructor-example.png)
 
 Vas a crear dos funciones constructoras, una para puntos y otra para disparos:
 
@@ -721,7 +727,7 @@ var shotAPI = {
 };
 ```
 
-Y usarlo en la creación del objeto para referenciar la API:
+Y usarlo en la creación del objeto para compartir los métodos de la API:
 
 ```js
 function newShot(position, velocity) {
@@ -906,9 +912,8 @@ demás es exactamente igual. Tanto es así que JavaScript lo tiene en cuenta
 y viene con los mecanismos para automatizar los pasos 1, 3 y 5.
 
 Primero, JavaScript permite que cualquier función pueda usarse como constructor.
-
-Cada vez que escribimos una función, JavaScript **crea una propiedad de la
-función llamada `prototype`** que es un objeto con una única propiedad
+Por eso, cada vez que escribimos una función, JavaScript **crea una propiedad de
+la función llamada `prototype`** que es un objeto con una única propiedad
 `constructor` que apunta a la función.
 
 ```js
@@ -998,7 +1003,8 @@ métodos y sabes también como hacerlo eficazmente usando constructores y la
 cadena de prototipos.
 
 ![Relación de herencia entre nave y los enemigos y la nave aliada](
-./imgs/space-invaders-hierarchy.png)
+../0201-programacion-orientada-a-objetos/imagesspace-invaders-hierarchy.png)
+
 Falta explicar cómo podrías crear una **relación de herencia**. Recuerda el
 ejemplo de los enemigos y la nave protagonista de la lección anterior.
 
@@ -1073,7 +1079,8 @@ Ship.prototype.moveRight = function () { this._position.x += 2; };
 Es mejor que no incluyas disparar dado que unas naves disparan hacia arriba y
 otras hacia abajo.
 
-![Jerarquía de constructores](./imgs/space-invaders-hierarchy-constructor.png)
+![Jerarquía de constructores](
+../0201-programacion-orientada-a-objetos/images/space-invaders-hierarchy-constructor.png)
 
 Recuerda que ahora los constructores de la nave aliada y los enemigos pedirán
 primero al constructor de nave una nave y luego la personalizarán.
@@ -1101,9 +1108,9 @@ comunes** y luego serán modificadas cada una por el constructor pertinente para
 convertirse en enemigos o aliados concretamente.
 
 En cuanto a la API, lo ideal sería contar con una cadena de prototipos de forma
-que los atributos del enemigo estén en la instancia, la API específica en la
-propiedad `prototype` del constructor `Enemy` y la API común en la propiedad
-`prototype` del constructor `Ship`.
+que los atributos del enemigo estén en la instancia, la API específica del tipo
+en la propiedad `prototype` del constructor de ese tipo y la API común en la
+propiedad `prototype` del constructor `Ship`.
 
 ```
 var enemy = new Enemy()             Enemy.prototype      Ship.prototype
