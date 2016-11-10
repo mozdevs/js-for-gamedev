@@ -102,7 +102,7 @@ Los **valores** de un tipo son cada uno de los objetos individuales. El enemigo
 especial, así como cada uno de los otros enemigos será un valor distinto del
 **tipo enemigo**.
 
-Si prefieres la terminología de clases, los valores se convierten en
+Cuando utilices la terminología de clases, los valores se convertirán en
 **instancias de la clase**.
 
 En los modelos de objetos es más conveniente trabajar con tipos de objetos.
@@ -124,7 +124,7 @@ Un ejemplo: _los enemigos se mueven todos juntos hacia un lado, avanzan una
 línea y se mueven hacia el otro lado mientras disparan aleatoriamente_.
 
 La técnica consiste en **buscar verbos** esta vez: **mover**, **avanzar** y
-**disparar**.
+**disparar**, por ejemplo.
 
 Para poder implementar el comportamiento de los enemigos, estos tienen que
 poder moverse hacia los lados, avanzar y disparar. Así, tendrán que permitir
@@ -208,9 +208,9 @@ posición, este gráfico y esta dirección de avance".
 Durante el modelado surgen relaciones de forma natural. Los enemigos **tienen**
 una posición. La nave amiga **crea** disparos.
 
-Tu cerebro tenderá a establecer jerarquías entre objetos creando tipos más
-generalistas. Por ejemplo: en vez de pensar en enemigos y protagonista por
-separado, es posible pensar en **naves**.
+Como es natural entre las personas, tenderás a establecer jerarquías entre
+objetos creando tipos más generalistas. Por ejemplo: en vez de pensar en
+enemigos y protagonista por separado, es posible pensar en **naves**.
 
 El **tipo nave** reune los métodos y atributos comunes de la nave protagonista
 y enemigos.
@@ -232,10 +232,10 @@ Como hay nuevos tipos, necesitarás nuevos constructores. Los viejos
 constructores pueden delegar parte de la creación del objeto (las partes
 comunes) a los nuevos.
 
-![Cuando se pide al constructor de enemigos un enemigo, este pide al constructor
-de naves una nave, la personaliza para que sea un enemigo y devuelve el
-enemigo.](./images/space-invaders-hierarchy-constructor.png)
-
 De esta forma al pedir un enemigo, el constructor de enemigos pedirá una nave
 al constructor de naves. Luego tomará esa nave, la modificará para que sea un
 enemigo y devolverá un enemigo.
+
+![Cuando se pide al constructor de enemigos un enemigo, este pide al constructor
+de naves una nave, la personaliza para que sea un enemigo y devuelve el
+enemigo.](./images/space-invaders-hierarchy-constructor.png)
