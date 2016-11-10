@@ -2,19 +2,19 @@
 
 ## ¿Por qué?
 
-Si queréis publicar juegos en la web, hay que saber cómo funciona un navegador, y cómo funciona la web.
+Si quieres publicar juegos en la web, hay que saber cómo funciona un navegador, y cómo funciona la Web.
 
-Los **navegadores** son el entorno donde se van a ejecutar tus juegos, y hay consideraciones técnicas a tener en cuenta, tanto a nivel de interfaz como de seguridad. Asímismo, los navegadores incorporan **herramientas de desarrollo** que nos serán muy útiles: un depurador, un profiler, un inspector del tráfico de red, etc.
+Los **navegadores** son el entorno donde se van a ejecutar tus juegos, y hay consideraciones técnicas a tener en cuenta, tanto a nivel de interfaz como de seguridad. Asimismo, los navegadores incorporan **herramientas de desarrollo** que nos serán muy útiles: un depurador, un profiler, un inspector del tráfico de red, etc.
 
-También es necesario tener conocimientos sobre las tecnologías web , aun en el caso de utilizar un motor multiplatforma y exportar a HTML5:
+También es necesario tener conocimientos sobre las tecnologías web, aun en el caso de utilizar un motor multiplatforma y exportar a HTML5:
 
-- El juego siempre está contenido en una página web, y quizás interese personalizar su apariencia. Para ello, hace falta usar los lenguajes HTML (para el contenido) y CSS (la apariencia).
+- El juego siempre está contenido en una página web, y quizá interese personalizar su apariencia. Para ello, hace falta usar los lenguajes HTML (para el contenido) y CSS (la apariencia).
 
-- Es útil para añadir ciertas cosas que quizás no incorpore dicho exportador, como quizás un botón que ponga el juego a pantalla completa o bien precargar fuentes web.
+- Es útil para añadir ciertas cosas que quizá no incorpore dicho exportador, como tal vez un botón que ponga el juego a pantalla completa o bien precargar fuentes web.
 
-- Siempre que se desarrolla un videojuego multiplataforma, es posible que aparezcan bugs sólo en una de estas plataformas. Para depurar un bug específico de la web, tendrás que usar las herramientas que proporcionan los navegadores, así como tener ciertos conocimientos de las API's web que el juego utiliza (por ejemplo, la API de Gamepad o la de WebGL).
+- Siempre que se desarrolla un videojuego multiplataforma, es posible que aparezcan _bugs_ sólo en una de estas plataformas. Para depurar un _bug_ específico de la web, tendrás que usar las herramientas que proporcionan los navegadores, así como tener ciertos conocimientos de las API web que el juego utiliza (por ejemplo, la API de Gamepad o la de WebGL).
 
-- Si utilizas un motor o framework de terceros, y necesitas arreglar un bug en dicho motor o implementar una _feature_ que tu juego requiere, obviamente se ha de tener conocimientos de programación web.
+- Si utilizas un motor o framework de terceros, y necesitas arreglar un _bug_ en dicho motor o implementar una _feature_ que tu juego requiere, obviamente se ha de tener conocimientos de programación web.
 
 
 ## Los navegadores
@@ -27,7 +27,7 @@ Desde el punto de vista del desarrollador, los componentes más relevantes de un
 
 - La **máquina virtual de JavaScript**, que se encarga de ejecutar el código JavaScript de la página web. Firefox utiliza SpiderMonkey, mientras que Chrome y otros navegadores –así como Node– utilizan V8.
 
-Esto da lugar a que **no todos los navegadores soporten las mismas características**, y a que aparezcan bugs del motor de render o de la máquina virtual de JavaScript que son específicos a un navegador en concreto.
+Esto da lugar a que **no todos los navegadores soporten las mismas características** y a que aparezcan _bugs_ del motor de render o de la máquina virtual de JavaScript que son específicos a un navegador en concreto.
 
 Para conocer qué características implementa cada navegador, podemos utilizar, entre otros:
 
@@ -78,7 +78,7 @@ Veremos un ejemplo de este flujo paso a paso.
 
 ![Paso 1](images/request_dance_step1.png)
 
-El navegador hace una **petición HTTP GET** a una URL (que sirve para identificar dónde está cierto recurso en la Web), y si el recurso existe el servidor lo retorna.
+El navegador hace una **petición HTTP GET** a una URL (que sirve para identificar dónde está cierto recurso en la Web), y si el recurso existe, el servidor lo retorna.
 
 Hay que tener en cuenta que los navegadores disponen de una memoria caché, con lo que si ya tienen dicho recurso en memoria y no ha caducado, no realizan una petición al servidor y utilizan el recurso del que ya disponen.
 
@@ -98,7 +98,7 @@ Es muy común incluir el código que inicializa la ejecución del programa en el
 
 ```javascript
 window.onload = function () {
-  // hello world
+  // Initilise the program
 };
 ```
 
@@ -153,6 +153,7 @@ Si por el contrario, incluimos el JavaScript al final de `<body>` la página web
 No hay una solución objetivamente óptima para todos los casos. Dependiendo de las características del videojuego (o de la página) interesará un punto de carga diferente.
 
 <small>Nota: esto es ha sido una explicación muy simplificada. Puedes encontrar información más completa en [este artículo de Jake Archibald](https://www.html5rocks.com/en/tutorials/speed/script-loading/).</small>
+<!-- Yo no pondría el disclaimer sólo indicaría que si quieren saber más pues que lean. -->
 
 
 ### Scripts inline y externos
@@ -235,7 +236,8 @@ Acceder a un elemento (o varios) del DOM es una de las operaciones más frecuent
 
 ### Por ID
 
-Sólo selecciona un elemento (las ID's deben ser únicas), en base a su atributo `id` de HTML:
+Sólo selecciona un elemento (los ID deben ser únicas), en base a su atributo `id` de HTML:
+<!-- Creo que es el ID porque es el apócope de identificados pero eres libre de ignorarme totalmente. -->
 
 ```html
 <button id="show-fullscreen">Fullscreen</button>
@@ -340,7 +342,6 @@ button.setAttribute('type', 'button');
 ```
 
 Es importante tener en cuenta que cuando creamos un elemento con `createElement` este se encuentra **huérfano** y no lo veremos renderizado en la página. Para que aparezca, hay que añadirlo al DOM como "familiar" de algún otro elemento –usando para ello [`appendChild`](https://developer.mozilla.org/en/docs/Web/API/Node/appendChild), [`insertBefore`](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore), etc.
-
 
 ```javascript
 document.body.appendChild(button);
