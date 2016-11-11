@@ -1,6 +1,6 @@
 # Canvas
 
-Con la llegada de HTML5, se introdujeron varios elementos HTML y API's de JavaScript que hacen posible la programación de videojuegos con tecnologías y estándares web, entre ellos el elemento `<canvas>` y su API JavaScript, que nos permite pintar gráficos en pantalla, tanto 3D como 2D.
+Con la llegada de HTML5, se introdujeron varios elementos HTML y API de JavaScript que hacen posible la programación de videojuegos con tecnologías y estándares web, entre ellos el elemento `<canvas>` y su API JavaScript, que nos permite pintar gráficos en pantalla, tanto 3D como 2D.
 
 ## El elemento `<canvas>`
 
@@ -108,7 +108,7 @@ Tener que crear una etiqueta `<img>` en nuestro HTML por cada imagen que queramo
 Los pasos a seguir para cargar una imagen de esta manera serían:
 
 1. Usamos el constructor **`Image`**.
-2. Nos subscribimos al evento de **`load`** (para pintar la imagen cuando se haya producido).
+2. Nos subscribimos al evento de **`load`** (para pintar la imagen cuando se haya cargado).
 3. Establecemos el atributo **`src`** de la imagen para iniciar la carga.
 
 
@@ -131,7 +131,6 @@ Ver el [_snippet_ de código](https://jsfiddle.net/Lm56dcb6/) online.
 Los elementos `<img>` que tengan como estilo `display:none` son invisibles al usuario, pero _se siguen cargando_ igualmente. Es habitual usar esto para ocultar las imágenes que se dibujen en el canvas. Como se ha comentado anteriormente, el evento `load` de `window` se dispara cuando –entre otras cosas– todas las imágenes del DOM se han cargado, sean visibles o no. Por ello, podemos cargar imágenes usando únicamente HTML y CSS, aunque es algo laborioso.
 
 Para cargar imágenes desde JavaScript, creando nuevas instancias `Image`, se suelen utilizar [Promesas](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise), o bien un contador para detectar cuándo se han cargado todas.
-
 
 ### Otras operaciones de la API de Canvas
 
@@ -199,7 +198,7 @@ La manera adecuada para renderizar animaciones en un canvas es usando `requestAn
 
 ### `requestAnimationFrame`
 
-Esta función acepta un _callback_ que se llamará automáticamente la siguiente vez que el navegador **_pueda_ pintar** en pantalla. En este callback incluiremos tanto las operaciones de dibujo que queramos realizar, como una nueva llamada a `requestAnimationFrame`, para establecer así un **bucle** continuo.
+Esta función acepta un _callback_ que se llamará automáticamente la siguiente vez que el navegador **_pueda_ pintar** en pantalla. En este _callback_ incluiremos tanto las operaciones de dibujo que queramos realizar, como una nueva llamada a `requestAnimationFrame`, para establecer así un **bucle** continuo.
 
 Ejemplo:
 
@@ -222,13 +221,13 @@ Puedes ver una comparación del mismo código de dibujado ejecutándose con `req
 
 ### Tiempo delta
 
-El **tiempo delta** es como se llama en desarrollo de videojuegos al tiempo que ha transcurrido entre el frame actual y el anterior. Este tiempo es necesario que sea preciso ya que mucha lógica del juego depende de él: animaciones, físicas, etc.
+El **tiempo delta** es como se llama en desarrollo de videojuegos al tiempo que ha transcurrido entre el _frame_ actual y el anterior. Este tiempo es necesario que sea preciso ya que mucha lógica del juego depende de él: animaciones, físicas, etc.
 
 Mientras que en programación web se usa normalmente `Date` para manejar fechas, crear instancias de `Date` no sólo no es eficiente, sino que estos objetos no tienen la resolución suficiente para un videojuego, que necesita decimales de milisegundos.
 
-Existe una alternativa, y es usar objetos de _timestamp_, `DOMHighResTimeStamp`, como los que devuelve el uso de la interfaz de  [`Performance`](https://developer.mozilla.org/en-US/docs/Web/API/Performance). Estos _timestamps_ tienen un margen de error de únicamente 5 microsegundos. Además, para nuestra conveniencia, `requestAnimationFrame` llama a nuestro **_callback_ con un _timestamp_**.
+Existe una alternativa, y es usar objetos de _timestamp_, `DOMHighResTimeStamp`, como los que devuelve el uso de la interfaz de [`Performance`](https://developer.mozilla.org/en-US/docs/Web/API/Performance). Estos _timestamps_ tienen un margen de error de únicamente 5 microsegundos. Además, para nuestra conveniencia, `requestAnimationFrame` llama a nuestro **_callback_ con un _timestamp_**.
 
-En la práctica, este parámetro nos permite calcular el tiempo delta de forma precisa. El _timestamp_ que optenemos contiene el número de milisegundos transcurrido desde la primera llamada a `requestAnimationFrame`. Si vamos almacenando cuál era el valor del _timestamp_ en el frame anterior, podemos calcular el tiempo delta:
+En la práctica, este parámetro nos permite calcular el tiempo delta de forma precisa. El _timestamp_ que optenemos contiene el número de milisegundos transcurrido desde la primera llamada a `requestAnimationFrame`. Si vamos almacenando cuál era el valor del _timestamp_ en el _frame_ anterior, podemos calcular el tiempo delta:
 
 Ejemplo:
 
@@ -252,4 +251,4 @@ Algunas **consideraciones** a tener en cuenta sobre el tiempo delta:
 
 - _Siempre_ se ha de poner una **cota superior** al valor del tiempo delta (p.ej: 250ms) para evitar _glitches_ en la lógica del juego. Un "salto" grande en el tiempo delta puede causar fallos en las colisiones, funcionamiento anormal en el motor de físicas, etc.
 
-- A veces es recomendable saltarse el _update_ de nuestro juego un frame (por ejemplo, [como hace Phaser](https://github.com/photonstorm/phaser/blob/master/src/core/Game.js#L784)).
+- A veces es recomendable saltarse el _update_ de nuestro juego un _frame_ (por ejemplo, [como hace Phaser](https://github.com/photonstorm/phaser/blob/master/src/core/Game.js#L784)).
