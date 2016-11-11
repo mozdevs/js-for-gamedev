@@ -1,0 +1,99 @@
+body {
+    line-height: 1.2;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > h1 {
+    text-align: center;
+}
+
+p, li  {
+    margin: 0.5em 0;
+}
+
+fieldset ul {
+    padding-left: 0;
+}
+
+fieldset li {
+    list-style-type: none;
+}
+
+button, input, select {
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.parties {
+    display: flex;
+    justify-content: space-between;
+}
+
+.party {
+    width: calc(50% - 2em);
+    margin-left: 2em;
+}
+
+.party:first-child {
+    margin-left: 0;
+}
+
+.party h1 {
+    border-bottom: 1px solid #000;
+}
+
+.party li {
+    list-style: none;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.party ul {
+    padding-left: 0;
+}
+
+.dead {
+    text-decoration: line-through;
+}
+
+.active {
+    background: rgba(255, 255, 0, 0.5);
+}
+
+.active::before {
+    content: "► ";
+    display: block;
+    position: absolute;
+    left: -1em;
+}
+
+.info {
+    padding: 1em;
+    background: #efefef;
+    box-sizing: border-box;
+}
+
+.info strong {
+    text-transform: capitalize;
+}
+
+.battle-menu .choices {
+    text-transform: capitalize;
+    padding-left: 0;
+}
+
+.battle-menu .choices li {
+    list-style-type: none;
+}
+
+.battle-menu button {
+    box-sizing: border-box;
+    padding: 1em;
+}

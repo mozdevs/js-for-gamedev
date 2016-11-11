@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>Batalla RPG</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <script src="js/rpg.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <h1>RPG Battle</h1>
+    <main>
+        <section class="parties">
+            <section id="heroes" class="party">
+                <h1>Heroes</h1>
+                <ul class="character-list"></ul>
+            </section>
+            <section id="monsters" class="party">
+                <h1>Monsters</h1>
+                <ul class="character-list"></ul>
+            </section>
+        </section><!-- parties -->
+
+        <section class="info">
+            <p id="battle-info">Fight!</p>
+        </section><!-- info -->
+
+        <section class="battle-menu">
+            <form name="select-action" style="display:none">
+                <ul class="choices"></ul>
+
+                <p><button type="submit">Select action</button></p>
+            </form>
+
+            <form name="select-spell" style="display:none">
+                <ul class="choices"></ul>
+
+                <p><button type="submit">Select spell</button> or
+                    <a href="#" class="cancel">Cancel</a>
+                </p>
+            </form>
+
+            <form name="select-target" style="display:none">
+                <ul class="choices"></ul>
+
+                <p><button type="submit">Select target</button> or
+                    <a href="#" class="cancel">Cancel</a>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

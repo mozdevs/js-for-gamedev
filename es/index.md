@@ -14,6 +14,6 @@
     - [Navegador y DOM](03-javascript-en-el-navegador/0301-dom/articulo.md)
     - [Canvas](03-javascript-en-el-navegador/0302-canvas/articulo.md)
     - [Ejercicios guiados](03-javascript-en-el-navegador/03-ejercicios/ejercicios-guiados.md)
-    - Práctica
+    - [Práctica](03-javascript-en-el-navegador/03-practica/enunciado.md) (y [guía](03-javascript-en-el-navegador/03-practica/guia.md))
 
 Se recomienda leer todos los artículos de una unidad, así como hacer los ejercicios guiados _antes_ de realizar la práctica propuesta.
