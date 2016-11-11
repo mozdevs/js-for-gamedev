@@ -153,8 +153,6 @@ Si por el contrario, incluimos el JavaScript al final de `<body>` la página web
 No hay una solución objetivamente óptima para todos los casos. Dependiendo de las características del videojuego (o de la página) interesará un punto de carga diferente.
 
 <small>Nota: esto es ha sido una explicación muy simplificada. Puedes encontrar información más completa en [este artículo de Jake Archibald](https://www.html5rocks.com/en/tutorials/speed/script-loading/).</small>
-<!-- Yo no pondría el disclaimer sólo indicaría que si quieren saber más pues que lean. -->
-
 
 ### Scripts inline y externos
 
@@ -236,8 +234,7 @@ Acceder a un elemento (o varios) del DOM es una de las operaciones más frecuent
 
 ### Por ID
 
-Sólo selecciona un elemento (los ID deben ser únicas), en base a su atributo `id` de HTML:
-<!-- Creo que es el ID porque es el apócope de identificados pero eres libre de ignorarme totalmente. -->
+Sólo selecciona un elemento (los ID deben ser únicos), en base a su atributo `id` de HTML:
 
 ```html
 <button id="show-fullscreen">Fullscreen</button>

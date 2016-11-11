@@ -1,6 +1,6 @@
 # Canvas
 
-Con la llegada de HTML5, se introdujeron varios elementos HTML y API de JavaScript que hacen posible la programación de videojuegos con tecnologías y estándares web, entre ellos el elemento `<canvas>` y su API JavaScript, que nos permite pintar gráficos en pantalla, tanto 3D como 2D.
+Con la llegada de HTML5, se introdujeron varios elementos HTML y API's de JavaScript que hacen posible la programación de videojuegos con tecnologías y estándares web, entre ellos el elemento `<canvas>` y su API JavaScript, que nos permite pintar gráficos en pantalla, tanto 3D como 2D.
 
 ## El elemento `<canvas>`
 
