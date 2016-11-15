@@ -634,6 +634,12 @@ sino solamente referirse a la función.
 Con la segunda **pedimos a la función que se ejecute** y por tanto habrás de
 aportar todos los parámetros necesarios.
 
+**Importante**: a lo largo del curso nos referiremos a las funciones y métodos
+por su nombre seguido de unos de paréntesis `(` `)`. Por ejemplo, la función
+`factorial()` o el método `push()` de los _arrays_. Incluímos los paréntesis
+para recordar al lector que ese nombre guarda una referencia a una función pero
+conviene recordar que, _estrictamente, el nombre no incluye los paréntesis_.
+
 ### En JavaScript todo es un objeto
 
 Si, como definición alternativa, consideramos como objeto aquello que puede
