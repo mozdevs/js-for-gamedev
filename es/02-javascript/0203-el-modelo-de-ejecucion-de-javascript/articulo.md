@@ -152,12 +152,9 @@ f();
 En **modo estricto**, usar una variable que no ha sido declarada produce
 un error.
 
-<!-- NOTA: no entiendo muy bien qué significa lo del "comenta esto después de
-probar f". El error se produce tanto con el console.log como con i=5 -->
-
 ```js
 function f() {
-    console.log(i); // comenta esto después de probar f.
+    console.log(i);
     i = 5;
 }
 f();
@@ -178,8 +175,8 @@ function getEven(list) {
 getEven([1, 2, 3, 4, 5, 6]);
 ```
 
-Esto permite una forma de ordenar el código que quizás sea más clara, situando
-las funciones auxiliares en la parte inferior de las funciones que las utilicen.
+Esto permite una forma de ordenar el código que quizá sea más clara, situando
+las funciones auxiliares a continuación de las funciones que las utilizan.
 
 Así, viendo sólo la primera línea de la función, ya podemos conocer qué es lo
 que realiza.
@@ -363,51 +360,6 @@ var diceUtils = {
 }
 ```
 
-## Diferencias entre ámbitos en Node y en el navegador
-
-<!-- quizás deberíamos mover esta sección debajo de la de módulos, donde
-ya mencionamos la posibilidad de dividir el código en diferentes ficheros -->
-
-Se ha dicho que el ámbito en JavaScript es equivalente a la función, pero
-sabemos que podemos abrir una consola o un fichero y empezar a declarar
-variables sin necesidad de escribir una función.
-
-Esto es así porque estamos usando el **ámbito global**. El ámbito global está
-disponible tanto en el navegador como en Node.
-
-```js
-// Esta es una variable text en el ámbito GLOBAL.
-var text = 'I\'m Ziltoid, the Omniscient.';
-
-// Esta es una función en el ámbito GLOBAL.
-function greetings(list) {
-    // Esta es OTRA variable text en el ámbito de la función.
-    var text = 'Greetings humans!';
-    console.log(text);
-}
-
-greetings();
-console.log(text);
-```
-
-Sin embargo, existe una peculiaridad en Node. El ámbito global es realmente
-_local al fichero_. Esto quiere decir que:
-
-```js
-// En a.js, text es visible únicamente dentro del FICHERO.
-"use strict";
-var text = 'I\'m Ziltoid, the Omniscient.';
-
-// En b.js, text es visible únicamente dentro del FICHERO.
-"use strict";
-var text = 'Greetings humans!';
-
-// En una consola iniciada en el mismo directorio que a y b
-require('./a');
-require('./b');
-text;
-```
-
 ## Módulos
 
 Esta sección presenta la característica **módulos**, que es específica de Node.
@@ -476,16 +428,55 @@ howard.sanityCheck();
 ```
 
 Para importar un módulo desde otro hay que pasar a [`require`](https://nodejs.org/api/modules.html#modules_module_require_id)
-la **ruta relativa** hasta el fichero del módulo que queremos importar
-_sin extensión_.
-
-<!-- NOTA: con extensión también funciona -->
+la **ruta relativa** hasta el fichero del módulo que queremos importar.
 
 Si en lugar de una ruta, pasamos un nombre, accederemos a la **funcionalidad
 que viene por defecto** con Node (los módulos que forman parte de la librería
 estándar, como `path` o `fs`) o la que instalemos de terceras partes (por
 ejemplo, módulos instalados con el gestor de paquetes npm). Usaremos esta forma
 en un par de ocasiones más adelante.
+
+## Diferencias entre ámbitos en Node y en el navegador
+
+Se ha dicho que el ámbito en JavaScript es equivalente a la función, pero
+sabemos que podemos abrir una consola o un fichero y empezar a declarar
+variables sin necesidad de escribir una función.
+
+Esto es así porque estamos usando el **ámbito global**. El ámbito global está
+disponible tanto en el navegador como en Node.
+
+```js
+// Esta es una variable text en el ámbito GLOBAL.
+var text = 'I\'m Ziltoid, the Omniscient.';
+
+// Esta es una función en el ámbito GLOBAL.
+function greetings(list) {
+    // Esta es OTRA variable text en el ámbito de la función.
+    var text = 'Greetings humans!';
+    console.log(text);
+}
+
+greetings();
+console.log(text);
+```
+
+Sin embargo, existe una peculiaridad en Node. El ámbito global es realmente
+_local al fichero_. Esto quiere decir que:
+
+```js
+// En a.js, text es visible únicamente dentro del FICHERO.
+"use strict";
+var text = 'I\'m Ziltoid, the Omniscient.';
+
+// En b.js, text es visible únicamente dentro del FICHERO.
+"use strict";
+var text = 'Greetings humans!';
+
+// En una consola iniciada en el mismo directorio que a y b
+require('./a');
+require('./b');
+text;
+```
 
 ## Programación asíncrona y eventos
 
