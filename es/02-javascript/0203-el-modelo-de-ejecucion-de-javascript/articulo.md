@@ -75,7 +75,7 @@ introduction();
 ```
 
 En el caso anterior, decimos que la variable `text` de la función anidada
-`greetings()` _oculta_ a la variable `text` de la función `introduction()`.
+`greetings` _oculta_ a la variable `text` de la función `introduction`.
 
 Recuerda que para introducir una nueva variable hay que declararla con
 `var` antes de usarla (o al mismo tiempo que se asigna).
@@ -321,10 +321,10 @@ d10();
 diceUtils.history;
 ```
 
-La segunda forma es usando el **método [`bind()`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind)** de las funciones.
+La segunda forma es usando el **método [`bind`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind)** de las funciones.
 
-El método `bind()` de una función devuelve otra función cuyo `this` será el
-primer parámetro de `bind()`. De este modo:
+El método `bind` de una función devuelve otra función cuyo `this` será el
+primer parámetro de `bind`. De este modo:
 
 ```js
 var diceUtils = {
@@ -589,15 +589,15 @@ Si la línea es exactamente `salir`, cerraremos la interfaz de línea de
 comandos. Esto produce un evento `close` y, cuando lo recibamos, utilizaremos el
 _listener_ de ese evento para terminar el programa.
 
-El método `on()` es un segundo nombre para [`addListener()`](https://nodejs.org/api/events.html#events_emitter_addlistener_eventname_listener).
+El método `on` es un segundo nombre para [`addListener`](https://nodejs.org/api/events.html#events_emitter_addlistener_eventname_listener).
 
 Igual que podemos añadir un _listener_, también podemos eliminarlo con
-[`removeListener()`](https://nodejs.org/api/events.html#events_emitter_removelistener_eventname_listener),
+[`removeListener`](https://nodejs.org/api/events.html#events_emitter_removelistener_eventname_listener),
 y quitarlos todos con
-[`removeAllListeners()`](https://nodejs.org/api/events.html#events_emitter_removealllisteners_eventname).
+[`removeAllListeners`](https://nodejs.org/api/events.html#events_emitter_removealllisteners_eventname).
 
 Podemos escuchar un evento **sólo una vez** con
-[`once()`](https://nodejs.org/api/events.html#events_emitter_once_eventname_listener).
+[`once`](https://nodejs.org/api/events.html#events_emitter_once_eventname_listener).
 
 ### Emisores de eventos
 
@@ -616,7 +616,7 @@ eventos:
 
 - Hacer que nuestros objetos **sean instancias** de `EventEmitter`.
 
-La primera supondría crear nuestro propio método `on()` y los mecanismos para
+La primera supondría crear nuestro propio método `on` y los mecanismos para
 emitir eventos. La segunda y la tercera usan la clase
 [`EventEmitter`](https://nodejs.org/api/events.html#events_class_eventemitter),
 que ya implementa esta API.
@@ -657,7 +657,7 @@ ship.shoot();
 ```
 
 **Emitir un evento** consiste en llamar al método
-[`emit()`](https://nodejs.org/api/events.html#events_emitter_emit_eventname_arg1_arg2),
+[`emit`](https://nodejs.org/api/events.html#events_emitter_emit_eventname_arg1_arg2),
 que hará que se ejecuten los _listeners_ que escuchan tal evento.
 
 Los eventos son increiblemente útiles para modelar interfaces de usuario de

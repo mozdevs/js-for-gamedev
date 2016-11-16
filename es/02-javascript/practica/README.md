@@ -222,10 +222,10 @@ caso de las armas el efecto debe reducir los puntos de vida de alguna forma.
 ## La API de batalla
 
 La batalla tendrá los siguientes métodos:
-  + `setup()` para establecer la configuración inicial como la que hemos
+  + `setup` para establecer la configuración inicial como la que hemos
   mostrados antes.
-  + `start()` para comenzar la batalla.
-  + `stop()` para detener la batalla.
+  + `start` para comenzar la batalla.
+  + `stop` para detener la batalla.
 
 Además la batalla expone los siguientes atributos:
   + `characters` para inspeccionar el estado de los personajes.
