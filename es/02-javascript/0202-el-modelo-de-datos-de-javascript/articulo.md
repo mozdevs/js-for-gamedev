@@ -125,7 +125,7 @@ var point = { 'x': 10, 'y': 15 };
 ```
 
 Cada par etiqueta y valor se llama **propiedad del objeto**. No es algo
-estricto, pero cuando se habla de las propiedades de un objeto se suele
+estricto, pero cuando se habla de las propiedades de un objeto, se suele
 referir a los valores; mientras que para hablar de las etiquetas se suele
 decir **nombre de la propiedad**.
 
@@ -447,7 +447,7 @@ var enemy = {
   moveLeft: function () { console.log('Going left!'); },
   moveRight: function () { console.log('Going right!'); },
   advance: function () { console.log('Marching forward!'); },
-  shoot: function () { console.log('PAYUN!'); } // (es un láser)
+  shoot: function () { console.log('PICHIUM!'); } // (es un láser)
 };
 ```
 
@@ -854,7 +854,7 @@ obj3.hasOwnProperty('f'); // true
 obj3.hasOwnProperty('z'); // false
 ```
 
-Se puede usar el método [`Object.getPrototypeOf`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
+Se puede usar el método [`Object.getPrototypeOf()`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
 para obtener el prototipo de un objeto:
 
 ```js
@@ -1089,9 +1089,10 @@ Ship.prototype.moveLeft = function () { this._position.x -= 2; };
 Ship.prototype.moveRight = function () { this._position.x += 2; };
 ```
 
-En este caso, probablemente sea mejor no incluir el método de disparar `shoot`,
-ya que unas naves disparan hacia arriba y otras hacia abajo. Tampoco incluiremos
-`advance`, puesto que es exclusivo de los enemigos y no de la nave aliada.
+En este caso, probablemente sea mejor no incluir el método de disparar
+`shoot()`, ya que unas naves disparan hacia arriba y otras hacia abajo. Tampoco
+incluiremos `advance()`, puesto que es exclusivo de los enemigos y no de la nave
+aliada.
 
 ![Jerarquía de constructores](images/space-invaders-hierarchy-constructor.png)
 
@@ -1241,13 +1242,12 @@ enemy instanceof Ally;   // Ally.prototype no está en la cadena.
 
 En lo referente al estado, resulta conveniente saber qué constructor ha
 construido el objeto para conocer de un vistazo los atributos que contendrá el
-objeto. Esto es equivalente a determinar cuál es la función cuya propiedad
+mismo. Esto es equivalente a determinar cuál es la función cuya propiedad
 `prototype` es el **primer eslabón** de la cadena de prototipos.
 
-Dado que los objetos prototipos vienen de serie con una propiedad `constructor`,
+Dado que los objetos prototipo vienen de serie con una propiedad `constructor`,
 que por defecto apunta a la función que posee al objeto prototipo, basta con
-acceder a la propiedad `constructor` del objeto para que sea el primer eslabón
-de la cadena.
+acceder a la propiedad `constructor` a través de la instancia.
 
 ```js
 enemy.constructor;
