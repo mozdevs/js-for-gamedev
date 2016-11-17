@@ -207,14 +207,14 @@ Se puede consultar la longitud de un _array_ accediendo a la propiedad `length`.
 menu.length;
 ```
 
-Se puede añadir un elemento al final del _array_ llamando al método [`push()`](
+Se puede añadir un elemento al final del _array_ llamando al método [`push`](
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push):
 
 ```js
 menu.push('Magic');
 ```
 
-También se puede quitar un elemento por el final usando el método [`pop()`](
+También se puede quitar un elemento por el final usando el método [`pop`](
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop):
 
 ```js
@@ -222,7 +222,7 @@ menu.pop();
 ```
 
 Se puede alterar un _array_ (insertar o borrar elementos), en cualquier lugar,
-usando el método [`splice()`](
+usando el método [`splice`](
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice):
 
 ```js
@@ -480,7 +480,7 @@ enemy.moveLeft();
 enemy; // fíjate en la posición otra vez.
 ```
 
-Obviamente, echando un vistazo a lo que hace `moveLeft()`, no podríamos decir
+Obviamente, echando un vistazo a lo que hace `moveLeft`, no podríamos decir
 que _cambia el estado_ del objeto destinatario del mensaje. ¿Cómo podríamos
 solucionarlo?
 
@@ -541,7 +541,7 @@ está usando como un método, por lo que no hay destinatario.
 
 En JavaScript podemos hacer que cualquier objeto sea `this` en cualquier
 función. Para ello usaremos
-[`apply()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply)
+[`apply`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply)
 en una función.
 
 ```js
@@ -635,12 +635,6 @@ sino solamente referirse a la función.
 
 Con la segunda, **pedimos a la función que se ejecute** y por tanto habrá que
 aportar todos los parámetros necesarios.
-
-**Importante**: a lo largo del curso nos referiremos a las funciones y métodos
-por su nombre seguido de unos de paréntesis `(` `)`. Por ejemplo, la función
-`factorial()` o el método `push()` de los _arrays_. Incluímos los paréntesis
-para recordar al lector que ese nombre guarda una referencia a una función pero
-conviene recordar que, _estrictamente, el nombre no incluye los paréntesis_.
 
 ### En JavaScript todo es un objeto
 
@@ -833,7 +827,7 @@ obj1.z; // undefined
 El método `Object.create()` crea un nuevo objeto vacío (como `{}`) cuyo
 prototipo es el objeto pasado como parámetro.
 
-Se puede usar el método [`hasOwnProperty()`]( https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+Se puede usar el método [`hasOwnProperty`]( https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 para determinar si una propiedad pertenece a un objeto sin atravesar la cadena
 de prototipos:
 
@@ -1090,8 +1084,8 @@ Ship.prototype.moveRight = function () { this._position.x += 2; };
 ```
 
 En este caso, probablemente sea mejor no incluir el método de disparar
-`shoot()`, ya que unas naves disparan hacia arriba y otras hacia abajo. Tampoco
-incluiremos `advance()`, puesto que es exclusivo de los enemigos y no de la nave
+`shoot`, ya que unas naves disparan hacia arriba y otras hacia abajo. Tampoco
+incluiremos `advance`, puesto que es exclusivo de los enemigos y no de la nave
 aliada.
 
 ![Jerarquía de constructores](images/space-invaders-hierarchy-constructor.png)
@@ -1111,7 +1105,7 @@ function Ally(position) {
 }
 ```
 
-Con [`apply()`](
+Con [`apply`](
 https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply)
 se puede ejecutar una función indicando cuál será su objeto de contexto y sus
 parámetros.

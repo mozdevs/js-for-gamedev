@@ -98,26 +98,26 @@ primero. Tendrás que experimentar.
 
 Repasa bien el código, muchos de los ejercicios consisten en dar las
 implementaciones de **funciones auxiliares**. Es el caso de:
-  + `assignParty()`
-  + `useUniqueNames()`
-  + `isAlive()`
-  + `getCommonParty()`
+  + `assignParty`
+  + `useUniqueNames`
+  + `isAlive`
+  + `getCommonParty`
 
-Fíjate entonces en la función `_showAction()` que hará que las acciones de
+Fíjate entonces en la función `_showAction` que hará que las acciones de
 batalla estén disponibles en el atributo `options`.
 
-Ahora concéntrate en las acciones. La implementación de `_defend()` está casi
-hecha. Sólo tendrás que completar las funciones `_improveDefense()` y
-`_restoreDefense()` para el cálculo de la defensa mejorada.
+Ahora concéntrate en las acciones. La implementación de `_defend` está casi
+hecha. Sólo tendrás que completar las funciones `_improveDefense` y
+`_restoreDefense` para el cálculo de la defensa mejorada.
 
 La acción _defend_ rellena la estructura `this._action` con el nombre de la
 acción, los identificadores del personaje activo y del objetivo, el efecto
 y la nueva defensa. Todos menos la defensa son necesarios para poder llamar
-a la función `_executeAction()` que ejecutará la acción e informará del
+a la función `_executeAction` que ejecutará la acción e informará del
 resultado.
 
 Durante el proceso de implementación de las acciones, tendrás que implementar
-también `_showTargets()` y `_showScrolls()` de manera similar, de acuerdo a la
+también `_showTargets` y `_showScrolls` de manera similar, de acuerdo a la
 especificación y a la [descripciónl ejercicio](./README.md).
 
 ## 8. Calidad del código

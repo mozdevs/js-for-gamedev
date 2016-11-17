@@ -555,7 +555,7 @@ function newLog(label) {
 ```
 
 Esta función crea funciones que llamarán a `console.log()` pero con una
-etiqueta delante. Podríamos crear métodos `log()` por clase, cada uno con
+etiqueta delante. Podríamos crear métodos `log` por clase, cada uno con
 un prefijo y así distinguir unos logs de otros.
 
 Sin embargo, advierte el siguiente comportamiento:
@@ -594,7 +594,7 @@ log2(p);
 log1('Greetings', 'humans!');
 ```
 
-¿Podrías decir qué hace cada línea en la función `newLog()`?
+¿Podrías decir qué hace cada línea en la función `newLog`?
 
 **13. Asincronía y closures**
 
@@ -640,11 +640,11 @@ var id = setInterval(obj.advance, 1 * 1000);
 ```
 
 Este ejemplo falla porque en la última línea **no estamos llamando** a la
-función sino sólo pasándola como parámetro. La función `setInterval()` no
+función sino sólo pasándola como parámetro. La función `setInterval` no
 tiene idea del destinatario del mensaje y por tando no puede llamar a la función
 como si fuera un método.
 
-Podemos arreglarlo con `bind()` pero antes para el intervalo con:
+Podemos arreglarlo con `bind` pero antes para el intervalo con:
 
 ```js
 clearInterval(id);
@@ -658,10 +658,10 @@ var id = setInterval(obj.advance.bind(obj), 1 * 1000);
 
 **15. La función bind()**
 
-A estas alturas ya deberías saber cómo funciona `bind()` o qué hace. Si aun no
+A estas alturas ya deberías saber cómo funciona `bind` o qué hace. Si aun no
 lo tienes claro, búscalo en la MDN.
 
-La tarea es la siguiente: crea una función `bind()` que simule el comportamiento
+La tarea es la siguiente: crea una función `bind` que simule el comportamiento
 del método de las funciones `.bind()`. Como se pide una función y no un método,
 el primer parámetro será la función. Así pues, en vez de usarse así:
 
