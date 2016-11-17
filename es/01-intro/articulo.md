@@ -1,6 +1,53 @@
 # Introducción
 
-<!-- Tu parte aquí. -->
+Esta es una guía de introducción a **JavaScript**, y está orientada al
+desarrollo de **videojuegos HTML5**.
+
+Esta basada en unos materiales que desarrollamos en una colaboración con la
+Universidad Complutense de Madrid para la asignatura de _Programación de
+videojuegos con lenguajes interpretados_. Puedes acceder a los materiales
+originales de la asignatura a través de
+[este repositorio en Github](https://github.com/clnznr/pvli2017).
+
+El código fuente de esta guía también está
+[publicado en Github](https://github.com/mozdevs/js-for-gamedev/). Si encuentras
+una errata o quieres sugerir algún cambio, por favor háznoslo saber
+[abriendo un ticket](https://github.com/mozdevs/js-for-gamedev/issues).
+
+## ¿A quién está dirigida esta guía?
+
+- A cualquiera con interés en el desarrollo de videojuegos y que ya tenga unos
+**conocimientos mínimos de programación** (cualquier lenguaje sirve, como Lua,
+C o Python): variables, bucles, funciones, condiciones, etc.
+
+- A programadores de videojuegos que quieran desarrollar videojuegos web con
+JavaScript.
+
+- A desarrolladores web que quieran aprender los fundamentos de la programación
+orientada a objetos con JavaScript.
+
+## Videojuegos en la Web
+
+La llegada de **HTML5** y sus tecnologías asociadas expandió enormemente las
+capacidades de la Web como **plataforma de videojuegos**. Hasta entonces, la
+mayoría de juegos web requerían un plugin externo –como Flash o Unity Player–,
+pero hoy ya no es necesario y los juegos HTML5 se ejecutan en el navegador de
+forma transparente.
+
+La Web nos ofrece **API** de gráficos 2D y 3D (esta última, basada en el estándar
+OpenGL ES), de reproducción y sintetización de audio, de acceso a múltiples
+métodos de entrada (_gamepads_, eventos de _touch_, giroscopios…), etc. En
+definitiva, todo lo que necesitamos para desarrollar videojuegos.
+
+Existen multitud de **motores y herramientas** para crear videojuegos HTML5.
+Algunos de los motores más populares, como Unity, Unreal o Game Maker, ya
+incluyen un exportador HTML5. También existen motores o frameworks específicos
+para la web, en los que podemos desarrollar con JavaScript, como Phaser o
+PlayCanvas.
+
+El objetivo de esta guía es proporcionar una base de conocimientos JavaScript
+para que puedas desarrollar videojuegos web utilizando librerías o motores web
+existentes.
 
 ## El entorno de trabajo
 
@@ -48,33 +95,41 @@ Chrome, de Google. Node es ampliamente utilizado en el desarrollo de
 aplicaciones en el lado del servidor y será en Node que aprenderemos JavaScript
 para enfatizar su independencia del navegador.
 
-Para el desarrollo del curso, recomendamos [instalar cualquier versión de Node
-6](https://nodejs.org/en/).
+Para realizar los ejercicios y prácticas propuestos en esta guía, recomendamos
+[instalar cualquier versión de Node 6](https://nodejs.org/en/).
 
 ### El editor de texto
 
 Conviene tener en cuenta que para comenzar a programar en JavaScript sólo
-necesitas un editor de texto ordinario. Sin embargo, es recomendable elegir un
+necesitas un editor de texto plano. Sin embargo, es recomendable elegir un
 editor con algunas características avanzadas que nos permita ser más
 productivos.
 
-Hay muchos editores ahí fuera pero nosotros recomendamos [Atom](
-https://atom.io/) por ser gratuito, de código abierto, extensible y, además,
-haber sido programado utilizando las mismas tecnologías que vas a aprender.
+**Nota**: es importante no confundir un editor de texto plano (como Notepad),
+con un procesador de texto (como Microsoft Word).
 
-Si optas por instalar Atom, existen varios artículos en Internet que recomiendan
-extensiones útiles que pueden aumentar la comodidad de uso del editor y tu
-productividad.
+El editor [Atom](https://atom.io/) es muy popular entre desarrolladores web. Es
+una buena opción por ser gratuito, de código abierto y extensible (y, además,
+ha sido programado con JavaScript).
 
-<!-- Aquí la lista de extensiones. -->
+Si optas por Atom, te recomendamos que instales el siguiente _add-on_:
+[`linter-jshint`](https://github.com/AtomLinter/linter-jshint). Es un _linter_,
+un software que analizará tu código JavaScript. No sólo te corregirá el estilo
+(por ejemplo, que las líneas no superen cierto número de caracteres), sino que
+te avisará de posibles malas prácticas que podrían causar _bugs_ (como,
+por ejemplo, usar una variable sin haberla declarado antes).
+
+
+#### Editores de consola
 
 Es conveniente conocer al menos un editor de consola, puesto que no siempre
-trabajarás con entornos de escritorio. Nuestra recomendación es que aprendas
+trabajarás con entornos de escritorio. Hay varios muy buenos, entre ellos
 [Vim](http://www.vim.org/).
 
-De todas formas, si nunca has trabajado con un editor de consola, recomendamos
-encarecidamente que uses Atom. Es la forma más rápida de comenzar puesto que
-la curva de aprendizaje de Vim es muy pronunciada.
+De todas formas, si nunca has trabajado con un editor de consola, _recomendamos
+encarecidamente que uses Atom_ o cualquier otro editor con una interfaz visual.
+Es la forma más rápida de comenzar, puesto que la curva de aprendizaje de Vim
+es muy pronunciada.
 
 Si, pese a nuestras advertencias, optas por utilizar Vim, no olvides jugar a
 [Vim Adventures](http://vim-adventures.com/) y completar el tutorial de
@@ -82,14 +137,14 @@ http://www.openvim.com, que te ayudarán a familiarizarte con el editor.
 Vim es también altamente configurable y existen varias guías sobre cómo mejorar
 la experiencia de programación.
 
-### Git
+### El navegador
 
-Resulta muy conveniente trabajar con un sistema de control de versiones de
-código como Git. Git puede ser utilizado sin conexión, permitiéndote guardar
-versiones localmente. Puede utilizar servicios como [GitHub](https://github.com)
-o [GitLab](https://gitlan.com) para mantener repositorios _online_.
+**Cualquier navegador moderno** sirve y, de hecho, recomendamos que instales
+varios para que puedas comprobar que el juego sea compatible entre navegadores.
 
-Recuerda que Git es una herramienta de consola, y la manera natural de
-utilizarla es a través de una línea de comandos, aunque puedes optar entre
-numerosas [interfaces gráficas](https://git-scm.com/download/gui/linux) si eso
-te resulta más sencillo.
+Debes aprender cómo activar las **herramientas de desarrollador** en tu
+navegador, ya que te permitirán depurar tu juego, analizar su rendimiento, etc.
+En esta guía mostraremos
+[Firefox Developer Edition](https://www.mozilla.org/firefox/developer/), que
+es una versión de Firefox especial para desarrolladores web e incluye
+herramientas y opciones no disponibles en la versión normal de Firefox.
