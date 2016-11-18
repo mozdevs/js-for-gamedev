@@ -1,0 +1,38 @@
+{
+  "name": "js-for-gamedev",
+  "version": "1.0.0",
+  "description": "Learning guide about JavaScript for game development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve:es": "npm run styles && gitbook serve ./es",
+    "gitbook:es": "gitbook build ./es",
+    "build:es": "npm run styles && npm run gitbook:es",
+    "build": "npm run build:es",
+    "styles": "mkdirp ./es/styles && cpr styles/website.css es/styles/ -o",
+    "clean": "rimraf _book ./es/_book ./es/styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozdevs/js-for-gamedev.git"
+  },
+  "keywords": [
+    "learning",
+    "tutorial",
+    "javascript",
+    "game",
+    "dev"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/mozdevs/js-for-gamedev/issues"
+  },
+  "homepage": "https://github.com/mozdevs/js-for-gamedev#readme",
+  "private": true,
+  "dependencies": {
+    "cpr": "^2.0.0",
+    "gitbook-cli": "^2.3.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.4"
+  }
+}

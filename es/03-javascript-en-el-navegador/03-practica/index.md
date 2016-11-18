@@ -9,7 +9,7 @@ La práctica consiste en implementar un cliente visual (en este caso, **una pág
 ![Captura de pantalla del cliente](images/screenshot.png)
 
 
-Como punto de partida, se ha provisto de un [esqueleto de proyecto](start-here/index.html) con los siguientes archivos:
+Como punto de partida, se ha provisto de un [esqueleto de proyecto](https://github.com/mozdevs/js-for-gamedev/tree/master/es/03-javascript-en-el-navegador/03-practica/start-here) con los siguientes archivos:
 
 - `index.html`: código HTML de partida
 - `styles.css`: hoja de estilo

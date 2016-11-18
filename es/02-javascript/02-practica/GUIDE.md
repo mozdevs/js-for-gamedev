@@ -118,7 +118,7 @@ resultado.
 
 Durante el proceso de implementación de las acciones, tendrás que implementar
 también `_showTargets` y `_showScrolls` de manera similar, de acuerdo a la
-especificación y a la [descripciónl ejercicio](./README.md).
+especificación y al [enunciado](index.md).
 
 ## 8. Calidad del código
 Cuando termines y todos tus tests estén en verde habrás terminado la práctica.

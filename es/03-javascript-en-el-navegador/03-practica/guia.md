@@ -1,6 +1,6 @@
 # Guía
 
-_Nota: lee primero el [enunciado de la práctica](enunciado.md) antes de leer este documento._
+_Nota: lee primero el [enunciado de la práctica](index.md) antes de leer este documento._
 
 Esta es una guía paso a paso con sugerencias para afrontar la práctica. Es recomendable **leer este documento entero** –especialmente el apartado de _Consideraciones_– antes de ponerse a realizar el primer paso.
 

@@ -1,4 +1,4 @@
-# Ejercicios de laboratorio
+# Ejercicios guiados
 
 Prueba estos ejemplos y trata de responder a las preguntas. Si te atascas con
 lo que hace una función, busca en Internet la función acompañada de "mdn".

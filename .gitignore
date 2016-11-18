@@ -1,3 +1,5 @@
 node_modules
 _book
 .DS_Store
+es/styles
+en/styles
