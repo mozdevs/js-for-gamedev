@@ -1,0 +1,738 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Navegador y DOM · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../0302-canvas/" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../01-intro/articulo.md">
+            
+                <span>
+            
+                    
+                    El entorno de trabajo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    JavaScript básico
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../02-javascript/0201-poo/">
+            
+                <a href="../../02-javascript/0201-poo/">
+            
+                    
+                    Programación orientada a objetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-javascript/0202-modelo-de-datos/">
+            
+                <a href="../../02-javascript/0202-modelo-de-datos/">
+            
+                    
+                    El modelo de datos de JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../02-javascript/0203-modelo-de-ejecucion/">
+            
+                <a href="../../02-javascript/0203-modelo-de-ejecucion/">
+            
+                    
+                    El modelo de ejecución de JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../02-javascript/02-ejercicios/">
+            
+                <a href="../../02-javascript/02-ejercicios/">
+            
+                    
+                    Ejercicios guiados
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../02-javascript/02-practica/">
+            
+                <a href="../../02-javascript/02-practica/">
+            
+                    
+                    Práctica
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../02-javascript/02-practica/GUIDE.html">
+            
+                <a href="../../02-javascript/02-practica/GUIDE.html">
+            
+                    
+                    Guía
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../02-javascript/02-practica/TDD.html">
+            
+                <a href="../../02-javascript/02-practica/TDD.html">
+            
+                    
+                    TDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    JavaScript en el navegador
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Navegador y DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../0302-canvas/">
+            
+                <a href="../0302-canvas/">
+            
+                    
+                    Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-ejercicios/index.md">
+            
+                <span>
+            
+                    
+                    Ejercicios guiados
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-practica/">
+            
+                <a href="../03-practica/">
+            
+                    
+                    Práctica
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../03-practica/guia.html">
+            
+                <a href="../03-practica/guia.html">
+            
+                    
+                    Guía
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado con GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Navegador y DOM</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="navegador-y-dom">Navegador y DOM</h1>
+<h2 id="&#xBF;por-qu&#xE9;">&#xBF;Por qu&#xE9;?</h2>
+<p>Si quieres publicar juegos en la web, hay que saber c&#xF3;mo funciona un navegador, y c&#xF3;mo funciona la Web.</p>
+<p>Los <strong>navegadores</strong> son el entorno donde se van a ejecutar tus juegos, y hay consideraciones t&#xE9;cnicas a tener en cuenta, tanto a nivel de interfaz como de seguridad. Asimismo, los navegadores incorporan <strong>herramientas de desarrollo</strong> que nos ser&#xE1;n muy &#xFA;tiles: un depurador, un profiler, un inspector del tr&#xE1;fico de red, etc.</p>
+<p>Tambi&#xE9;n es necesario tener conocimientos sobre las tecnolog&#xED;as web, aun en el caso de utilizar un motor multiplatforma y exportar a HTML5:</p>
+<ul>
+<li><p>El juego siempre est&#xE1; contenido en una p&#xE1;gina web, y quiz&#xE1; interese personalizar su apariencia. Para ello, hace falta usar los lenguajes HTML (para el contenido) y CSS (la apariencia).</p>
+</li>
+<li><p>Es &#xFA;til para a&#xF1;adir ciertas cosas que quiz&#xE1; no incorpore dicho exportador, como tal vez un bot&#xF3;n que ponga el juego a pantalla completa o bien precargar fuentes web.</p>
+</li>
+<li><p>Siempre que se desarrolla un videojuego multiplataforma, es posible que aparezcan <em>bugs</em> s&#xF3;lo en una de estas plataformas. Para depurar un <em>bug</em> espec&#xED;fico de la web, tendr&#xE1;s que usar las herramientas que proporcionan los navegadores, as&#xED; como tener ciertos conocimientos de las API web que el juego utiliza (por ejemplo, la API de Gamepad o la de WebGL).</p>
+</li>
+<li><p>Si utilizas un motor o framework de terceros, y necesitas arreglar un <em>bug</em> en dicho motor o implementar una <em>feature</em> que tu juego requiere, obviamente se ha de tener conocimientos de programaci&#xF3;n web.</p>
+</li>
+</ul>
+<h2 id="los-navegadores">Los navegadores</h2>
+<p>Un <strong>navegador</strong> es un programa que permite acceder a la Web. Hay que tener en cuenta que no todos los navegadores son iguales, y pese a que la Web est&#xE1; basada en <strong>est&#xE1;ndares abiertos</strong>, no todos los navegadores implementan estos est&#xE1;ndares de la misma manera.</p>
+<p>Desde el punto de vista del desarrollador, los componentes m&#xE1;s relevantes de un navegador son:</p>
+<ul>
+<li><p>El <strong>motor de renderizado</strong>, que se encarga de &quot;pintar&quot; una p&#xE1;gina web en la pantalla. Firefox utiliza Gecko, Safari utiliza Webkit, Chrome y Opera utilizan un <em>fork</em> de Webkit conocido como Blink, etc.</p>
+</li>
+<li><p>La <strong>m&#xE1;quina virtual de JavaScript</strong>, que se encarga de ejecutar el c&#xF3;digo JavaScript de la p&#xE1;gina web. Firefox utiliza SpiderMonkey, mientras que Chrome y otros navegadores &#x2013;as&#xED; como Node&#x2013; utilizan V8.</p>
+</li>
+</ul>
+<p>Esto da lugar a que <strong>no todos los navegadores soporten las mismas caracter&#xED;sticas</strong> y a que aparezcan <em>bugs</em> del motor de render o de la m&#xE1;quina virtual de JavaScript que son espec&#xED;ficos a un navegador en concreto.</p>
+<p>Para conocer qu&#xE9; caracter&#xED;sticas implementa cada navegador, podemos utilizar, entre otros:</p>
+<ul>
+<li><a href="http://caniuse.com" target="_blank">caniuse.com</a>, r&#xE1;pida e intuitiva</li>
+<li><a href="http://developer.mozilla.org" target="_blank">MDN</a>, tiene detalles concretos sobre la implementaci&#xF3;n y diferencias entre navegadores</li>
+</ul>
+<h2 id="lenguajes-en-la-web">Lenguajes en la Web</h2>
+<h3 id="html">HTML</h3>
+<p>HTML (<em>HyperText Markup Language</em>) se utiliza para crear el <strong>contenido</strong> de una p&#xE1;gina web: p&#xE1;rrafos, t&#xED;tulos, im&#xE1;genes, v&#xED;deos, etc.</p>
+<p>Es un lenguaje de marcado basado en etiquetas. Por ejemplo:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Esto es un t&#xED;tulo<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<h3 id="css">CSS</h3>
+<p>CSS (<em>Cascading Style Sheets</em>) se utiliza para personalizar la <strong>apariencia</strong> de los elementos HTML: colores, fondos, bordes, su posici&#xF3;n en la p&#xE1;gina, divisi&#xF3;n en columnas, el tama&#xF1;o, m&#xE1;rgenes, etc.</p>
+<p>Es un lenguaje declarativo basado en reglas. Por ejemplo:</p>
+<pre><code class="lang-css"><span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">color</span>: red; <span class="hljs-comment">/* hace que los elementos h1 tengan texto rojo */</span>
+}
+</code></pre>
+<h3 id="javascript">JavaScript</h3>
+<p>JavaScript es un lenguaje de programaci&#xF3;n interpretado, y con &#xE9;l se implementan el <strong>comportamiento y la l&#xF3;gica</strong> de una p&#xE1;gina web &#x2013;si hiciera falta.</p>
+<p>Es un <strong>lenguaje din&#xE1;mico</strong> orientado a prototipos, con caracter&#xED;sticas funcionales.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Hello, world!&quot;</span>);
+</code></pre>
+<h2 id="&#xBF;qu&#xE9;-pasa-cuando-se-accede-a-una-p&#xE1;gina-desde-un-navegador">&#xBF;Qu&#xE9; pasa cuando se accede a una p&#xE1;gina desde un navegador?</h2>
+<p>Entender c&#xF3;mo funciona el tr&#xE1;fico de red a un nivel b&#xE1;sico es necesario para comprender &#x2013;y poder arreglar o mitigar&#x2013; ciertas situaciones. Por ejemplo, por qu&#xE9; un juego tarda mucho en cargarse, por qu&#xE9; ciertos <em>assets</em> no se cargan, c&#xF3;mo hacer que la p&#xE1;gina no se quede en blanco mientras el juego se carga, etc.</p>
+<p>Veremos un ejemplo de este flujo paso a paso.</p>
+<h3 id="paso-1-petici&#xF3;n-http-get-a-un-servidor">Paso 1. Petici&#xF3;n HTTP GET a un servidor</h3>
+<p><img src="images/request_dance_step1.png" alt="Paso 1"></p>
+<p>El navegador hace una <strong>petici&#xF3;n HTTP GET</strong> a una URL (que sirve para identificar d&#xF3;nde est&#xE1; cierto recurso en la Web), y si el recurso existe, el servidor lo retorna.</p>
+<p>Hay que tener en cuenta que los navegadores disponen de una memoria cach&#xE9;, con lo que si ya tienen dicho recurso en memoria y no ha caducado, no realizan una petici&#xF3;n al servidor y utilizan el recurso del que ya disponen.</p>
+<h3 id="paso-2-descarga-de-archivos">Paso 2. Descarga de archivos</h3>
+<p><img src="images/request_dance_step2.png" alt="Paso 2"></p>
+<p>Los archivos HTML pueden hacer referencia a otros recursos&#x2026; que el navegador deber&#xE1; pedir al servidor. Si hemos pedido un archivo HTML, se ir&#xE1; <strong>descargando y renderizando</strong> sobre la marcha.</p>
+<p>Cuando un archivo JS se acaba de descargar, su c&#xF3;digo se parsea y se <strong>ejecuta</strong>. Mientras se ejecuta, el navegador queda <em>bloqueado</em>.</p>
+<h3 id="paso-3-carga-finalizada">Paso 3. Carga finalizada</h3>
+<p>Cuando todas las im&#xE1;genes, scripts, CSS, etc. se han cargado, se dispara el <strong>evento <code>load</code></strong> de <code>window</code>, que es un objeto global definido en el est&#xE1;ndar de JavaScript que incorporan los navegadores.</p>
+<p>Es muy com&#xFA;n incluir el c&#xF3;digo que inicializa la ejecuci&#xF3;n del programa en el <em>handler</em> de ese evento.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// Initilise the program</span>
+};
+</code></pre>
+<h2 id="c&#xF3;mo-incluir-javascript-en-una-p&#xE1;gina-web">C&#xF3;mo incluir JavaScript en una p&#xE1;gina web</h2>
+<p>Una p&#xE1;gina web es, en esencia, un archivo HTML que puede incluir otros recursos, como las hojas de estilo CSS y tambi&#xE9;n c&#xF3;digo JavaScript.</p>
+<h3 id="estructura-b&#xE1;sica-de-un-documento-html">Estructura b&#xE1;sica de un documento HTML</h3>
+<p>Aqu&#xED; un ejemplo de un documento HTML con un poco de contenido &#x2013;en este caso, un t&#xED;tulo (<code>&lt;h1&gt;</code>) y un p&#xE1;rrafo (<code>&lt;p&gt;</code>).</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- el head es metadata --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Cancamusa<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- el body es contenido --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Monkey Island<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Mira detr&#xE1;s de ti, &#xA1;un mono de tres cabezas!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Como ves, HTML se basa en incluir unas etiquetas dentro de otras. Hay una etiqueta ra&#xED;z, <code>&lt;html&gt;</code>, que contiene a su vez dos etiquetas, <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>. Estas dos etiquetas son <em>necesarias</em> en toda p&#xE1;gina web.</p>
+<p>Tambi&#xE9;n se puede observar que en la primera l&#xED;nea hay una etiqueta especial:</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+</code></pre>
+<p>Con esto le indicamos al navegador que efectivamente estamos utilizando un formato HTML5 o superior &#x2013;antes hab&#xED;a otros est&#xE1;ndares, como XHTML.</p>
+<p><code>&lt;head&gt;</code> contiene <strong>metadatos</strong> relativos a la p&#xE1;gina, como el t&#xED;tulo (aparece en las pesta&#xF1;as del navegador, o en los resultados de b&#xFA;squeda de Google y otros), la codificaci&#xF3;n de caracteres, etc. Desde aqu&#xED; tambi&#xE9;n podemos incluir otros archivos, como hojas de estilos CSS.</p>
+<p><code>&lt;body&gt;</code> posee el <strong>contenido</strong> de la p&#xE1;gina, lo que ve el usuario. En el ejemplo anterior hay un elemento de t&#xED;tulo y un p&#xE1;rrafo.</p>
+<h3 id="&#xBF;d&#xF3;nde-va-el-c&#xF3;digo-javascript">&#xBF;D&#xF3;nde va el c&#xF3;digo JavaScript?</h3>
+<p>Se puede incluir archivos &#x2013;y c&#xF3;digo <em>inline</em>&#x2013; de JavaScript tanto en el <code>&lt;head&gt;</code> como en el <code>&lt;body</code>, pero esto afecta a c&#xF3;mo se carga la p&#xE1;gina.</p>
+<p>Por defecto, cuando se inicia la carga de un archivo JavaScript el navegador deja de renderizar el HTML hasta que dicho archivo se descargue por completo, se <em>parsee</em> y se ejecute.</p>
+<p>Por tanto, si lo descargamos al principio (en el <code>&lt;head&gt;</code> o al principio de <code>&lt;body&gt;</code>) es posible que la p&#xE1;gina web aparezca en blanco o que retrasemos la carga de algunos <em>assets</em> que quiz&#xE1;s sean m&#xE1;s importantes.</p>
+<p>Si por el contrario, incluimos el JavaScript al final de <code>&lt;body&gt;</code> la p&#xE1;gina web se renderizar&#xE1; por completo &#x2013;con lo cual el usuario puede ver <em>algo</em>&#x2013; pero el archivo tardar&#xE1; m&#xE1;s en ejecutarse.</p>
+<p>No hay una soluci&#xF3;n objetivamente &#xF3;ptima para todos los casos. Dependiendo de las caracter&#xED;sticas del videojuego (o de la p&#xE1;gina) interesar&#xE1; un punto de carga diferente.</p>
+<p><small>Nota: esto es ha sido una explicaci&#xF3;n muy simplificada. Puedes encontrar informaci&#xF3;n m&#xE1;s completa en <a href="https://www.html5rocks.com/en/tutorials/speed/script-loading/" target="_blank">este art&#xED;culo de Jake Archibald</a>.</small></p>
+<h3 id="scripts-inline-y-externos">Scripts inline y externos</h3>
+<p>Podemos incluir c&#xF3;digo JavaScript inline en el HTML con la etiqueta <code>&lt;script&gt;</code>.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Hello, world!&quot;</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>Tambi&#xE9;n podemos tener el c&#xF3;digo JavaScript en un archivo <code>.js</code> separado. Se incluyen estos archivos con la etiqueta <code>&lt;script&gt;</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;js/game.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h2 id="c&#xF3;mo-se-ejecuta-el-c&#xF3;digo-javascript">C&#xF3;mo se ejecuta el c&#xF3;digo JavaScript</h2>
+<h3 id="modelo-as&#xED;ncrono-basado-en-eventos">Modelo as&#xED;ncrono basado en eventos</h3>
+<p>En el navegador, JavaScript sigue un <strong>modelo as&#xED;ncrono</strong> basado en eventos. Hay que tener en cuenta que, mientras el c&#xF3;digo JavaScript se est&#xE1; ejecutando, el navegador <strong>bloquea <em>todo</em></strong> lo dem&#xE1;s, incluida la UI (la interfaz gr&#xE1;fica de usuario).</p>
+<p>El modelo as&#xED;ncrono nos permite programar JavaScript de forma que los bloqueos sean imperceptibles al usuario. La idea es que el c&#xF3;digo JavaScript no se est&#xE9; ejecutando siempre (y as&#xED; la interfaz no estar&#xE1; bloqueada), sino que nos <strong>subscribimos a ciertos eventos</strong> y ejecutamos s&#xF3;lo c&#xF3;digo cuando estos eventos se producen.</p>
+<p>L&#xF3;gicamente, tenemos la responsabilidad de que el c&#xF3;digo no tarde mucho tiempo en ejecutarse, porque entonces s&#xED; que el usuario notar&#xED;a que el navegador se ha quedado bloqueado. Los navegadores, adem&#xE1;s, suelen bloquear &#x2013;u ofrecer al usuario esta posibilidad&#x2013; los scripts de JavaScript que no han terminado al cabo de cierta cantidad de tiempo.</p>
+<p>Algunos ejemplos de eventos a los que podemos subscribinos son: la carga de la p&#xE1;gina, click en un bot&#xF3;n o en un enlace, pasar el rat&#xF3;n por encima de un elemento, cuando se ha descargado cierto contenido, etc. Tambi&#xE9;n podemos lanzar nuestros propios eventos personalizados.</p>
+<h3 id="un-&#xFA;nico-hilo">Un &#xFA;nico hilo</h3>
+<p>Otro aspecto a considerar es que, <em>normalmente</em>, nuestro c&#xF3;digo JavaScript se ejecutar&#xE1; en <strong>un solo hilo</strong> (hay excepciones, como el uso de WebWorkers). Es por ello por lo que si hay dos subscripciones a un mismo evento, <em>no</em> se ejecutar&#xE1;n de forma simult&#xE1;nea, sino una detr&#xE1;s de otra. Y mientras un evento se ejecuta, el resto del c&#xF3;digo <em>espera</em>.</p>
+<p>Veamos un ejemplo:</p>
+<pre><code class="lang-javascript">button.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Click&quot;</span>);
+}
+
+<span class="hljs-comment">// ...</span>
+
+button.trigger(<span class="hljs-string">&apos;click&apos;</span>);
+<span class="hljs-comment">// el bot&#xF3;n no se desactiva hasta que el handler de &quot;click&quot;</span>
+<span class="hljs-comment">// haya acabado de ejecutarse</span>
+button.disabled = <span class="hljs-literal">true</span>;
+</code></pre>
+<p>Tambi&#xE9;n puedes acceder a este <a href="https://jsfiddle.net/1wqevdob/" target="_blank">snippet de c&#xF3;digo</a> online.</p>
+<h2 id="el-dom">El DOM</h2>
+<p>Los documentos HTML presentan una <strong>estructura de &#xE1;rbol</strong>. Al incluir unas etiquetas dentro de otras, tenemos una relaci&#xF3;n jer&#xE1;rquica, ya que algunos elementos son &quot;padres&quot; de otros.</p>
+<p>Por ejemplo, pongamos el siguiente fragmento de c&#xF3;digo HTML:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Un t&#xED;tulo mol&#xF3;n<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Bla bla bla.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+    M&#xE1;s bla, bla, bla y
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://wikipedia.org&quot;</span>&gt;</span>aqu&#xED; un enlace<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+</code></pre>
+<p>Su representaci&#xF3;n en forma de &#xE1;rbol ser&#xED;a la siguiente:</p>
+<p><img src="images/dom_section.png" alt="Secci&#xF3;n del DOM"></p>
+<p>El DOM (<em>Object Document Model</em>) es una <strong>interfaz</strong> que implementan los navegadores para que podamos <strong>interactuar con dicho &#xE1;rbol</strong> y con los elementos HTML que lo pueblan. Podemos tanto manipular los elementos HTML (cambiando su contenido, sus propiedades o bien llamando sus m&#xE9;todos propios), como manipular el &#xE1;rbol en s&#xED;, insertando, cambiando e eliminando elementos.</p>
+<h2 id="acceder-a-elementos-del-dom">Acceder a elementos del DOM</h2>
+<p>Acceder a un elemento (o varios) del DOM es una de las operaciones m&#xE1;s frecuentes que se hacen.</p>
+<h3 id="por-id">Por ID</h3>
+<p>S&#xF3;lo selecciona un elemento (los ID deben ser &#xFA;nicos), en base a su atributo <code>id</code> de HTML:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;show-fullscreen&quot;</span>&gt;</span>Fullscreen<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> button = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;show-fullscreen&apos;</span>);
+</code></pre>
+<h3 id="acceder-a-elementos-por-selector-css">Acceder a elementos por selector CSS</h3>
+<p>Esta forma usa la sintaxis de los selectores CSS para localizar uno (o varios) elementos.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// selecciona el primer p&#xE1;rrafo que encuentra</span>
+<span class="hljs-keyword">var</span> paragraph = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;p&apos;</span>);
+<span class="hljs-comment">// selecciona el primer elemento con clase .warning</span>
+<span class="hljs-keyword">var</span> label = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;.warning&apos;</span>);
+<span class="hljs-comment">// selecciona TODOS los p&#xE1;rrafos</span>
+<span class="hljs-keyword">var</span> allPars = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&apos;p&apos;</span>);
+</code></pre>
+<p><small>Puedes encontrar m&#xE1;s informaci&#xF3;n sobre selectores CSS para usar con <code>querySelector</code> en <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Selectors" target="_blank">la MDN</a>.</small></p>
+<h3 id="iterar-sobre-una-lista-de-elementos">Iterar sobre una lista de elementos</h3>
+<p>Hay que tener en cuenta que <code>querySelectorAll</code> <em>no</em> devuelve un array, sino una <a href="https://developer.mozilla.org/en/docs/Web/API/NodeList" target="_blank"><code>NodeList</code></a>, que es un objeto diferente.</p>
+<p>No podemos utilizar m&#xE9;todos de <code>Array</code> sobre una <code>NodeList</code>, pero tiene la propiedad <code>length</code> y el operador <code>[]</code>, as&#xED; que podemos iterar sobre ella mediante un bucle:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> buttons = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&apos;button&apos;</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; buttons.length; i++) {
+    buttons[i].style = <span class="hljs-string">&quot;display: none&quot;</span>; <span class="hljs-comment">// hide buttons</span>
+}
+</code></pre>
+<p><small>Aunque tambi&#xE9;n podemos iterar con <code>Array.forEach</code> si lo utilizamos con <code>apply</code>&#x2026;</small></p>
+<h3 id="navegar-el-&#xE1;rbol-del-dom">Navegar el &#xE1;rbol del DOM</h3>
+<p>Una vez que hemos accedido a un elemento, podemos navegar &#x2013;recorrer- el &#xE1;rbol del DOM a partir de &#xE9;l.</p>
+<ul>
+<li>Se accede al <strong>padre</strong> de un elemento con la propiedad <code>parentNode</code>.</li>
+<li>Se accede a la lista de <strong>hijos</strong> de un elemento con <code>childNodes</code>.</li>
+<li>Se accede al <strong>hermano</strong> anterior o siguiente con <code>previousSibling</code> y <code>nextSibling</code>.</li>
+</ul>
+<p>Con esto podemos recorrer todo el DOM en cualquier direcci&#xF3;n.</p>
+<h2 id="propiedades-interesantes-de-elementos-del-dom">Propiedades interesantes de elementos del DOM</h2>
+<h3 id="innerhtml"><code>innerHTML</code></h3>
+<p>Es el <em>interior</em> o contenido del elemento. Puede haber desde simplemente texto, hasta c&#xF3;digo HTML. Si usamos c&#xF3;digo HTML, estar&#xED;amos de hecho creando nuevos elementos HTML en el DOM al vuelo.</p>
+<pre><code class="lang-javascript">button.innerHTML = <span class="hljs-string">&apos;Aceptar&apos;</span>;
+<span class="hljs-comment">// -&gt; &lt;button&gt;Aceptar&lt;/button&gt;</span>
+p.innerHTML = <span class="hljs-string">&apos;P&#xE1;rrafo con &lt;b&gt;negrita&lt;/b&gt;&apos;</span>;
+<span class="hljs-comment">// -&gt; &lt;p&gt;P&#xE1;rrafo con &lt;b&gt;negrita&lt;/b&gt;&lt;/p&gt;</span>
+</code></pre>
+<h3 id="style"><code>style</code></h3>
+<p><code>style</code> nos permite aplicar <strong>estilos CSS inline</strong>. Estos estilos tienen la m&#xE1;xima prioridad, as&#xED; que son muy &#xFA;tiles para ocultar/mostrar elementos, por ejemplo.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> previousDisplay = button.style.display;
+button.style=<span class="hljs-string">&quot;display:none&quot;</span>; <span class="hljs-comment">// oculta cualquier elemento</span>
+button.style=<span class="hljs-string">&quot;display:inline-block;&quot;</span> <span class="hljs-comment">// muestra el bot&#xF3;n</span>
+</code></pre>
+<p><small>Nota: <code>display:none</code> es universal, pero para mostrar un elemento se ha de elegir entre varios valores, los m&#xE1;s comunes son <code>inline</code>, <code>inline-block</code> y <code>block</code>, pero hay otros.</small></p>
+<h3 id="classlist"><code>classList</code></h3>
+<p><code>classList</code> nos permite acceder a las <strong>clases CSS</strong> de un elemento, pudiendo a&#xF1;adir, quitar o alternar (<em>toggle</em>) clases. Esto es muy &#xFA;til para cambiar el aspecto de la UI en funci&#xF3;n de las interacciones del usuario.</p>
+<pre><code class="lang-javascript">button.classList.add(<span class="hljs-string">&apos;loading&apos;</span>);
+button.classList.remove(<span class="hljs-string">&apos;loading&apos;</span>);
+button.classList.contains(<span class="hljs-string">&apos;loading&apos;</span>); <span class="hljs-comment">// query</span>
+button.classList.toggle(<span class="hljs-string">&apos;loading&apos;</span>); <span class="hljs-comment">// doesn&apos;t work on IE</span>
+</code></pre>
+<p>Ejemplo: <a href="https://developer.mozilla.org/en/docs/Web/API/Element/classList" target="_blank"><em>snippet</em> de c&#xF3;digo</a> online.</p>
+<h2 id="manipular-el-dom">Manipular el DOM</h2>
+<p>Manipular el DOM (esto es, insertar y eleminar elementos) nos permite alterar din&#xE1;micamente el contenido de una p&#xE1;gina web.</p>
+<h3 id="insertar-elementos">Insertar elementos</h3>
+<p>Ya hemos visto que se pueden insertar elementos HTML nuevos a trav&#xE9;s de la propiedad <code>innerHTML</code>, pero tambi&#xE9;n los podemos crear desde cero, con <code>createElement</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> button = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;button&apos;</span>);
+button.innerHTML = <span class="hljs-string">&apos;Start&apos;</span>;
+button.setAttribute(<span class="hljs-string">&apos;type&apos;</span>, <span class="hljs-string">&apos;button&apos;</span>);
+
+<span class="hljs-comment">// &lt;button type=&quot;button&quot;&gt;Start&lt;/button&gt;</span>
+</code></pre>
+<p>Es importante tener en cuenta que cuando creamos un elemento con <code>createElement</code> este se encuentra <strong>hu&#xE9;rfano</strong> y no lo veremos renderizado en la p&#xE1;gina. Para que aparezca, hay que a&#xF1;adirlo al DOM como &quot;familiar&quot; de alg&#xFA;n otro elemento &#x2013;usando para ello <a href="https://developer.mozilla.org/en/docs/Web/API/Node/appendChild" target="_blank"><code>appendChild</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore" target="_blank"><code>insertBefore</code></a>, etc.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">document</span>.body.appendChild(button);
+</code></pre>
+<p>Ejemplo: <a href="https://jsfiddle.net/mpsjmz11/1/" target="_blank"><em>snippet</em> de c&#xF3;digo</a> online.</p>
+<h3 id="eliminar-elementos">Eliminar elementos</h3>
+<p>Para eliminar un elemento del DOM, bien podemos reemplazarlo por otro &#x2013;usando <code>replaceChild</code>, o bien podemos eliminarlo del todo.</p>
+<p>Del mismo modo que se pueden crear elementos insertando una string con c&#xF3;digo HTML en la propiedad <code>innerHTML</code>, tambi&#xE9;n se pueden eliminar todos los hijos &#x2013;y contenido&#x2013; de un elemento asignando una cadena vac&#xED;a a <code>innerHTML</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">document</span>.body.innerHTML = <span class="hljs-string">&apos;&apos;</span>; <span class="hljs-comment">// remove all the body content</span>
+</code></pre>
+<p>Tambi&#xE9;n podemos eliminar un elemento del DOM con <code>remove</code>, y un hijo suyo con <code>removeChild</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> button = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;button&apos;</span>);
+button.remove();
+</code></pre>
+<h2 id="eventos">Eventos</h2>
+<p>Los eventos del DOM son una parte crucial de la programaci&#xF3;n web, ya que es la manera que tenemos de programar el comportamiento de una p&#xE1;gina web sin bloquear la UI.</p>
+<p>Los elementos del DOM disparan eventos a los que podemos subscribirnos, y ejecutar entonces el comprtamiento que queremos asociado a dicha acci&#xF3;n. Por ejemplo, un click en un bot&#xF3;n, un cambio del texto de un <code>&lt;input&gt;</code>, cuando se selecciona una checkbox, etc.</p>
+<p>No s&#xF3;lo los elementos HTML disparan eventos, sino que otros objetos globales, como <code>window</code>, tambi&#xE9;n lo hacen Por ejemplo: <code>load</code>, <code>resize</code>, etc.</p>
+<p>Hay dos maneras de escuchar (o subscribirse a) eventos del DOM:</p>
+<ul>
+<li>Usando el m&#xE9;todo <code>Event.addEventListener</code></li>
+<li>Usando los <em>on-event handlers</em> (p. ej: <code>onclick</code>, <code>onfocus</code>, etc.)</li>
+</ul>
+<h3 id="on-event-handlers"><em>On-event handlers</em></h3>
+<p>Los <em>on-event handlers</em> eran originalmente la &#xFA;nica manera de subscribirse a eventos, aunque hoy en d&#xED;a disponemos de la alternativa de <code>addEventListener</code>. El inconveniente de usar un <em>on-event handler</em> es que s&#xF3;lo podemos tener <strong>un &#xFA;nico <em>handler</em></strong> (es decir, el c&#xF3;digo que se ejecutar&#xE1; cuando el evento se dispara) por evento.</p>
+<p>La manera de subscribirse y cancelar la subscribpci&#xF3;n con <em>handlers</em> es mediante una <strong>asignaci&#xF3;n</strong>:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// subscripci&#xF3;n</span>
+button.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{ <span class="hljs-comment">/* ... */</span> };
+<span class="hljs-comment">// cancelar la subscripci&#xF3;n</span>
+button.onclick = <span class="hljs-literal">null</span>;
+</code></pre>
+<p>Documentaci&#xF3;n <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers" target="_blank">en la MDN</a>.</p>
+<h3 id="event-listeners"><em>Event listeners</em></h3>
+<p>Usando <em>event listeners</em> podemos <strong>subscribirnos varias veces</strong> al mismo evento, pudiendo tener varios comportamientos asociados a una misma acci&#xF3;n.</p>
+<p>Esta es la manera <strong>recomendada y m&#xE1;s segura</strong>, especialmente si se usa c&#xF3;digo de terceros, ya que no podr&#xED;amos eliminar de manera accidental un <em>handler</em> existente.</p>
+<p>Para subscribirnos a un evento usamos el m&#xE9;todo <code>addEventListener</code>, y para cancelar la subscripci&#xF3;n usamos <code>removeEventListener</code> (al que hay que pasarle la funci&#xF3;n de callback para que sepa qu&#xE9; subscripci&#xF3;n en particular cancelar).</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sayHi = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">/* */</span> };
+<span class="hljs-comment">// subscripci&#xF3;n</span>
+button.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, sayHi);
+<span class="hljs-comment">// cancelar la subscripci&#xF3;n</span>
+button.removeEventListener(<span class="hljs-string">&apos;click&apos;</span>, sayHi);
+</code></pre>
+<p>Documentaci&#xF3;n <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">en la MDN</a>.</p>
+<h3 id="bubbling"><em>Bubbling</em></h3>
+<p>El <strong><em>bubbling</em></strong> es la met&#xE1;fora con la que explicamos c&#xF3;mo se comportan los eventos del DOM.</p>
+<p>Cuando un elemento dispara un evento, <strong>se propaga</strong> hacia arriba en el &#xE1;rbol del DOM, como si fuera una burbuja. Es decir, que un evento disparado por un elemento en concreto, podr&#xE1; ser visto tambi&#xE9;n por su nodo padre y el resto de sus ancestros.</p>
+<p>Por ejemplo, en el siguiente c&#xF3;digo, si el usuario hace click en el bot&#xF3;n se disparar&#xED;a el evento <code>click</code>, al que podr&#xED;amos subscribirnos tanto desde el <code>&lt;button&gt;</code> como desde la <code>&lt;section&gt;</code> &#x2013;como ocurre en este caso.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> section = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;section&apos;</span>)
+section.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Clicked&#x2026;&apos;</span>);
+});
+</code></pre>
+<p>Puedes probar un <a href="https://jsfiddle.net/mcx0hkou/1/" target="_blank"><em>snippet</em> de c&#xF3;digo</a> online.</p>
+<h3 id="interrumpir-el-bubbling">Interrumpir el <em>bubbling</em></h3>
+<p>Hay veces que no nos interesa que se produzca esta propagaci&#xF3;n, o s&#xF3;lo queremos que se produzca de forma parcial.</p>
+<p>Los <em>callbacks</em> de los eventos pueden recibir <strong>un argumento</strong>, que ser&#xE1; un objeto de tipo <code>Event</code> y contiene informaci&#xF3;n sobre el evento (como el elemento originario de que se disparase), as&#xED; como m&#xE9;todos. Uno de estos m&#xE9;todos, <code>stopPropagation</code>, interrumpe el <em>bubbling</em>.</p>
+<pre><code class="lang-javascript">button.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    evt.stopPropagation();
+});
+</code></pre>
+<h3 id="cancelar-el-evento">Cancelar el evento</h3>
+<p>Tambi&#xE9;n puede ocurrir que necesitemos <strong>cancelar el evento</strong> para evitar las acciones por defecto asociadas a &#xE9;l (por ejemplo, el env&#xED;o de un formulario, o el cambio de p&#xE1;gina al hacer click en un enlace).</p>
+<p>N&#xF3;tese que esto <em>no</em> es interrumpir el <em>bubbling</em>. Una vez disparado, el evento ya se ha producido y ya ha comenzado su propagaci&#xF3;n. Para interrumpir el <em>bubbling</em> debemos usar <code>Event.stopPropagation</code>, como ya hemos visto.</p>
+<p>Los eventos se cancelan usando <code>Event.preventDefault</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;file.zip&quot;</span> <span class="hljs-attr">download</span>&gt;</span>Download zip<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> link = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;a&apos;</span>);
+link.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    <span class="hljs-comment">// the browser won&apos;t detect the link has been clicked</span>
+    evt.preventDefault();
+});
+</code></pre>
+<p><strong>Aviso</strong>: hay que tener mucho cuidado al hacer <code>preventDefault</code>, puesto que podemos empeorar la experiencia de usuario. Cancelar los links suele ser una mala idea, anular los clicks con el bot&#xF3;n derecho para que el usuario no pueda guardar una imagen es una idea a&#xFA;n peor.</p>
+<p>Usos leg&#xED;timos de <code>preventDefault</code> podr&#xED;an ser: validar un formulario en el cliente antes de enviarlo, anular ciertas acciones del teclado &#x2013;por ejemplo, scroll hacia abajo con la barra espaciadora&#x2013; en un videojuego que use esa tecla, etc.</p>
+<h2 id="documentaci&#xF3;n-en-la-mdn">Documentaci&#xF3;n en la MDN</h2>
+<p>La documentaci&#xF3;n de todo lo que se ha visto est&#xE1; en la Mozilla Developer Network (MDN): <a href="http://developer.mozilla.org" target="_blank">http://developer.mozilla.org</a></p>
+<p>Un truco para acceder m&#xE1;s r&#xE1;pidamente a la MDN desde un buscador, es a&#xF1;adir <code>mdn</code> a cualquier b&#xFA;squeda:</p>
+<p><img src="images/search.png" alt="Buscador"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../0302-canvas/" class="navigation navigation-next navigation-unique" aria-label="Next page: Canvas">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Navegador y DOM","level":"1.4.1","depth":2,"next":{"title":"Canvas","level":"1.4.2","depth":2,"path":"03-javascript-en-el-navegador/0302-canvas/index.md","ref":"03-javascript-en-el-navegador/0302-canvas/index.md","articles":[]},"previous":{"title":"JavaScript en el navegador","level":"1.4","depth":1,"ref":"","articles":[{"title":"Navegador y DOM","level":"1.4.1","depth":2,"path":"03-javascript-en-el-navegador/0301-dom/index.md","ref":"03-javascript-en-el-navegador/0301-dom/index.md","articles":[]},{"title":"Canvas","level":"1.4.2","depth":2,"path":"03-javascript-en-el-navegador/0302-canvas/index.md","ref":"03-javascript-en-el-navegador/0302-canvas/index.md","articles":[]},{"title":"Ejercicios guiados","level":"1.4.3","depth":2,"path":"03-javascript-en-el-navegador/03-ejercicios/index.md","ref":"03-javascript-en-el-navegador/03-ejercicios/index.md","articles":[]},{"title":"Práctica","level":"1.4.4","depth":2,"path":"03-javascript-en-el-navegador/03-practica/index.md","ref":"03-javascript-en-el-navegador/03-practica/index.md","articles":[{"title":"Guía","level":"1.4.4.1","depth":3,"path":"03-javascript-en-el-navegador/03-practica/guia.md","ref":"03-javascript-en-el-navegador/03-practica/guia.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"es","gitbook":"*"},"file":{"path":"03-javascript-en-el-navegador/0301-dom/index.md","mtime":"2016-11-11T10:33:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-18T14:38:31.682Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

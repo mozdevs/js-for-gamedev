@@ -1,0 +1,975 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>El modelo de ejecución de JavaScript · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../02-ejercicios/" />
+    
+    
+    <link rel="prev" href="../0202-modelo-de-datos/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../01-intro/articulo.md">
+            
+                <span>
+            
+                    
+                    El entorno de trabajo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    JavaScript básico
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../0201-poo/">
+            
+                <a href="../0201-poo/">
+            
+                    
+                    Programación orientada a objetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../0202-modelo-de-datos/">
+            
+                <a href="../0202-modelo-de-datos/">
+            
+                    
+                    El modelo de datos de JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    El modelo de ejecución de JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-ejercicios/">
+            
+                <a href="../02-ejercicios/">
+            
+                    
+                    Ejercicios guiados
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-practica/">
+            
+                <a href="../02-practica/">
+            
+                    
+                    Práctica
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../02-practica/GUIDE.html">
+            
+                <a href="../02-practica/GUIDE.html">
+            
+                    
+                    Guía
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../02-practica/TDD.html">
+            
+                <a href="../02-practica/TDD.html">
+            
+                    
+                    TDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    JavaScript en el navegador
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../03-javascript-en-el-navegador/0301-dom/">
+            
+                <a href="../../03-javascript-en-el-navegador/0301-dom/">
+            
+                    
+                    Navegador y DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../03-javascript-en-el-navegador/0302-canvas/">
+            
+                <a href="../../03-javascript-en-el-navegador/0302-canvas/">
+            
+                    
+                    Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../03-javascript-en-el-navegador/03-ejercicios/index.md">
+            
+                <span>
+            
+                    
+                    Ejercicios guiados
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../03-javascript-en-el-navegador/03-practica/">
+            
+                <a href="../../03-javascript-en-el-navegador/03-practica/">
+            
+                    
+                    Práctica
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../03-javascript-en-el-navegador/03-practica/guia.html">
+            
+                <a href="../../03-javascript-en-el-navegador/03-practica/guia.html">
+            
+                    
+                    Guía
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado con GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >El modelo de ejecución de JavaScript</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="el-modelo-de-ejecuci&#xF3;n-de-javascript">El modelo de ejecuci&#xF3;n de JavaScript</h1>
+<p>JavaScript se caracteriza por presentar un <strong>modelo de ejecuci&#xF3;n as&#xED;ncrono</strong>, donde
+los resultados no se encuentran disposibles inmediatamente, sino que lo
+estar&#xE1;n en un futuro.</p>
+<h2 id="&#xE1;mbito-y-hoisting">&#xC1;mbito y <em>hoisting</em></h2>
+<p>Como en muchos lenguajes, los nombres de las variables pueden reutilizarse y
+guardar valores distintos, siempre y cuando se encuentren en <strong>&#xE1;mbitos
+distintos</strong>.</p>
+<p>El &#xE1;mbito o <em>scope</em> de una variable es la porci&#xF3;n de c&#xF3;digo donde puede ser
+utilizada. Variables con el mismo nombre en &#xE1;mbitos distintos son variables
+distintas.</p>
+<p>El &#xE1;mbito en JavaScript es el <strong>cuerpo de la funci&#xF3;n</strong>, delimitado entre el
+par de llaves <code>{</code> y <code>}</code> que siguen a la lista de par&#xE1;metros de la funci&#xF3;n.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">introduction</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Esta es la variable text.</span>
+    <span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;I\&apos;m Ziltoid, the Omniscient.&apos;</span>;
+    greetings();
+    <span class="hljs-built_in">console</span>.log(text);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greetings</span>(<span class="hljs-params">list</span>) </span>{
+    <span class="hljs-comment">// Y esta es otra variable text DISTINTA.</span>
+    <span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;Greetings humans!&apos;</span>;
+    <span class="hljs-built_in">console</span>.log(text);
+}
+
+introduction();
+</code></pre>
+<p>En JavaScript, las funciones pueden definirse dentro de otras funciones y, de
+esta forma, anidar &#xE1;mbitos.</p>
+<p>El anidamiento de funciones es &#xFA;til cuando se quieren usar <strong>funciones
+auxiliares</strong>, normalmente cortas.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getEven</span>(<span class="hljs-params">list</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isEven</span>(<span class="hljs-params">n</span>) </span>{
+        <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">return</span> list.filter(isEven);
+}
+
+getEven([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]);
+</code></pre>
+<p>Como el &#xE1;mbito es el de la funci&#xF3;n, el mismo nombre en una funci&#xF3;n anidada se
+puede referir a dos cosas:</p>
+<p>1) <strong>Si se usa con <code>var</code></strong>, se estar&#xE1; declarando <strong>otra variable distinta</strong>:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">introduction</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Esta es una variable text.</span>
+    <span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;I\&apos;m Ziltoid, the Omniscient.&apos;</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greetings</span>(<span class="hljs-params">list</span>) </span>{
+        <span class="hljs-comment">// Y esta es OTRA variable text distinta.</span>
+        <span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;Greetings humans!&apos;</span>;
+        <span class="hljs-built_in">console</span>.log(text);
+    }
+
+    greetings();
+    <span class="hljs-built_in">console</span>.log(text);
+}
+
+introduction();
+</code></pre>
+<p>En el caso anterior, decimos que la variable <code>text</code> de la funci&#xF3;n anidada
+<code>greetings</code> <em>oculta</em> a la variable <code>text</code> de la funci&#xF3;n <code>introduction</code>.</p>
+<p>Recuerda que para introducir una nueva variable hay que declararla con
+<code>var</code> antes de usarla (o al mismo tiempo que se asigna).</p>
+<p>2) Si se omite la palabra <code>var</code>, no se crea una nueva variable, sino que se
+<strong>reutiliza</strong> la que ya exist&#xED;a.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">introduction</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// Esta es una variable text.</span>
+  <span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;I\&apos;m Ziltoid, the Omniscient.&apos;</span>;
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greetings</span>(<span class="hljs-params">list</span>) </span>{
+    <span class="hljs-comment">// Esta es la MISMA variable text que la de afuera.</span>
+    text = <span class="hljs-string">&apos;Greetings humans!&apos;</span>;
+    <span class="hljs-built_in">console</span>.log(text);
+  }
+
+  greetings();
+  <span class="hljs-built_in">console</span>.log(text);
+}
+
+introduction();
+</code></pre>
+<h3 id="hoisting"><em>Hoisting</em></h3>
+<p><em>Hoisting</em> significa &quot;elevaci&#xF3;n&quot;, y en el contexto de la programaci&#xF3;n nos
+referimos a un mecanismo que emplean algunos lenguajes respecto a la declaraci&#xF3;n
+de nombres.</p>
+<p>En JavaScript da igual en qu&#xE9; punto de la funci&#xF3;n se declara una variable.
+JavaScript asumir&#xE1; cualquier declaraci&#xF3;n como si ocurriese al comienzo de
+la funci&#xF3;n.</p>
+<p>Es decir que esto:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">10</span>; j++) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;i: &apos;</span>, i, <span class="hljs-string">&apos; j: &apos;</span>, j);
+        }
+    }
+}
+</code></pre>
+<p>Es equivalente a esto:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> i;
+    <span class="hljs-keyword">var</span> j;
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+        <span class="hljs-keyword">for</span> (j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">10</span>; j++) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;i: &apos;</span>, i, <span class="hljs-string">&apos; j: &apos;</span>, j);
+        }
+    }
+}
+</code></pre>
+<p>F&#xED;jate que JavaScript <strong><em>alza</em> la declaraci&#xF3;n</strong> de la variable (la lleva al
+principio), no la inicializaci&#xF3;n. Es por eso que el siguiente c&#xF3;digo no falla,
+pero imprime <code>undefined</code>:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(i);
+    <span class="hljs-keyword">var</span> i = <span class="hljs-number">5</span>;
+}
+f();
+</code></pre>
+<p>En <strong>modo estricto</strong>, usar una variable que no ha sido declarada produce
+un error.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(i);
+    i = <span class="hljs-number">5</span>;
+}
+f();
+</code></pre>
+<p>Con las <strong>declaraciones de funciones</strong> esto no pasa: cuando una declaraci&#xF3;n de
+funci&#xF3;n se alza, se alza entera, <em>definici&#xF3;n incluida</em>.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getEven</span>(<span class="hljs-params">list</span>) </span>{
+    <span class="hljs-keyword">return</span> list.filter(isEven);
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isEven</span>(<span class="hljs-params">n</span>) </span>{
+        <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+    }
+}
+
+getEven([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]);
+</code></pre>
+<p>Esto permite una forma de ordenar el c&#xF3;digo que quiz&#xE1; sea m&#xE1;s clara, situando
+las funciones auxiliares a continuaci&#xF3;n de las funciones que las utilizan.</p>
+<p>As&#xED;, viendo s&#xF3;lo la primera l&#xED;nea de la funci&#xF3;n, ya podemos conocer qu&#xE9; es lo
+que realiza.</p>
+<pre><code class="lang-js">    <span class="hljs-keyword">return</span> list.filter(isEven);
+</code></pre>
+<p>Y, si a&#xFA;n tenemos dudas, podemos seguir leyendo e investigar qu&#xE9; hace la funci&#xF3;n
+auxiliar.</p>
+<pre><code class="lang-js">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isEven</span>(<span class="hljs-params">n</span>) </span>{
+        <span class="hljs-keyword">return</span> n % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+    }
+</code></pre>
+<p>N&#xF3;tese que para que esta manera de escribir c&#xF3;digo sea clara, el nombre que
+utilicemos en las funciones auxiliares tiene que ser adecuado, descriptivo, y
+dar una pista sobre cu&#xE1;l es el valor de retorno.</p>
+<h2 id="closures"><em>Closures</em></h2>
+<p>Las funciones son datos y se crean cada vez que se encuentra una instrucci&#xF3;n
+<code>function</code>. De esta forma, podemos crear una funci&#xF3;n que devuelva funciones.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">buildFunction</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-number">42</span>; };
+}
+
+<span class="hljs-keyword">var</span> f = buildFunction();
+<span class="hljs-keyword">var</span> g = buildFunction();
+
+<span class="hljs-keyword">typeof</span> f === <span class="hljs-string">&apos;function&apos;</span>;
+<span class="hljs-keyword">typeof</span> g === <span class="hljs-string">&apos;function&apos;</span>;
+
+f();
+g(); <span class="hljs-comment">// Las funciones hacen lo mismo...</span>
+
+f !== g; <span class="hljs-comment">// ...pero NO son la misma funci&#xF3;n</span>
+</code></pre>
+<p>Por s&#xED; solo, este no es un mecanismo muy potente, pero sabiendo que una funci&#xF3;n
+anidada puede acceder a las variables de los &#xE1;mbitos superiores, podemos hacer
+algo as&#xED;:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newDie</span>(<span class="hljs-params">sides</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * sides) + <span class="hljs-number">1</span>;
+  };
+}
+<span class="hljs-keyword">var</span> d100 = newDie(<span class="hljs-number">100</span>);
+<span class="hljs-keyword">var</span> d20 = newDie(<span class="hljs-number">20</span>);
+
+d100 !== d20; <span class="hljs-comment">// distintas, creadas en dos llamadas distintas a newDie.</span>
+
+d100();
+d20();
+</code></pre>
+<p>En JavaScript, las funciones <strong>retienen el acceso a las variables en &#xE1;mbitos
+superiores</strong>. Una funci&#xF3;n que se refiere a alguna de las variables en &#xE1;mbitos
+superiores se denomina <strong><em>closure</em></strong> o clausura.</p>
+<p>Esto <strong>no afecta al valor de <code>this</code></strong>, que seguir&#xE1; siendo el destinatario del
+mensaje.</p>
+<h3 id="m&#xE9;todos-closures-y-this">M&#xE9;todos, <em>closures</em> y <code>this</code></h3>
+<p>Considera el siguiente ejemplo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> diceUtils = {
+    history: [], <span class="hljs-comment">// lleva el hist&#xF3;rico de tiradas.</span>
+
+    newDie: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">sides</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">die</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> result = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * sides) + <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">this</span>.history.push([<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), sides, result]);
+            <span class="hljs-keyword">return</span> result;
+        }
+    }
+}
+</code></pre>
+<p>La intenci&#xF3;n es poder crear dados y llevar un registro de todas las tiradas que
+se hagan con estos dados.</p>
+<p>Sin embargo, esto no funciona:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> d10 = diceUtils.newDie(<span class="hljs-number">10</span>);
+d10(); <span class="hljs-comment">// &#xA1;error!</span>
+</code></pre>
+<p>Y es as&#xED; porque <strong><code>this</code> siempre es el destinatario del mensaje</strong> y <code>d10</code> se
+est&#xE1; llamando como si fuera una funci&#xF3;n y no un m&#xE9;todo.</p>
+<p>Recuerda que podemos hacer que cualquier funci&#xF3;n tomara un valor forzoso como
+<code>this</code> con <code>.apply()</code>; por lo que esto s&#xED; funciona, pero no es muy conveniente:</p>
+<pre><code class="lang-js">d10.apply(diceUtils);
+d10.apply(diceUtils);
+diceUtils.history;
+</code></pre>
+<p>Lo que tenemos que hacer es que la funci&#xF3;n <code>die</code> dentro de <code>newDie</code> se refiera
+al <code>this</code> del &#xE1;mbito superior, no al suyo.</p>
+<p>Puedes lograr esto de dos maneras. La primera es un mero juego de variables,
+guardando el <code>this</code> en una variable auxiliar (en este caso, <code>self</code>):</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> diceUtils = {
+    history: [], <span class="hljs-comment">// Lleva el hist&#xF3;rico de dados.</span>
+
+    newDie: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">sides</span>) </span>{
+        <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>; <span class="hljs-comment">// self es ahora el destinatario de newDie.</span>
+
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">die</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> result = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * sides) + <span class="hljs-number">1</span>;
+            <span class="hljs-comment">// Usando self nos referimos al destinatario de newDie.</span>
+            self.history.push([<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), sides, result]);
+            <span class="hljs-keyword">return</span> result;
+        }
+    }
+}
+</code></pre>
+<p>Esto s&#xED; funciona y es mucho m&#xE1;s conveniente:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> d10 = diceUtils.newDie(<span class="hljs-number">10</span>);
+<span class="hljs-keyword">var</span> d6 = diceUtils.newDie(<span class="hljs-number">6</span>);
+d10();
+d6();
+d10();
+diceUtils.history;
+</code></pre>
+<p>La segunda forma es usando el <strong>m&#xE9;todo <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind" target="_blank"><code>bind</code></a></strong> de las funciones.</p>
+<p>El m&#xE9;todo <code>bind</code> de una funci&#xF3;n devuelve otra funci&#xF3;n cuyo <code>this</code> ser&#xE1; el
+primer par&#xE1;metro de <code>bind</code>. De este modo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> diceUtils = {
+    history: [], <span class="hljs-comment">// Lleva el hist&#xF3;rico de dados.</span>
+
+    newDie: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">sides</span>) </span>{
+        <span class="hljs-keyword">return</span> die.bind(<span class="hljs-keyword">this</span>); <span class="hljs-comment">// una nueva funci&#xF3;n que llamar&#xE1; a die con su</span>
+                               <span class="hljs-comment">// destinatario establecido al primer par&#xE1;metro.</span>
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">die</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> result = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * sides) + <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">this</span>.history.push([<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), sides, result]);
+            <span class="hljs-keyword">return</span> result;
+        }
+    }
+}
+</code></pre>
+<p>Las dos formas son ampliamente utilizadas, pero la segunda se ve escrita
+muchas veces de este modo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> diceUtils = {
+    history: [], <span class="hljs-comment">// Lleva el hist&#xF3;rico de dados.</span>
+
+    newDie: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">sides</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">die</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> result = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * sides) + <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">this</span>.history.push([<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), sides, result]);
+            <span class="hljs-keyword">return</span> result;
+        }.bind(<span class="hljs-keyword">this</span>); <span class="hljs-comment">// el bind sigue a la expresi&#xF3;n de funci&#xF3;n.</span>
+    }
+}
+</code></pre>
+<h2 id="m&#xF3;dulos">M&#xF3;dulos</h2>
+<p>Esta secci&#xF3;n presenta la caracter&#xED;stica <strong>m&#xF3;dulos</strong>, que es espec&#xED;fica de Node.</p>
+<p>Una de las principales desventajas de JavaScript (<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/import" target="_blank">hasta la pr&#xF3;xima versi&#xF3;n</a>)
+es que no hay forma de organizar el c&#xF3;digo en m&#xF3;dulos.</p>
+<p>Los m&#xF3;dulos sirven para aislar funcionalidad relacionada: tipos, funciones,
+constantes, configuraci&#xF3;n&#x2026;</p>
+<p>Node <em>s&#xED; tiene m&#xF3;dulos</em> y, afortunadamente, existen <strong>herramientas que simulan
+m&#xF3;dulos</strong> como los de Node en el navegador.</p>
+<p>En Node, los ficheros JavaScript acabados en <code>.js</code> son m&#xF3;dulos. Node nos permite
+exponer o <strong>exportar funcionalidad</strong> de un m&#xF3;dulo, poni&#xE9;ndola dentro del objeto
+<code>module.exports</code>:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// En diceUtils.js</span>
+<span class="hljs-meta">&quot;use strict&quot;</span>; <span class="hljs-comment">// pone el m&#xF3;dulo en modo estricto.</span>
+
+<span class="hljs-keyword">var</span> history = [];
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newDie</span>(<span class="hljs-params">sides</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">die</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> result = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * sides) + <span class="hljs-number">1</span>;
+        history.push([<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), sides, result]);
+        <span class="hljs-keyword">return</span> result;
+    };
+}
+
+<span class="hljs-comment">// &#xA1;Lo que se exporta realmente es el objeto module.exports!</span>
+<span class="hljs-built_in">module</span>.exports.newDie = newDie;
+<span class="hljs-built_in">module</span>.exports.history = history;
+</code></pre>
+<p>Realmente, lo que se exporta es <strong>siempre <code>module.exports</code></strong>, que en principio
+es un objeto vac&#xED;o:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span>.exports;
+<span class="hljs-built_in">module</span>.exports;
+</code></pre>
+<p>Ahora podemos ahora <strong>importar ese m&#xF3;dulo</strong> desde otro:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// En cthulhuRpg.js</span>
+<span class="hljs-meta">&quot;use strict&quot;</span>;
+
+<span class="hljs-keyword">var</span> diceUtils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./diceUtils&apos;</span>);
+<span class="hljs-keyword">var</span> d100 = diceUtils.newDie(<span class="hljs-number">100</span>);
+
+<span class="hljs-keyword">var</span> howard = {
+    sanity: <span class="hljs-number">45</span>,
+    sanityCheck: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">if</span> (d100() &lt;= <span class="hljs-keyword">this</span>.sanity) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Horrible, pero lo superar&#xE9;. Estuvo cerca.&apos;</span>);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-built_in">console</span>.log(
+                <span class="hljs-string">&apos;&#xA1;Ph\&apos;nglui mglw\&apos;nafh Cthulhu R\&apos;lyeh wgah\&apos;nagl fhtagn!&apos;</span>);
+        }
+    }
+};
+howard.sanityCheck();
+</code></pre>
+<p>Para importar un m&#xF3;dulo desde otro hay que pasar a <a href="https://nodejs.org/api/modules.html#modules_module_require_id" target="_blank"><code>require</code></a>
+la <strong>ruta relativa</strong> hasta el fichero del m&#xF3;dulo que queremos importar.</p>
+<p>Si en lugar de una ruta, pasamos un nombre, accederemos a la <strong>funcionalidad
+que viene por defecto</strong> con Node (los m&#xF3;dulos que forman parte de la librer&#xED;a
+est&#xE1;ndar, como <code>path</code> o <code>fs</code>) o la que instalemos de terceras partes (por
+ejemplo, m&#xF3;dulos instalados con el gestor de paquetes npm). Usaremos esta forma
+en un par de ocasiones m&#xE1;s adelante.</p>
+<h2 id="diferencias-entre-&#xE1;mbitos-en-node-y-en-el-navegador">Diferencias entre &#xE1;mbitos en Node y en el navegador</h2>
+<p>Se ha dicho que el &#xE1;mbito en JavaScript es equivalente a la funci&#xF3;n, pero
+sabemos que podemos abrir una consola o un fichero y empezar a declarar
+variables sin necesidad de escribir una funci&#xF3;n.</p>
+<p>Esto es as&#xED; porque estamos usando el <strong>&#xE1;mbito global</strong>. El &#xE1;mbito global est&#xE1;
+disponible tanto en el navegador como en Node.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Esta es una variable text en el &#xE1;mbito GLOBAL.</span>
+<span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;I\&apos;m Ziltoid, the Omniscient.&apos;</span>;
+
+<span class="hljs-comment">// Esta es una funci&#xF3;n en el &#xE1;mbito GLOBAL.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">greetings</span>(<span class="hljs-params">list</span>) </span>{
+    <span class="hljs-comment">// Esta es OTRA variable text en el &#xE1;mbito de la funci&#xF3;n.</span>
+    <span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;Greetings humans!&apos;</span>;
+    <span class="hljs-built_in">console</span>.log(text);
+}
+
+greetings();
+<span class="hljs-built_in">console</span>.log(text);
+</code></pre>
+<p>Sin embargo, existe una peculiaridad en Node. El &#xE1;mbito global es realmente
+<em>local al fichero</em>. Esto quiere decir que:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// En a.js, text es visible &#xFA;nicamente dentro del FICHERO.</span>
+<span class="hljs-meta">&quot;use strict&quot;</span>;
+<span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;I\&apos;m Ziltoid, the Omniscient.&apos;</span>;
+
+<span class="hljs-comment">// En b.js, text es visible &#xFA;nicamente dentro del FICHERO.</span>
+<span class="hljs-meta">&quot;use strict&quot;</span>;
+<span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;Greetings humans!&apos;</span>;
+
+<span class="hljs-comment">// En una consola iniciada en el mismo directorio que a y b</span>
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./a&apos;</span>);
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./b&apos;</span>);
+text;
+</code></pre>
+<h2 id="programaci&#xF3;n-as&#xED;ncrona-y-eventos">Programaci&#xF3;n as&#xED;ncrona y eventos</h2>
+<p>Prueba el siguiente ejemplo (copia, pega y espera 5 segundos):</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> fiveSeconds = <span class="hljs-number">5</span> * <span class="hljs-number">1000</span>; <span class="hljs-comment">// en milisegundos.</span>
+
+<span class="hljs-comment">// Esto ocurre ahora.</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;T: &apos;</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+
+setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Esto ocurre pasados 5 segundos.</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;T + 5 segundos: &apos;</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+}, fiveSeconds);
+
+<span class="hljs-comment">// Esto ocurre inmediatamente despu&#xE9;s</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;T + delta: &apos;</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+</code></pre>
+<p>Como puedes comprobar, el mensaje se completa pasados 5 segundos porque lo que
+hace <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout" target="_blank"><code>setTimeout</code></a>
+es llamar a la funci&#xF3;n tan pronto como pasen el n&#xFA;mero de milisegundos
+indicados.</p>
+<p>Decimos que una funci&#xF3;n es un <strong><em>callback</em></strong> si se llama en alg&#xFA;n momento
+futuro &#x2013;es decir, <strong>as&#xED;ncronamente</strong>&#x2013; para informar de alg&#xFA;n resultado.</p>
+<p>En el ejemplo de <code>setTimeout</code>, el resultado es que ha pasado la cantidad de
+tiempo especificada.</p>
+<h3 id="eventos">Eventos</h3>
+<p>En esta secci&#xF3;n veremos el <strong>m&#xF3;dulo <code>readline</code></strong>, que es espec&#xED;fico de Node.</p>
+<p>La programaci&#xF3;n as&#xED;ncrona en JavaScript y otros lenguajes se usa para <strong>modelar
+eventos</strong>, principalmente esperas por entrada y salida. En otras palabras:
+hitos que ocurren pero que no sabemos <em>cu&#xE1;ndo</em> ocurren.</p>
+<p>La entrada y salida &#x2013;a partir de ahora IO (del ingl&#xE9;s <em>input / output</em>)&#x2013; no
+s&#xF3;lo supone lectura de ficheros o peticiones a la red, tambi&#xE9;n incluye esperar
+una acci&#xF3;n del usuario.</p>
+<p>Como ejemplo, vamos a implementar una consola de di&#xE1;logo por l&#xED;neas. Usaremos el
+m&#xF3;dulo <a href="https://nodejs.org/api/readline.html" target="_blank"><code>readline</code></a>, que es parte de la
+librer&#xED;a est&#xE1;ndar que viene con Node:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// En conversational.js</span>
+<span class="hljs-meta">&quot;use strict&quot;</span>;
+
+<span class="hljs-keyword">var</span> readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;readline&apos;</span>);
+
+<span class="hljs-keyword">var</span> cmd = readline.createInterface({
+    input: process.stdin,  <span class="hljs-comment">// as&#xED; referenciamos la consola como entrada.</span>
+    output: process.stdout, <span class="hljs-comment">// y as&#xED;, como salida.</span>
+    prompt: <span class="hljs-string">&apos;(&#x256F;&#xB0;&#x25A1;&#xB0;&#xFF09;&#x256F; &apos;</span> <span class="hljs-comment">// lo que aparece para esperar la entrada del usuario.</span>
+});
+</code></pre>
+<p>Lanza ese programa con Node y ver&#xE1;s que no hace nada, <strong>pero tampoco termina</strong>.
+Esto es t&#xED;pico de los programas as&#xED;ncronos: el programa queda esperando a que
+pase algo. Pulsa <code>ctrl+c</code> para terminar el programa.</p>
+<p>Ahora prueba:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// A&#xF1;ade al final de conversational.js</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Escribe algo y pulsa enter&apos;</span>);
+cmd.prompt(); <span class="hljs-comment">// pide que el usuario escriba algo.</span>
+
+cmd.on(<span class="hljs-string">&apos;line&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">input</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Has dicho &quot;&apos;</span> + input  + <span class="hljs-string">&apos;&quot;&apos;</span>);
+    cmd.prompt(); <span class="hljs-comment">// pide que el usuario escriba algo.</span>
+});
+</code></pre>
+<p>Lo que has conseguido es <strong>escuchar el evento <code>line</code></strong> que se produce
+<a href="https://nodejs.org/api/readline.html#readline_event_line" target="_blank">cada vez que en la entrada se recibe un caracter de cambio de l&#xED;nea</a>.</p>
+<p>Hablando de eventos, la funci&#xF3;n que se ejecuta as&#xED;ncronamente recibe el nombre de
+<strong><em>listener</em></strong>, pero tampoco es raro que se la llame <em>callback</em>.</p>
+<p>Se habla de &quot;<strong>registrar un <em>listener</em></strong> para un evento&quot;, &quot;subscribirse a un
+evento&quot; o &quot;escuchar un evento&quot; a utilizar el mecanismo que permite asociar la
+ejecuci&#xF3;n de una funci&#xF3;n con dicho evento.</p>
+<p>Con todo, a&#xFA;n no se puede salir del programa anterior. Necesitamos algunos
+cambios m&#xE1;s:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// A&#xF1;ade a conversational.js</span>
+cmd.on(<span class="hljs-string">&apos;line&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">input</span>) </span>{
+    <span class="hljs-keyword">if</span> (input === <span class="hljs-string">&apos;salir&apos;</span>) {
+        cmd.close();
+    }
+});
+
+cmd.on(<span class="hljs-string">&apos;close&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xA1;Nos vemos!&apos;</span>);
+    process.exit(<span class="hljs-number">0</span>); <span class="hljs-comment">// sale de node.</span>
+});
+</code></pre>
+<p>Hemos a&#xF1;adido un segundo <em>listener</em> al evento <code>line</code> y <strong>ambos se ejecutar&#xE1;n</strong>.
+El primero gestiona el funcionamiento por defecto (que es repetir lo que el
+usuario ha introducido) y el segundo trata espec&#xED;ficamente el comando <code>salir</code>.</p>
+<p>Si la l&#xED;nea es exactamente <code>salir</code>, cerraremos la interfaz de l&#xED;nea de
+comandos. Esto produce un evento <code>close</code> y, cuando lo recibamos, utilizaremos el
+<em>listener</em> de ese evento para terminar el programa.</p>
+<p>El m&#xE9;todo <code>on</code> es un segundo nombre para <a href="https://nodejs.org/api/events.html#events_emitter_addlistener_eventname_listener" target="_blank"><code>addListener</code></a>.</p>
+<p>Igual que podemos a&#xF1;adir un <em>listener</em>, tambi&#xE9;n podemos eliminarlo con
+<a href="https://nodejs.org/api/events.html#events_emitter_removelistener_eventname_listener" target="_blank"><code>removeListener</code></a>,
+y quitarlos todos con
+<a href="https://nodejs.org/api/events.html#events_emitter_removealllisteners_eventname" target="_blank"><code>removeAllListeners</code></a>.</p>
+<p>Podemos escuchar un evento <strong>s&#xF3;lo una vez</strong> con
+<a href="https://nodejs.org/api/events.html#events_emitter_once_eventname_listener" target="_blank"><code>once</code></a>.</p>
+<h3 id="emisores-de-eventos">Emisores de eventos</h3>
+<p>Ahora veremos la clase <code>EventEmitter</code>, que tambi&#xE9;n es espec&#xED;fica de Node.</p>
+<p>Los eventos no son un mecanismo est&#xE1;ndar de JavaScript. Son una forma
+conveniente de modelar determinados tipos de problema, pero un objeto JavaScript,
+por s&#xED; solo, <strong>no tiene API para emitir eventos</strong>.</p>
+<p>En Node contamos con diversas alternativas con el fin de que los objetos emitan
+eventos:</p>
+<ul>
+<li><p>Implementar nuestra propia API de eventos.</p>
+</li>
+<li><p>Hacer que nuestros objetos <strong>usen</strong> una instancia de <code>EventEmitter</code>.</p>
+</li>
+<li><p>Hacer que nuestros objetos <strong>sean instancias</strong> de <code>EventEmitter</code>.</p>
+</li>
+</ul>
+<p>La primera supondr&#xED;a crear nuestro propio m&#xE9;todo <code>on</code> y los mecanismos para
+emitir eventos. La segunda y la tercera usan la clase
+<a href="https://nodejs.org/api/events.html#events_class_eventemitter" target="_blank"><code>EventEmitter</code></a>,
+que ya implementa esta API.</p>
+<p>Este es un ejemplo de la opci&#xF3;n 3 &#x2013;el cual aprovechamos para repasar la
+herencia:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> events = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;events&apos;</span>);
+<span class="hljs-keyword">var</span> EventEmitter = events.EventEmitter;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ship</span>(<span class="hljs-params"></span>) </span>{
+    EventEmitter.apply(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>._ammunition = <span class="hljs-string">&apos;laser charges&apos;</span>;
+}
+
+Ship.prototype = <span class="hljs-built_in">Object</span>.create(EventEmitter.prototype);
+Ship.prototype.constructor = Nave;
+
+<span class="hljs-keyword">var</span> ship = <span class="hljs-keyword">new</span> Ship();
+ship.on; <span class="hljs-comment">// &#xA1;existe!</span>
+</code></pre>
+<p>Ahora que la nave puede emitir eventos, vamos a hacer que dispare y que emita un
+evento.</p>
+<pre><code class="lang-js">Ship.prototype.shoot = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;PICHIUM!&apos;</span>);
+    <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">&apos;shoot&apos;</span>, <span class="hljs-keyword">this</span>._ammunition); <span class="hljs-comment">// parte de la API de EventEmitter.</span>
+};
+
+ship.on(<span class="hljs-string">&apos;shoot&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">ammunition</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;CENTRO DE MANDO. La nave ha disparado:&apos;</span>, ammunition);
+});
+
+ship.shoot();
+</code></pre>
+<p><strong>Emitir un evento</strong> consiste en llamar al m&#xE9;todo
+<a href="https://nodejs.org/api/events.html#events_emitter_emit_eventname_arg1_arg2" target="_blank"><code>emit</code></a>,
+que har&#xE1; que se ejecuten los <em>listeners</em> que escuchan tal evento.</p>
+<p>Los eventos son increiblemente &#xFA;tiles para modelar interfaces de usuario de
+forma gen&#xE9;rica.</p>
+<p>Para ello, los modelos deben <strong>publicar</strong> qu&#xE9; les ocurre: c&#xF3;mo cambian, qu&#xE9;
+hacen&#x2026; Todo <strong>a base de eventos</strong>. Las interfaces de usuario se
+<strong>suscribir&#xE1;n</strong> a estos eventos y proporcionar&#xE1;n la informaci&#xF3;n visual adecuada.</p>
+<p>Este modelo permite adem&#xE1;s que varias interfaces de usuario funcionen al mismo
+tiempo, todas escuchando los mismos eventos. Sin embargo, tambi&#xE9;n permite
+dividir la interfaz en otras m&#xE1;s especializadas, cada una escuchando un
+determinado conjunto de eventos.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0202-modelo-de-datos/" class="navigation navigation-prev " aria-label="Previous page: El modelo de datos de JavaScript">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../02-ejercicios/" class="navigation navigation-next " aria-label="Next page: Ejercicios guiados">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"El modelo de ejecución de JavaScript","level":"1.3.3","depth":2,"next":{"title":"Ejercicios guiados","level":"1.3.4","depth":2,"path":"02-javascript/02-ejercicios/index.md","ref":"02-javascript/02-ejercicios/index.md","articles":[]},"previous":{"title":"El modelo de datos de JavaScript","level":"1.3.2","depth":2,"path":"02-javascript/0202-modelo-de-datos/index.md","ref":"02-javascript/0202-modelo-de-datos/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"es","gitbook":"*"},"file":{"path":"02-javascript/0203-modelo-de-ejecucion/index.md","mtime":"2016-11-17T11:08:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-18T14:38:31.682Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1391 @@
+
+<!DOCTYPE HTML>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>El modelo de datos de JavaScript · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../0203-modelo-de-ejecucion/" />
+    
+    
+    <link rel="prev" href="../0201-poo/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Escribe para buscar" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../01-intro/articulo.md">
+            
+                <span>
+            
+                    
+                    El entorno de trabajo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    JavaScript básico
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../0201-poo/">
+            
+                <a href="../0201-poo/">
+            
+                    
+                    Programación orientada a objetos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    El modelo de datos de JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../0203-modelo-de-ejecucion/">
+            
+                <a href="../0203-modelo-de-ejecucion/">
+            
+                    
+                    El modelo de ejecución de JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-ejercicios/">
+            
+                <a href="../02-ejercicios/">
+            
+                    
+                    Ejercicios guiados
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-practica/">
+            
+                <a href="../02-practica/">
+            
+                    
+                    Práctica
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../02-practica/GUIDE.html">
+            
+                <a href="../02-practica/GUIDE.html">
+            
+                    
+                    Guía
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../02-practica/TDD.html">
+            
+                <a href="../02-practica/TDD.html">
+            
+                    
+                    TDD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    JavaScript en el navegador
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../03-javascript-en-el-navegador/0301-dom/">
+            
+                <a href="../../03-javascript-en-el-navegador/0301-dom/">
+            
+                    
+                    Navegador y DOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../03-javascript-en-el-navegador/0302-canvas/">
+            
+                <a href="../../03-javascript-en-el-navegador/0302-canvas/">
+            
+                    
+                    Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../03-javascript-en-el-navegador/03-ejercicios/index.md">
+            
+                <span>
+            
+                    
+                    Ejercicios guiados
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../03-javascript-en-el-navegador/03-practica/">
+            
+                <a href="../../03-javascript-en-el-navegador/03-practica/">
+            
+                    
+                    Práctica
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../03-javascript-en-el-navegador/03-practica/guia.html">
+            
+                <a href="../../03-javascript-en-el-navegador/03-practica/guia.html">
+            
+                    
+                    Guía
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publicado con GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >El modelo de datos de JavaScript</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="el-modelo-de-datos-de-javascript">El modelo de datos de JavaScript</h1>
+<p>Conocer un lenguaje de programaci&#xF3;n se traduce b&#xE1;sicamente en conocer su
+sintaxis, modelo de datos, modelo de ejecuci&#xF3;n y estilo.</p>
+<p>Durante esta lecci&#xF3;n, <a href="../0201-programacion-orientada-a-objetos/articulo.md">codificar&#xE1;s en JavaScript lo aprendido en la lecci&#xF3;n
+anterior</a>.</p>
+<p>No todos los lenguajes permiten una transcripci&#xF3;n 1 a 1 de los conceptos que
+recogemos en el modelo. Por ejemplo, JavaScript no tiene un mecanismo para crear
+tipos nuevos, pero tiene otros mecanismos que permiten implementar una
+funcionalidad similar.</p>
+<h2 id="experimentando-con-javascript">Experimentando con JavaScript</h2>
+<p>Vas a experimentar con JavaScript, as&#xED; que necesitar&#xE1;s una forma r&#xE1;pida de
+inspeccionar expresiones y obtener feedback de lo que est&#xE1;s haciendo. La mejor
+forma es utilizar la <strong>consola de Node</strong>. Por ejemplo:</p>
+<pre><code class="lang-sh">$ node --use_strict
+</code></pre>
+<p>La opci&#xF3;n <code>--use_strict</code> activa el modo estricto de JavaScript, que simplifica
+algunos aspectos del lenguaje. El modo estricto recorta algunas caracter&#xED;sticas,
+pero los beneficios son mayores que las p&#xE9;rdidas.</p>
+<p>Ahora puedes probar a introducir algunas expresiones:</p>
+<pre><code class="lang-sh">&gt; 40 + 2
+42
+&gt; var point = { x: 1, y: 1 };
+undefined
+&gt; point
+{ x: 1, y: 1 }
+&gt; point.x
+1
+</code></pre>
+<p>Para limpiar la pantalla presiona <code>ctrl+l</code>. Para salir de Node, presiona
+<code>ctrl+c</code> dos veces seguidas. Si escribiendo una expresi&#xF3;n Node parece no
+responder, presiona <code>ctrl+c</code> una vez para cancelar la expresi&#xF3;n.</p>
+<p>Si no quieres lidiar con la consola de Node, siempre puedes escribir un
+programa y usar <code>console.log()</code> para mostrar expresiones por pantalla.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// en el fichero prueba.js</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">40</span> + <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> point = { x: <span class="hljs-number">1</span>, y: <span class="hljs-number">1</span> };
+<span class="hljs-built_in">console</span>.log(point);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Coordenada X:&apos;</span>, point.x);
+</code></pre>
+<p>Ahora ejecuta el programa con Node:</p>
+<pre><code class="lang-sh">$ node prueba.js
+42
+{ x: 1, y: 1 }
+Coordenada X: 1
+</code></pre>
+<p>Esta lecci&#xF3;n asume que utilizar&#xE1;s una &#xFA;nica sesi&#xF3;n de la consola de Node, a
+menos que se indique lo contrario.</p>
+<p>Para la mayor&#xED;a de los ejemplos, puedes mantener la misma sesi&#xF3;n abierta, pero
+si te encuentras con algo inesperado, antes de nada prueba a reiniciar la
+consola. Para reiniciar la consola tienes que <strong>salir y volver a entrar</strong>.</p>
+<p>Lo mejor es que se tenga este texto abierto en una ventana (o impreso), y la
+consola de Node en otra.</p>
+<h2 id="tipos-primitivos">Tipos primitivos</h2>
+<p>Se llaman <strong>tipos primitivos</strong> a aquellos que vienen con el lenguaje y que
+permiten la creaci&#xF3;n de nuevos tipos m&#xE1;s complejos. En JavaScript, los tipos
+primitivos son: <strong>booleanos</strong>, <strong>n&#xFA;meros</strong>, <strong>cadenas</strong> (<em>strings</em>), <strong>objetos</strong> y
+<strong>funciones</strong>.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// En los comentarios hay m&#xE1;s valores posibles para cada uno de los tipos.</span>
+<span class="hljs-keyword">var</span> bool = <span class="hljs-literal">true</span>; <span class="hljs-comment">// false</span>
+<span class="hljs-keyword">var</span> number = <span class="hljs-number">1234.5</span>; <span class="hljs-comment">// 42, -Infinity, +Infinity</span>
+<span class="hljs-keyword">var</span> text = <span class="hljs-string">&apos;I want to be a pirate!&apos;</span>; <span class="hljs-comment">// &quot;I want to be a pirate&quot;</span>
+<span class="hljs-keyword">var</span> object = {}; <span class="hljs-comment">// [], null</span>
+<span class="hljs-keyword">var</span> code = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-number">42</span>; };
+</code></pre>
+<p>Los puedes reconocer porque responden de manera distinta al operador <code>typeof</code>.
+Observa c&#xF3;mo los tipos son cadenas de texto:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">typeof</span> <span class="hljs-literal">true</span>;
+<span class="hljs-keyword">typeof</span> <span class="hljs-number">1234.5</span>;
+<span class="hljs-keyword">typeof</span> <span class="hljs-string">&apos;I want to be a pirate!&apos;</span>;
+<span class="hljs-keyword">typeof</span> {};
+<span class="hljs-keyword">typeof</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-number">42</span>; };
+</code></pre>
+<p>En JavaScript se puede declarar una variable y no asignarle ning&#xFA;n valor. En
+este caso, el tipo de la variable ser&#xE1; <code>&apos;undefined&apos;</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> x;
+<span class="hljs-keyword">typeof</span> x;
+x = <span class="hljs-number">5</span>; <span class="hljs-comment">// tan pronto como le demos un valor, el tipo dejar&#xE1; de ser undefined.</span>
+<span class="hljs-keyword">typeof</span> x;
+</code></pre>
+<h3 id="objetos-en-javascript">Objetos en JavaScript</h3>
+<p>De entre todos los tipos, vamos a prestar especial atenci&#xF3;n a aquel cuyos
+valores permiten la <strong>composici&#xF3;n</strong> con otros valores. Estos son los de tipo <code>&apos;object&apos;</code> (objeto).</p>
+<p>En JavaScript, los objetos son colecciones de valores etiquetados. Por ejemplo,
+si queremos representar el punto <code>(10, 15)</code> del plano XY, podemos etiquetar el
+valor en el eje X con la cadena <code>&apos;x&apos;</code> y el valor en el eje Y con la cadena
+<code>&apos;y&apos;</code>.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> point = { <span class="hljs-string">&apos;x&apos;</span>: <span class="hljs-number">10</span>, <span class="hljs-string">&apos;y&apos;</span>: <span class="hljs-number">15</span> };
+</code></pre>
+<p>Cada par etiqueta y valor se llama <strong>propiedad del objeto</strong>. No es algo
+estricto, pero cuando se habla de las propiedades de un objeto, se suele
+referir a los valores; mientras que para hablar de las etiquetas se suele
+decir <strong>nombre de la propiedad</strong>.</p>
+<p>Si los nombres de las propiedades se escriben siguiendo las
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Identifier" target="_blank">reglas de formaci&#xF3;n de identificadores</a> en JavaScript, las
+comillas no son necesarias y podemos ahorr&#xE1;rnoslas.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> point = { x: <span class="hljs-number">10</span>, y: <span class="hljs-number">10</span> }; <span class="hljs-comment">// mucho m&#xE1;s conveniente.</span>
+</code></pre>
+<p>Este es el caso m&#xE1;s frecuente, el <em>recomendado</em>, y el que usaremos a los largo
+de este material; pero conviene saber que, por debajo, <strong>el nombre de la
+propiedad es una cadena</strong>.</p>
+<p>Para acceder a las propiedades de un objeto, usamos los corchetes <code>[</code> <code>]</code> con el
+nombre de la propiedad entre estos:</p>
+<pre><code class="lang-js">point[<span class="hljs-string">&apos;x&apos;</span>];
+point[<span class="hljs-string">&apos;y&apos;</span>];
+</code></pre>
+<p>De nuevo, si seguimos las reglas de formaci&#xF3;n de identificadores, podemos usar
+la <strong>notaci&#xF3;n de punto</strong> para acceder a la propiedad, mucho m&#xE1;s r&#xE1;pida de
+escribir:</p>
+<pre><code class="lang-js">point.x;
+point.y;
+</code></pre>
+<p>Para cambiar el valor de una propiedad se utiliza el operador de asignaci&#xF3;n:</p>
+<pre><code class="lang-js">point.x = <span class="hljs-number">0</span>;
+point.y = <span class="hljs-number">0</span>;
+point[<span class="hljs-string">&apos;x&apos;</span>] = <span class="hljs-number">0</span>;
+point[<span class="hljs-string">&apos;y&apos;</span>] = <span class="hljs-number">0</span>;
+</code></pre>
+<p>Si se accede a una <strong>propiedad que no existe</strong>, obtendras el valor <code>undefined</code>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> label = point.label; <span class="hljs-comment">// ser&#xE1; undefined. Compru&#xE9;balo con typeof.</span>
+</code></pre>
+<p>En cualquier momento podemos crear propiedades nuevas asign&#xE1;ndoles algo.</p>
+<pre><code class="lang-js">point.label = <span class="hljs-string">&apos;origin&apos;</span>;
+point;
+</code></pre>
+<h3 id="arrays"><em>Arrays</em></h3>
+<p>Las listas o <strong><em>arrays</em></strong> son colecciones de <strong>datos ordenados</strong>.</p>
+<p>Por ejemplo, la lista de comandos de un men&#xFA; en un videojuego:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> menu = [<span class="hljs-string">&apos;Attack&apos;</span>, <span class="hljs-string">&apos;Defense&apos;</span>, <span class="hljs-string">&apos;Inventory&apos;</span>];
+</code></pre>
+<p>En este tipo de objetos, el orden importa. Para acceder a los distintos valores
+se utiliza el <strong>&#xED;ndice del elemento en la lista</strong>, entre corchetes. Los &#xED;ndices
+<em>comienzan en <code>0</code></em>, y no en <code>1</code>.</p>
+<pre><code class="lang-js">menu[<span class="hljs-number">0</span>];
+menu[<span class="hljs-number">1</span>];
+menu[<span class="hljs-number">2</span>];
+</code></pre>
+<p>Se puede consultar la longitud de un <em>array</em> accediendo a la propiedad <code>length</code>.</p>
+<pre><code class="lang-js">menu.length;
+</code></pre>
+<p>Se puede a&#xF1;adir un elemento al final del <em>array</em> llamando al m&#xE9;todo <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank"><code>push</code></a>:</p>
+<pre><code class="lang-js">menu.push(<span class="hljs-string">&apos;Magic&apos;</span>);
+</code></pre>
+<p>Tambi&#xE9;n se puede quitar un elemento por el final usando el m&#xE9;todo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop" target="_blank"><code>pop</code></a>:</p>
+<pre><code class="lang-js">menu.pop();
+</code></pre>
+<p>Se puede alterar un <em>array</em> (insertar o borrar elementos), en cualquier lugar,
+usando el m&#xE9;todo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" target="_blank"><code>splice</code></a>:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Inspecciona la lista tras cada operaci&#xF3;n.</span>
+menu = [<span class="hljs-string">&apos;Attack&apos;</span>, <span class="hljs-string">&apos;Defense&apos;</span>, <span class="hljs-string">&apos;Inventory&apos;</span>];
+menu.splice(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;Magic&apos;</span>); <span class="hljs-comment">// a&#xF1;ade Magic antes de Inventory.</span>
+menu.splice(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;Ench. Inventory&apos;</span>); <span class="hljs-comment">// reemplaza Magic and Inventory with Ench. Inventory.</span>
+menu.splice(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;Wait&apos;</span>); <span class="hljs-comment">// a&#xF1;ade Wait al principio de la lista.</span>
+</code></pre>
+<p>Como en el caso de los objetos, podemos cambiar cualquier valor en cualquier
+momento usando el operador de asignaci&#xF3;n.</p>
+<pre><code class="lang-js">menu[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;Special&apos;</span>; <span class="hljs-comment">// reemplaza Wait con Special</span>
+</code></pre>
+<p>Tambi&#xE9;n como en el caso de los objetos, podemos acceder a un valor que no existe
+y recuperarlo o asignarlo en cualquier momento.</p>
+<pre><code class="lang-js">menu;
+menu.length;
+<span class="hljs-keyword">var</span> item = menu[<span class="hljs-number">10</span>];
+<span class="hljs-keyword">typeof</span> item; <span class="hljs-comment">// ser&#xE1; undefined.</span>
+menu[<span class="hljs-number">10</span>] = <span class="hljs-string">&apos;Secret&apos;</span>;
+menu;
+menu.length;
+</code></pre>
+<p>Si asignamos a un &#xED;ndice por encima de la longitud actual, <strong>se extender&#xE1; el
+<em>array</em></strong> hasta ese &#xED;ndice.</p>
+<h4 id="distinguir-entre-objetos-y-arrays">Distinguir entre objetos y <em>arrays</em></h4>
+<p><em>Arrays</em> y objetos tienen tipo <code>&apos;object&apos;</code>, as&#xED; que se ha de usar el m&#xE9;todo
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank"><code>Array.isArray()</code></a>
+para distinguirlos.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> obj = {}; <span class="hljs-comment">// el objeto vac&#xED;o es tan v&#xE1;lido como cualquier otro.</span>
+<span class="hljs-keyword">var</span> arr = []; <span class="hljs-comment">// una lista sin elementos, como te puedes imaginar.</span>
+<span class="hljs-keyword">typeof</span> obj; <span class="hljs-comment">// ser&#xE1; object.</span>
+<span class="hljs-keyword">typeof</span> arr; <span class="hljs-comment">// ser&#xE1; object.</span>
+<span class="hljs-built_in">Array</span>.isArray(obj); <span class="hljs-comment">// ser&#xE1; false.</span>
+<span class="hljs-built_in">Array</span>.isArray(arr); <span class="hljs-comment">// ser&#xE1; true.</span>
+</code></pre>
+<h3 id="null"><code>null</code></h3>
+<p>Existe un &#xFA;ltimo valor para el tipo objeto, que es <code>null</code>. Este valor representa
+la <strong>ausencia de objeto</strong> y se suele utilizar para:</p>
+<ul>
+<li><p>En funciones en las que se pregunta por un objeto, indicar que no se ha
+encontrado tal objeto.</p>
+</li>
+<li><p>En relaciones de composici&#xF3;n, indicar que el objeto compuesto ya no necesita
+al objeto componente.</p>
+</li>
+</ul>
+<p>Por ejemplo, en un RPG, podemos preguntar por el siguiente enemigo vivo para
+comprobar si debemos continuar la batalla:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getNextAliveEnemy</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> nextEnemy;
+  <span class="hljs-keyword">if</span> (aliveEnemies.length &gt; <span class="hljs-number">0</span>) {
+    nextEnemy = aliveEnemies[<span class="hljs-number">0</span>];
+  }
+  <span class="hljs-keyword">else</span> {
+    nextEnemy = <span class="hljs-literal">null</span>;
+  }
+  <span class="hljs-keyword">return</span> nextEnemy;
+}
+</code></pre>
+<p>O bien, sup&#xF3;n la ficha de personaje de un h&#xE9;roe:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> hero = { sword: <span class="hljs-literal">null</span>, shield: <span class="hljs-literal">null</span> };
+hero.sword = { attack: <span class="hljs-number">20</span>, magic: <span class="hljs-number">5</span> }; <span class="hljs-comment">// coge una espada.</span>
+hero.sword = <span class="hljs-literal">null</span>; <span class="hljs-comment">// suelta la espada.</span>
+</code></pre>
+<h3 id="composici&#xF3;n-de-objetos">Composici&#xF3;n de objetos</h3>
+<p>Objetos y <em>arrays</em> permiten cualquier composici&#xF3;n de objetos. Es decir, sus
+valores pueden ser otros objetos y <em>arrays</em>, n&#xFA;meros, cadenas o funciones.</p>
+<p>El siguiente ejemplo muestra una posible ficha de personaje de un RPG:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> hero = {
+  name: <span class="hljs-string">&apos;Link&apos;</span>,
+  life: <span class="hljs-number">100</span>,
+  weapon: { kind: <span class="hljs-string">&apos;sword&apos;</span>, power: <span class="hljs-number">20</span>, magicPower: <span class="hljs-number">5</span> },
+  defense: { kind: <span class="hljs-string">&apos;shield&apos;</span>, power: <span class="hljs-number">5</span>, magicPower: <span class="hljs-number">0</span> },
+  <span class="hljs-comment">// Inventario por slots. Dos slots vac&#xED;os y un &#xFA;ltimo con 5 pociones.</span>
+  inventory: [
+    { item: <span class="hljs-literal">null</span>, count: <span class="hljs-number">0</span>},
+    { item: <span class="hljs-literal">null</span>, count: <span class="hljs-number">0</span>},
+    { item: { kind: <span class="hljs-string">&apos;potion&apos;</span>, power: <span class="hljs-number">15</span> }, count: <span class="hljs-number">5</span>}
+  ]
+};
+</code></pre>
+<p>Algunas propiedades:</p>
+<pre><code class="lang-js">hero.name; <span class="hljs-comment">// el nombre del h&#xE9;roe</span>
+hero.weapon.kind; <span class="hljs-comment">// el tipo de arma</span>
+hero.inventory[<span class="hljs-number">0</span>]; <span class="hljs-comment">// el primer slot del inventario</span>
+hero.inventory[<span class="hljs-number">0</span>].item; <span class="hljs-comment">// qu&#xE9; hay en el primer slot del inventario</span>
+hero.inventory[<span class="hljs-number">2</span>].item.power; <span class="hljs-comment">// el poder del item del 3r slot del inventario</span>
+</code></pre>
+<h2 id="identidad-de-los-objetos">Identidad de los objetos</h2>
+<p>En JavaScript, el operador de igualdad es <code>===</code> (el triple igual). Esto permite
+comparar dos objetos y decidir si <strong>son iguales</strong>. Tambi&#xE9;n existe el operador de
+desigualdad <code>!==</code> que compara dos objetos y decide si <strong>no son iguales</strong>.</p>
+<p>Para los tipos <code>&apos;bool&apos;</code>, <code>&apos;string&apos;</code>, <code>&apos;number&apos;</code> y <code>&apos;undefined&apos;</code>, dos valores son
+iguales si tienen <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" target="_blank">la <strong>misma forma</strong></a>:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Todas estas comparaciones son verdaderas.</span>
+<span class="hljs-string">&quot;Hola&quot;</span> === <span class="hljs-string">&quot;Hola&quot;</span>;
+<span class="hljs-string">&quot;Hola&quot;</span> !== <span class="hljs-string">&quot;hola&quot;</span>;
+<span class="hljs-literal">true</span> === <span class="hljs-literal">true</span>;
+<span class="hljs-number">123</span> === <span class="hljs-number">123.0</span>;
+<span class="hljs-number">123</span> !== <span class="hljs-string">&quot;123&quot;</span>;
+<span class="hljs-number">123</span> === <span class="hljs-number">122</span> + <span class="hljs-number">1</span>; <span class="hljs-comment">// primero se resuelve la expresi&#xF3;n, luego se compara.</span>
+<span class="hljs-literal">undefined</span> === <span class="hljs-literal">undefined</span>;
+</code></pre>
+<p>Para el tipo <code>object</code>, dos objetos son iguales s&#xF3;lo si se refieren al mismo
+objeto:</p>
+<pre><code class="lang-js">({} !== {}); <span class="hljs-comment">// da igual la forma, esto son dos objetos distintos.</span>
+({} !== []);
+[] !== []; <span class="hljs-comment">// igual que antes.</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>] !== [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]; <span class="hljs-comment">// la forma da igual, los objetos son distintos.</span>
+<span class="hljs-literal">null</span> === <span class="hljs-literal">null</span>; <span class="hljs-comment">// pero con null funciona porque s&#xF3;lo hay un valor null.</span>
+<span class="hljs-keyword">var</span> obj = {};
+<span class="hljs-keyword">var</span> sameObj = obj;
+<span class="hljs-keyword">var</span> another = {};
+sameObj === obj; <span class="hljs-comment">// funciona porque ambos nombres se refieren al mismo objeto.</span>
+sameObj !== another; <span class="hljs-comment">// insisto, distintos, pese a la forma.</span>
+</code></pre>
+<h2 id="objetos-y-paso-de-mensajes">Objetos y paso de mensajes</h2>
+<p>Los objetos de JavaScript y el poder usar c&#xF3;digo como un valor m&#xE1;s, permiten
+codificar los conceptos de <em>objeto</em> y <em>paso de mensajes</em> de la programaci&#xF3;n
+orientada a objetos.</p>
+<h3 id="codificando-el-estado">Codificando el estado</h3>
+<p>Con lo que se ha visto hasta ahora deber&#xED;as tener el conocimiento suficiente
+para codificar el estado. El <strong>conjunto de atributos</strong> del objeto en el modelo
+orientado a objetos se traduce en el <strong>conjunto de propiedades</strong> de los objetos
+JavaScript.</p>
+<p>En el ejemplo de <em>Space Invaders</em>, el estado de los enemigos formado por:</p>
+<p><img src="images/space-invaders-enemy-state.png" alt="Estado del enemigo en el modelado de Space Invaders"></p>
+<p>Se puede codificar mediante:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> enemy = {
+  graphic: <span class="hljs-string">&apos;specie01.png&apos;</span>,
+  currentDirection: <span class="hljs-string">&apos;right&apos;</span>,
+  position: { x: <span class="hljs-number">10</span>, y: <span class="hljs-number">10</span> },
+  score: <span class="hljs-number">40</span>
+};
+</code></pre>
+<p>La primera limitaci&#xF3;n en JavsScript es que <strong>no se puede restringir el acceso
+a las propiedades de un objeto</strong> (es decir, no hay propiedaes privadas). As&#xED;,
+nada nos impide poder modificar la posici&#xF3;n directamente.</p>
+<pre><code class="lang-js">enemy.position.x = <span class="hljs-number">100</span>; <span class="hljs-comment">// perfectamente v&#xE1;lido.</span>
+</code></pre>
+<p>Lo &#xFA;nico que se puede hacer es desaconsejar al usuario de ese c&#xF3;digo que utilice
+ciertas propiedades. Una pr&#xE1;ctica muy com&#xFA;n en JavaScript es a&#xF1;adir un gui&#xF3;n
+bajo <code>_</code> a los atributos que consideramos que son <strong>privados</strong>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> enemy = {
+  _graphic: <span class="hljs-string">&apos;specie01.png&apos;</span>,
+  _currentDirection: <span class="hljs-string">&apos;right&apos;</span>,
+  _position: { x: <span class="hljs-number">10</span>, y: <span class="hljs-number">10</span> },
+  _score: <span class="hljs-number">40</span>
+};
+</code></pre>
+<p>Pero, insistimos, esto es una convenci&#xF3;n y se puede seguir accediendo a los
+atributos que tengan este gui&#xF3;n bajo:</p>
+<pre><code class="lang-js">enemy._position.x = <span class="hljs-number">100</span>; <span class="hljs-comment">// perfectamente v&#xE1;lido tambi&#xE9;n.</span>
+</code></pre>
+<h3 id="codificando-la-api">Codificando la API</h3>
+<p>Las acciones que forman la API de un objeto, los <strong>m&#xE9;todos</strong>, pueden
+implementarse como <strong>funciones</strong> en propiedades de un objeto.</p>
+<p><img src="images/space-invaders-enemy-api.png" alt="API del enemigo en el modelado de Space Invaders"></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> enemy = {
+  _graphic: <span class="hljs-string">&apos;specie01.png&apos;</span>,
+  _currentDirection: <span class="hljs-string">&apos;right&apos;</span>,
+  _position: { x: <span class="hljs-number">10</span>, y: <span class="hljs-number">10</span> },
+  _score: <span class="hljs-number">40</span>,
+
+  moveLeft: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Going left!&apos;</span>); },
+  moveRight: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Going right!&apos;</span>); },
+  advance: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Marching forward!&apos;</span>); },
+  shoot: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;PICHIUM!&apos;</span>); } <span class="hljs-comment">// (es un l&#xE1;ser)</span>
+};
+</code></pre>
+<p><strong>Enviar un mensaje</strong> a un objeto consiste sencillamente acceder a la propiedad
+del destinatario, que ser&#xE1; una funci&#xF3;n, y llamarla.</p>
+<pre><code class="lang-js">enemy.shoot(); <span class="hljs-comment">// primero accedemos con punto, luego llamamos con ().</span>
+enemy.moveLeft();
+enemy.moveLeft();
+enemy.advance();
+enemy[<span class="hljs-string">&apos;shoot&apos;</span>](); <span class="hljs-comment">// es lo mismo, acceder con corchetes y llamar con ().</span>
+</code></pre>
+<p>Cualquier funci&#xF3;n puede actuar como m&#xE9;todo. Para que act&#xFA;e como un m&#xE9;todo
+tan s&#xF3;lo es necesario <strong>llamarla desde la propiedad de un objeto</strong>. Y, como
+cualquier propiedad de un objeto, podemos cambiarla en cualquier momento:</p>
+<pre><code class="lang-js">enemy.shoot(); <span class="hljs-comment">// PICHIUM!</span>
+enemy.shoot = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;PA&#xD1;UM!&apos;</span>); };
+enemy.shoot(); <span class="hljs-comment">// PA&#xD1;UM!</span>
+</code></pre>
+<p>Ahora bien, observa el siguiente comportamiento:</p>
+<pre><code class="lang-js">enemy; <span class="hljs-comment">// f&#xED;jate en la posici&#xF3;n.</span>
+enemy.moveLeft();
+enemy; <span class="hljs-comment">// f&#xED;jate en la posici&#xF3;n otra vez.</span>
+</code></pre>
+<p>Obviamente, echando un vistazo a lo que hace <code>moveLeft</code>, no podr&#xED;amos decir
+que <em>cambia el estado</em> del objeto destinatario del mensaje. &#xBF;C&#xF3;mo podr&#xED;amos
+solucionarlo?</p>
+<p>Como cualquier funci&#xF3;n puede actuar como m&#xE9;todo, hace falta una forma de
+<strong>referirse al destinatario del mensaje</strong>, si existe. Cuando se usa como un
+m&#xE9;todo, el destinatario se guarda siempre en la variable <strong><code>this</code></strong>.</p>
+<p>Gracias a ella, podemos implementar los m&#xE9;todos de movimiento:</p>
+<pre><code class="lang-js">enemy.moveLeft = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.x -= <span class="hljs-number">2</span>; };
+enemy.moveRight = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.x += <span class="hljs-number">2</span>; };
+enemy.advance = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.y += <span class="hljs-number">2</span>; };
+</code></pre>
+<p>Prueba el mismo experimento de antes y observa c&#xF3;mo efectivamente alteramos el
+estado del objeto.</p>
+<pre><code class="lang-js">enemy; <span class="hljs-comment">// f&#xED;jate en la posici&#xF3;n.</span>
+enemy.moveLeft();
+enemy; <span class="hljs-comment">// f&#xED;jate en la posici&#xF3;n otra vez.</span>
+</code></pre>
+<h3 id="el-valor-the-this">El valor the <code>this</code></h3>
+<p>El valor de <code>this</code> es uno de los aspectos m&#xE1;s controvertidos de JavaScript.</p>
+<p>En otros lenguajes, m&#xE9;todos y funciones son cosas distintas y un m&#xE9;todo
+<em>siempre</em> tiene asociado un &#x2013;y s&#xF3;lo un- objeto, as&#xED; que <code>this</code> nunca cambia.</p>
+<p>Pero en JavaScript, <code>this</code> depende de c&#xF3;mo se llame a la funci&#xF3;n: si se
+llama como si fuera una funci&#xF3;n, o si se llama como si fuera un m&#xE9;todo.</p>
+<p>Considera la siguiente funci&#xF3;n:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">inspect</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// s&#xF3;lo inspecciona this</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Tipo:&apos;</span>, <span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Valor:&apos;</span>, <span class="hljs-keyword">this</span>);
+}
+</code></pre>
+<p>Y prueba lo siguiente:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Piensa qu&#xE9; puede valer this antes de probar cada ejemplo.</span>
+<span class="hljs-keyword">var</span> ship1 = { name: <span class="hljs-string">&apos;T-Fighter&apos;</span>, method: inspect };
+<span class="hljs-keyword">var</span> ship2 = { name: <span class="hljs-string">&apos;X-Wing&apos;</span>, method: inspect };
+ship1.method();
+ship2.method();
+inspect();
+</code></pre>
+<p>En el &#xFA;ltimo caso, el valor de <code>this</code> es <code>undefined</code> porque la funci&#xF3;n no se
+est&#xE1; usando como un m&#xE9;todo, por lo que no hay destinatario.</p>
+<p>En JavaScript podemos hacer que cualquier objeto sea <code>this</code> en cualquier
+funci&#xF3;n. Para ello usaremos
+<a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply" target="_blank"><code>apply</code></a>
+en una funci&#xF3;n.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> onlyNameShip = { name: <span class="hljs-string">&apos;Death Star&apos;</span> };
+inspect.apply(onlyNameShip); <span class="hljs-comment">// hace que this valga onlyNameShip en inspect.</span>
+</code></pre>
+<p>A <a href="http://dmitrysoshnikov.com/ecmascript/javascript-the-core/#this-value" target="_blank"><code>this</code></a>
+se le conoce tambi&#xE9;n como <strong>objeto de contexto</strong>, y en este material usaremos
+este t&#xE9;rmino de vez en cuando.</p>
+<h2 id="consideraciones-adicionales">Consideraciones adicionales</h2>
+<h3 id="nombres-y-valores">Nombres y valores</h3>
+<p>Una <strong>variable es un nombre</strong>. Para el programa, quitando algunas excepciones,
+los nombres no tienen significado.</p>
+<p>Un <strong>valor no es un nombre</strong>. De hecho, s&#xF3;lo las funciones pueden tener nombre
+con el fin de poder implementar recursividad y un par de cosas m&#xE1;s.</p>
+<p>As&#xED; que no es lo mismo el nombre <code>uno</code> que el valor <code>1</code>, y por supuesto, no
+es obligatoria ninguna relaci&#xF3;n coherente entre el nombre y el valor.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> uno = <span class="hljs-number">2</span>; <span class="hljs-comment">// para el programa tiene sentido, quiz&#xE1;s para el programador no.</span>
+</code></pre>
+<p>En general, hablando de booleanos, cadenas y n&#xFA;meros, decimos que los <strong>nombres
+guardan valores</strong>, mientras que si hablamos de objetos y funciones decimos que
+los <strong>nombres apuntan</strong> a objetos o funciones o <strong>son referencias</strong> a objetos o
+funciones.</p>
+<h3 id="funciones-referencias-a-funciones-y-llamadas-a-funciones">Funciones, referencias a funciones y llamadas a funciones</h3>
+<p>Hay dos formas de definir una funci&#xF3;n. Una es usando la <strong>declaraci&#xF3;n de
+funci&#xF3;n</strong> <code>function</code>:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Introduce una variable factorial que apunta a la funci&#xF3;n factorial.</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">factorial</span>(<span class="hljs-params">number</span>) </span>{
+  <span class="hljs-keyword">if</span> (number === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+  }
+  <span class="hljs-keyword">return</span> number * factorial(number - <span class="hljs-number">1</span>);
+} <span class="hljs-comment">// no hace falta un &apos;;&apos; en este caso.</span>
+</code></pre>
+<p>En este caso, el nombre de la funci&#xF3;n (antes de los par&#xE9;ntesis) es obligatorio.
+Dar nombre a una funci&#xF3;n tiene dos implicaciones:</p>
+<ul>
+<li><p>Permite implementar <strong>llamadas recursivas</strong> como la del ejemplo.</p>
+</li>
+<li><p><strong>Crea un nombre</strong> <code>factorial</code> para referirnos a esa funci&#xF3;n.</p>
+</li>
+</ul>
+<p>La otra forma es usar una <strong>expression de funci&#xF3;n</strong>. Esta se parece m&#xE1;s a como
+crear&#xED;amos otros valores, como n&#xFA;meros o cadenas:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Introduce una variable recursiveFunction que apunta a OTRA funcion factorial.</span>
+<span class="hljs-keyword">var</span> recursiveFunction = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">factorial</span>(<span class="hljs-params">number</span>) </span>{
+  <span class="hljs-keyword">if</span> (number === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+  }
+  <span class="hljs-keyword">return</span> number * factorial(number - <span class="hljs-number">1</span>);
+}; <span class="hljs-comment">// ahora s&#xED; hace falta &apos;;&apos;, como en cualquier asignaci&#xF3;n.</span>
+</code></pre>
+<p>En este &#xFA;ltimo caso, hay dos nombres. Uno es el nombre de la funci&#xF3;n
+<code>factorial</code>, que existe para poder referirnos a ella dentro del cuerpo de la
+funci&#xF3;n. El otro es la variable <code>recursiveFunction</code> que referencia a la funci&#xF3;n.</p>
+<p>La misma funci&#xF3;n puede referirse desde m&#xFA;ltiples variables o, dicho de otra
+manera, tener muchos nombres:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> a = recursiveFunction;
+<span class="hljs-keyword">var</span> b = recursiveFunction;
+a === b; <span class="hljs-comment">// es cierto, se refieren a la misma funci&#xF3;n.</span>
+a.name; <span class="hljs-comment">// el nombre de la funci&#xF3;n no tiene que ver con el de la variable.</span>
+b.name; <span class="hljs-comment">// lo mismo.</span>
+recursiveFunction !== factorial;
+</code></pre>
+<p>Tampoco podemos confundir la referencia a la funci&#xF3;n <code>factorial</code> y la
+llamada a la misma funci&#xF3;n, por ejemplo: <code>factorial(10)</code>.</p>
+<p>Con la primera forma <strong>nos referimos al objeto</strong> que encapsula el c&#xF3;digo que hay
+que ejecutar. No requiere par&#xE1;metros porque <strong>no se quiere ejecutar el c&#xF3;digo</strong>
+sino solamente referirse a la funci&#xF3;n.</p>
+<p>Con la segunda, <strong>pedimos a la funci&#xF3;n que se ejecute</strong> y por tanto habr&#xE1; que
+aportar todos los par&#xE1;metros necesarios.</p>
+<h3 id="en-javascript-todo-es-un-objeto">En JavaScript todo es un objeto</h3>
+<p>Si, como definici&#xF3;n alternativa, consideramos como objeto aquello que puede
+responder a un mensaje, resulta que en JavaScript <strong>todo es un objeto</strong>.</p>
+<p>Observa los siguiente ejemplos:</p>
+<pre><code class="lang-js"><span class="hljs-literal">true</span>.toString();
+<span class="hljs-number">3.1415</span>.toFixed(<span class="hljs-number">2</span>);
+<span class="hljs-string">&apos;I want to be a pirate!&apos;</span>.split(<span class="hljs-string">&apos; &apos;</span>);
+({}).hasOwnProperty(<span class="hljs-string">&apos;x&apos;</span>);
+(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">parameter</span>) </span>{ <span class="hljs-keyword">return</span> parameter; }).length;
+</code></pre>
+<h2 id="tipos-y-constructores-de-objetos">Tipos y constructores de objetos</h2>
+<p>Hemos comentado que JavaScript no permite modelar tipos nuevos y que
+hace falta &quot;dar un rodeo&quot;. Esta es una de las principales diferencias con otros
+lenguajes orientados a objetos.</p>
+<p>Lo que se debe hacer es saltarse el concepto de <em>tipo</em> para abordar directamente
+el de <strong><em>constructor</em></strong>.</p>
+<p><img src="images/space-invaders-constructor-example.png" alt="Constructores de objetos"></p>
+<p>Vamos a crear dos funciones constructoras: una para puntos y otra para disparos.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newPoint</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">var</span> obj = {};
+    obj.x = x;
+    obj.y = y;
+
+    <span class="hljs-keyword">return</span> obj;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newShot</span>(<span class="hljs-params">position, velocity</span>) </span>{
+    <span class="hljs-keyword">var</span> obj = {};
+    obj._position = position;
+    obj._velocity = velocity;
+    obj.advance = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>._position.y += <span class="hljs-keyword">this</span>._velocity;
+    };
+
+    <span class="hljs-keyword">return</span> obj;
+}
+</code></pre>
+<p>La forma de las funciones constructoras es muy similar: crear un objeto vac&#xED;o,
+establecer las propiedades del objeto y devolver el nuevo objeto.</p>
+<p>Ahora podr&#xED;amos crear disparos con algo as&#xED;:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Velocidad positiva para que se mueva hacia abajo.</span>
+<span class="hljs-keyword">var</span> enemyShot = newShot(newPoint(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>), <span class="hljs-number">2</span>);
+
+<span class="hljs-comment">// Velocidad negativa para que se mueva hacia arriba.</span>
+<span class="hljs-keyword">var</span> allyShot = newShot(newPoint(<span class="hljs-number">15</span>, <span class="hljs-number">585</span>), <span class="hljs-number">-2</span>);
+
+enemyShot !== allyShot;
+</code></pre>
+<h3 id="reaprovechando-funcionalidad">Reaprovechando funcionalidad</h3>
+<p>El problema con esta aproximaci&#xF3;n es que estamos creando funciones distintas
+para comportamientos id&#xE9;nticos: una funci&#xF3;n por objeto.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> s1 = newShot(newPoint(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>), <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> s2 = newShot(newPoint(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>), <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> s3 = newShot(newPoint(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>), <span class="hljs-number">2</span>);
+s1.advance !== s2.advance;
+s2.advance !== s3.advance;
+s3.advance !== s1.advance;
+</code></pre>
+<p>Esto es altamente ineficiente, dado que cada funci&#xF3;n ocupa un espacio distinto
+en memoria.</p>
+<p>Realmente no son necesarias tantas funciones, sino una solamente actuando sobre
+distintos objetos.</p>
+<p>As&#xED; que es mejor <strong>crear un objeto que contenga &#xFA;nicamente la API</strong>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> shotAPI = {
+    advance: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>._position.y += <span class="hljs-keyword">this</span>._velocity;
+    }
+};
+</code></pre>
+<p>Y usarlo en la creaci&#xF3;n del objeto para compartir los m&#xE9;todos de la API:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newShot</span>(<span class="hljs-params">position, velocity</span>) </span>{
+    <span class="hljs-keyword">var</span> obj = {};
+    obj._position = position;
+    obj._velocity = velocity;
+    obj.advance = shotAPI.advance;
+    <span class="hljs-keyword">return</span> obj;
+}
+</code></pre>
+<p>Ahora todas las instancias comparten la misma funci&#xF3;n, pero cada funci&#xF3;n act&#xFA;a
+sobre el objeto correspondiente gracias al valor de <code>this</code>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> s1 = newShot(newPoint(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>), <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> s2 = newShot(newPoint(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>), <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> s3 = newShot(newPoint(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>), <span class="hljs-number">2</span>);
+s1.advance === s2.advance; <span class="hljs-comment">// ahora S&#xCD; son iguales.</span>
+s2.advance === s3.advance;
+s3.advance === s1.advance;
+</code></pre>
+<p>Para hacer todav&#xED;a m&#xE1;s fuerte la asociaci&#xF3;n entre el constructor y la API,
+vamos a realizar una peque&#xF1;a modificaci&#xF3;n: crear el objeto con
+la API como una <strong>propiedad de la funci&#xF3;n constructora</strong>, quedando as&#xED; todo
+agrupado en el mismo sitio (la funci&#xF3;n <code>newShot</code>).</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newShot</span>(<span class="hljs-params">position, velocity</span>) </span>{
+    <span class="hljs-keyword">var</span> obj = {};
+    obj._position = position;
+    obj._velocity = velocity;
+    obj.advance = newShot.api.advance;
+    <span class="hljs-keyword">return</span> obj;
+}
+
+<span class="hljs-comment">// Una funci&#xF3;n es un objeto, as&#xED; que le podemos a&#xF1;adir una propiedad.</span>
+newShot.api = {
+    advance: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>._position.y += <span class="hljs-keyword">this</span>._velocity;
+    }
+};
+</code></pre>
+<h2 id="la-cadena-de-prototipos">La cadena de prototipos</h2>
+<p>JavaScript posee una caracter&#xED;stica muy representativa y &#xFA;nica del lenguaje:
+<strong>la cadena de prototipos</strong>.</p>
+<p>Puedes experimentar con ella en <a href="http://www.objectplayground.com/" target="_blank">Object Playground</a>,
+una excelente herramienta que te ayudar&#xE1; a visualizarla.</p>
+<p>La idea no es complicada: la cadena de prototipos <strong>es una lista de b&#xFA;squeda
+para las propiedades</strong>. Cada elemento de la cadena es <strong>prototipo</strong> del
+objeto anterior.</p>
+<p>Cuando accedes a una propiedad de un objeto, esta propiedad se busca en el
+objeto y, si no se encuentra, se busca en el prototipo del objeto, y as&#xED;
+sucesivamente hasta alcanzar la propiedad o el final de esta cadena.</p>
+<p>Por ejemplo:</p>
+<pre><code>obj1                    obj2               obj3
+{ a: 1, b: 2, c: 3} --&gt; { d: 4, e: 5 } --&gt; { f: 6 }
+obj1.c -------&#x2191;           &#x2191;                  &#x2191;
+obj1.d -------------------|                  |
+obj1.f --------------------------------------|
+obj1.z ------------------------------------------------X
+</code></pre><p>Crear esta jerarqu&#xED;a en JavaScript requiere el uso de <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/create" target="_blank"><code>Object.create()</code></a>:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// La cadena se monta de atr&#xE1;s hacia adelante.</span>
+<span class="hljs-keyword">var</span> obj3 = { f: <span class="hljs-number">6</span> };
+<span class="hljs-comment">// Encadenamos obj2 a obj3</span>
+<span class="hljs-keyword">var</span> obj2 = <span class="hljs-built_in">Object</span>.create(obj3);
+obj2.d = <span class="hljs-number">4</span>;
+obj2.e = <span class="hljs-number">5</span>;
+<span class="hljs-comment">// Encadenamos obj1 a obj2</span>
+<span class="hljs-keyword">var</span> obj1 = <span class="hljs-built_in">Object</span>.create(obj2);
+obj1.a = <span class="hljs-number">1</span>;
+obj1.b = <span class="hljs-number">2</span>;
+obj1.c = <span class="hljs-number">3</span>;
+
+obj1.c;
+obj1.d;
+obj1.f;
+obj1.z; <span class="hljs-comment">// undefined</span>
+</code></pre>
+<p>El m&#xE9;todo <code>Object.create()</code> crea un nuevo objeto vac&#xED;o (como <code>{}</code>) cuyo
+prototipo es el objeto pasado como par&#xE1;metro.</p>
+<p>Se puede usar el m&#xE9;todo <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" target="_blank"><code>hasOwnProperty</code></a>
+para determinar si una propiedad pertenece a un objeto sin atravesar la cadena
+de prototipos:</p>
+<pre><code class="lang-js">obj1.hasOwnProperty(<span class="hljs-string">&apos;c&apos;</span>); <span class="hljs-comment">// true</span>
+obj1.hasOwnProperty(<span class="hljs-string">&apos;d&apos;</span>); <span class="hljs-comment">// false</span>
+obj1.hasOwnProperty(<span class="hljs-string">&apos;f&apos;</span>); <span class="hljs-comment">// false</span>
+obj1.hasOwnProperty(<span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">// false</span>
+
+obj2.hasOwnProperty(<span class="hljs-string">&apos;c&apos;</span>); <span class="hljs-comment">// false</span>
+obj2.hasOwnProperty(<span class="hljs-string">&apos;d&apos;</span>); <span class="hljs-comment">// true</span>
+obj2.hasOwnProperty(<span class="hljs-string">&apos;f&apos;</span>); <span class="hljs-comment">// false</span>
+obj2.hasOwnProperty(<span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">// false</span>
+
+obj3.hasOwnProperty(<span class="hljs-string">&apos;c&apos;</span>); <span class="hljs-comment">// false</span>
+obj3.hasOwnProperty(<span class="hljs-string">&apos;d&apos;</span>); <span class="hljs-comment">// false</span>
+obj3.hasOwnProperty(<span class="hljs-string">&apos;f&apos;</span>); <span class="hljs-comment">// true</span>
+obj3.hasOwnProperty(<span class="hljs-string">&apos;z&apos;</span>); <span class="hljs-comment">// false</span>
+</code></pre>
+<p>Se puede usar el m&#xE9;todo <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf" target="_blank"><code>Object.getPrototypeOf()</code></a>
+para obtener el prototipo de un objeto:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">Object</span>.getPrototypeOf(obj1) === obj2;
+<span class="hljs-built_in">Object</span>.getPrototypeOf(obj2) === obj3;
+<span class="hljs-built_in">Object</span>.getPrototypeOf(obj3) === <span class="hljs-built_in">Object</span>.prototype;
+<span class="hljs-built_in">Object</span>.getPrototypeOf(<span class="hljs-built_in">Object</span>.prototype) === <span class="hljs-literal">null</span>;
+</code></pre>
+<h2 id="constructores-y-cadenas-de-prototipos">Constructores y cadenas de prototipos</h2>
+<p>Los prototipos se prestan a ser el lugar ideal para contener la API, que es el
+comportamiento com&#xFA;n de todos los objetos de un tipo.</p>
+<pre><code>var obj = newShot()                               newShot.api
+{ _position: { x: 10, y: 10 }, _velocity: 2 } --&gt; { advance: function ... };
+obj._position.y ------&#x2191;                             &#x2191;
+obj.advance ----------------------------------------|
+obj.goBack ------------------------------------------------------------------X
+</code></pre><p>Para crear este enlace, modificaremos nuestro constructor de la siguiente forma:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newShot</span>(<span class="hljs-params">position, velocity</span>) </span>{
+    <span class="hljs-comment">// Con esto la API es el prototipo del objeto.</span>
+    <span class="hljs-keyword">var</span> obj = <span class="hljs-built_in">Object</span>.create(newShot.api);
+    obj._position = position;
+    obj._velocity = velocity;
+
+    <span class="hljs-keyword">return</span> obj;
+}
+
+newShot.api = {
+    advance: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">this</span>._position.y += <span class="hljs-keyword">this</span>._velocity;
+    }
+};
+</code></pre>
+<p>Prueba ahora a crear un nuevo disparo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> shot = newShot({x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>}, <span class="hljs-number">2</span>);
+shot; <span class="hljs-comment">// al inspeccionar shot s&#xF3;lo se muestran las propiedades del objeto.</span>
+shot.advance; <span class="hljs-comment">// pero advance existe en su prototipo.</span>
+shot.hasOwnProperty(<span class="hljs-string">&apos;advance&apos;</span>); <span class="hljs-comment">// false</span>
+<span class="hljs-built_in">Object</span>.getPrototypeOf(shot).hasOwnProperty(<span class="hljs-string">&apos;advance&apos;</span>); <span class="hljs-comment">// true</span>
+</code></pre>
+<p>Si hacemos esto con todos los constructores, pronto encontraremos un patr&#xF3;n:</p>
+<ol>
+<li><p>Crear un objeto para contener la API.</p>
+</li>
+<li><p>Implementar la API como propiedades de este objeto.</p>
+</li>
+<li><p>En el constructor, hacer que este objeto sea el prototipo de un nuevo objeto.</p>
+</li>
+<li><p>Establecer las propiedades del nuevo objeto con el estado.</p>
+</li>
+<li><p>Devolver el nuevo objeto.</p>
+</li>
+</ol>
+<p>S&#xF3;lo los pasos 2 y 4 involucran diferencias de un constructor a otro, todo lo
+dem&#xE1;s es exactamente igual. Tanto es as&#xED;, que JavaScript lo tiene en cuenta
+y viene con los mecanismos para automatizar los pasos 1, 3 y 5.</p>
+<p>Primero, JavaScript permite que <em>cualquier funci&#xF3;n</em> pueda usarse como
+constructor. Por eso, cada vez que escribimos una funci&#xF3;n, JavaScript crea una
+<strong>propiedad de la funci&#xF3;n llamada <code>prototype</code></strong>, que es un
+objeto con una &#xFA;nica propiedad <code>constructor</code> que apunta a la funci&#xF3;n.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">anyFunction</span>(<span class="hljs-params"></span>) </span>{}
+anyFunction.prototype;
+anyFunction.prototype.constructor === anyFunction;
+</code></pre>
+<p>Esto automatiza el paso 1: ya no es necesario el objeto <code>api</code> que prepar&#xE1;bamos
+nosotros manualmente. La propiedad <code>prototype</code> es equivalente a la propiedad
+<code>api</code>.</p>
+<p>Ahora, al llamar a la funci&#xF3;n con el operador <code>new</code> delante, se crea un <strong>nuevo
+objeto cuyo prototipo es precisamente la propiedad <code>prototype</code></strong> de la funci&#xF3;n:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> anyFunction();
+<span class="hljs-keyword">var</span> anotherObj = <span class="hljs-keyword">new</span> anyFunction();
+
+<span class="hljs-comment">// Los objetos son distintos.</span>
+obj !== anotherObj;
+
+<span class="hljs-comment">// Pero sus prototipos son iguales.</span>
+<span class="hljs-built_in">Object</span>.getPrototypeOf(obj) === <span class="hljs-built_in">Object</span>.getPrototypeOf(anotherObj);
+
+<span class="hljs-comment">// Y adem&#xE1;s son la propiedad prototype de la funci&#xF3;n.</span>
+<span class="hljs-built_in">Object</span>.getPrototypeOf(obj) === anyFunction.prototype;
+</code></pre>
+<p>Con esto se automatiza el paso 3: ya no es necesario llamar a <code>Object.create()</code>
+para establecer la cadena de prototipos entre objeto y API (lo conseguimos
+autom&#xE1;ticamente al utilizar el operador <code>new</code>).</p>
+<p>Finalmente, cuando se llama con <code>new</code>, la <strong>funci&#xF3;n recibe como objeto de
+contexto (el <code>this</code>) el elemento que est&#xE1; siendo creado</strong>, lo que nos
+permite establecer sus atributos.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Hero</span>(<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-keyword">this</span>.name = name;
+    <span class="hljs-keyword">this</span>.sword = <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">this</span>.shield = <span class="hljs-literal">null</span>;
+}
+
+<span class="hljs-keyword">var</span> hero = <span class="hljs-keyword">new</span> Hero(<span class="hljs-string">&apos;Link&apos;</span>);
+hero;
+</code></pre>
+<p>Si la funci&#xF3;n no devuelve nada, el <strong>resultado del operador <code>new</code> ser&#xE1; el
+nuevo objeto</strong>. Esto automatiza el paso 5: no es necesario devolver el
+nuevo objeto, esta devoluci&#xF3;n se hace impl&#xED;cita al utilizar <code>new</code>.</p>
+<p>Observa como quedar&#xED;a el constructor de un objeto punto:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Point</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">this</span>.x = x;
+    <span class="hljs-keyword">this</span>.y = y;
+}
+</code></pre>
+<p>Y el del disparo:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Shot</span>(<span class="hljs-params">position, velocity</span>) </span>{
+    <span class="hljs-keyword">this</span>._position = position;
+    <span class="hljs-keyword">this</span>._velocity = velocity;
+}
+
+<span class="hljs-comment">// El prototipo ya existe, pero le a&#xF1;adimos el m&#xE9;todo advance()</span>
+Shot.prototype.advance = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>._position.y += <span class="hljs-keyword">this</span>._velocity;
+};
+</code></pre>
+<p>Ahora crear los objetos ser&#xE1; cuesti&#xF3;n de usar <code>new</code>. Emplearemos adem&#xE1;s nuestro
+nuevo tipo punto (<code>Point</code>) para pasar la posici&#xF3;n al disparo:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> enemyShot = <span class="hljs-keyword">new</span> Shot(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">15</span>, <span class="hljs-number">15</span>), <span class="hljs-number">2</span>);
+<span class="hljs-keyword">var</span> allyShot = <span class="hljs-keyword">new</span> Shot(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">15</span>, <span class="hljs-number">585</span>), <span class="hljs-number">-2</span>);
+enemyShot !== allyShot;
+</code></pre>
+<h2 id="herencia">Herencia</h2>
+<p>Ya hemos visto c&#xF3;mo crear objetos con atributos y c&#xF3;mo hacerlo eficazmente,
+usando constructores y la cadena de prototipos.</p>
+<p>Veremos ahora c&#xF3;mo crear una <strong>relaci&#xF3;n de herencia</strong>. Recordemos el ejemplo de
+los enemigos y la nave protagonista de la lecci&#xF3;n anterior:</p>
+<p><img src="images/space-invaders-hierarchy.png" alt="Relaci&#xF3;n de herencia entre nave y los enemigos y la nave aliada"></p>
+<p>Necesitaremos nuestros puntos y disparos:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Point</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">this</span>.x = x;
+    <span class="hljs-keyword">this</span>.y = y;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Shot</span>(<span class="hljs-params">position, velocity</span>) </span>{
+    <span class="hljs-keyword">this</span>._position = position;
+    <span class="hljs-keyword">this</span>._velocity = velocity;
+}
+
+Shot.prototype.advance = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>._position.y += <span class="hljs-keyword">this</span>._velocity;
+};
+</code></pre>
+<p>El constructor y los m&#xE9;todos de los enemigos podr&#xED;an ser:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Enemy</span>(<span class="hljs-params">graphic, position, score</span>) </span>{
+    <span class="hljs-keyword">this</span>._graphic = graphic;
+    <span class="hljs-keyword">this</span>._currentDirection = <span class="hljs-string">&apos;right&apos;</span>;
+    <span class="hljs-keyword">this</span>._position = position;
+    <span class="hljs-keyword">this</span>._score = score;
+}
+
+Enemy.prototype.moveLeft = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.x -= <span class="hljs-number">2</span>; };
+Enemy.prototype.moveRight = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.x += <span class="hljs-number">2</span>; };
+Enemy.prototype.advance = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.y += <span class="hljs-number">2</span>; };
+
+Enemy.prototype.shoot = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> firePosition = <span class="hljs-keyword">new</span> Position(<span class="hljs-keyword">this</span>._position.x, <span class="hljs-keyword">this</span>._position.y + <span class="hljs-number">10</span>);
+    <span class="hljs-keyword">var</span> shot = <span class="hljs-keyword">new</span> Shot(firePosition, <span class="hljs-number">2</span>);
+    <span class="hljs-keyword">return</span> shot;
+};
+</code></pre>
+<p>Y aqu&#xED; la implementaci&#xF3;n de la nave aliada:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ally</span>(<span class="hljs-params">position</span>) </span>{
+    <span class="hljs-keyword">this</span>._graphic = <span class="hljs-string">&apos;ally.png&apos;</span>;
+    <span class="hljs-keyword">this</span>._position = position;
+}
+
+Ally.prototype.moveLeft = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.x -= <span class="hljs-number">2</span>; };
+Ally.prototype.moveRight = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.x += <span class="hljs-number">2</span>; };
+
+Ally.prototype.shoot = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> firePosition = <span class="hljs-keyword">new</span> Position(<span class="hljs-keyword">this</span>._position.x, <span class="hljs-keyword">this</span>._position.y - <span class="hljs-number">10</span>);
+    <span class="hljs-keyword">var</span> shot = <span class="hljs-keyword">new</span> Shot(firePosition, <span class="hljs-number">-2</span>);
+    <span class="hljs-keyword">return</span> shot;
+};
+</code></pre>
+<p>Ahora podemos generalizar y pensar en un constructor que capture las propiedades
+comunes de ambos tipos:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ship</span>(<span class="hljs-params">graphic, position</span>) </span>{
+    <span class="hljs-keyword">this</span>._graphic = graphic;
+    <span class="hljs-keyword">this</span>._position = position;
+}
+
+Ship.prototype.moveLeft = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.x -= <span class="hljs-number">2</span>; };
+Ship.prototype.moveRight = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>._position.x += <span class="hljs-number">2</span>; };
+</code></pre>
+<p>En este caso, probablemente sea mejor no incluir el m&#xE9;todo de disparar
+<code>shoot</code>, ya que unas naves disparan hacia arriba y otras hacia abajo. Tampoco
+incluiremos <code>advance</code>, puesto que es exclusivo de los enemigos y no de la nave
+aliada.</p>
+<p><img src="images/space-invaders-hierarchy-constructor.png" alt="Jerarqu&#xED;a de constructores"></p>
+<p>Recuerda que ahora los constructores de la nave aliada y los enemigos pedir&#xE1;n
+primero al constructor de nave que cree una nave y luego la personalizar&#xE1;n.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Enemy</span>(<span class="hljs-params">graphic, position, score</span>) </span>{
+    Ship.apply(<span class="hljs-keyword">this</span>, [graphic, position]);
+    <span class="hljs-keyword">this</span>._currentDirection = <span class="hljs-string">&apos;right&apos;</span>;
+    <span class="hljs-keyword">this</span>._score = score;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ally</span>(<span class="hljs-params">position</span>) </span>{
+    Ship.apply(<span class="hljs-keyword">this</span>, [<span class="hljs-string">&apos;ally.png&apos;</span>, position]);
+}
+</code></pre>
+<p>Con <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply" target="_blank"><code>apply</code></a>
+se puede ejecutar una funci&#xF3;n indicando cu&#xE1;l ser&#xE1; su objeto de contexto y sus
+par&#xE1;metros.</p>
+<p>Con la configuraci&#xF3;n anterior, las nuevas instancias de enemigos y aliados
+pasar&#xE1;n primero por el constructor de <code>Ship</code>, que establecer&#xE1; los <strong>atributos
+comunes</strong> y luego estas instancias ser&#xE1;n modificados cada una por el constructor
+pertinente para convertirse en enemigos o en aliados.</p>
+<p>En cuanto a la API, lo ideal ser&#xED;a contar con una cadena de prototipos de la siguiente manera:</p>
+<ul>
+<li><p>Los atributos del enemigo (o del aliado) est&#xE1;n en la propia instancia.</p>
+</li>
+<li><p>La API espec&#xED;fica del tipo <code>Enemy</code> or <code>Ally</code> est&#xE1;n en la propiedad
+<code>prototype</code> del constructor de ese tipo.</p>
+</li>
+<li><p>La API com&#xFA;n a los tipos <code>Enemy</code> y <code>Ally</code> est&#xE1; en la propiedad <code>prototype</code> del
+constructor <code>Ship</code>.</p>
+</li>
+</ul>
+<pre><code>var enemy = new Enemy()             Enemy.prototype      Ship.prototype
+{ _position: ..., _score: ... } --&gt; { advance: ... } --&gt; { moveLeft: ... }
+enemy._score -----&#x2191;                   &#x2191;                    &#x2191;
+enemy.advance ------------------------|                    |
+enemy.moveLeft --------------------------------------------|
+</code></pre><p>Como ocurr&#xED;a con el ejemplo en la secci&#xF3;n anterior, hay que crear la cadena
+desde atr&#xE1;s hacia adelante. El enlace entre las instancias y los
+constructores nos lo proporciona JavaScript al utilizar <code>new</code>, pero el enlace
+entre la propiedad <code>prototype</code> de <code>Enemy</code> y la de <code>Ship</code> <strong>hay que que
+establecerlo manualmente</strong>.</p>
+<p>Prueba lo siguiente:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Inspecciona el prototype de Enemy.</span>
+Enemy.prototype;
+
+<span class="hljs-comment">// Enlaza ambas propiedades prototype.</span>
+Enemy.prototype = <span class="hljs-built_in">Object</span>.create(Ship.prototype);
+
+<span class="hljs-comment">// Inspecciona la propiedad prototype otra vez y busca diferencias.</span>
+Enemy.prototype;
+
+<span class="hljs-comment">// Corrige la propiedad constructor.</span>
+Enemy.prototype.constructor = Enemy;
+
+<span class="hljs-comment">// A&#xF1;ade el m&#xE9;todo espec&#xED;fico del tipo Enemy.</span>
+Enemy.prototype.advance = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>._position.y += <span class="hljs-number">2</span>;
+};
+
+<span class="hljs-comment">// Otro m&#xE9;todo espec&#xED;fico.</span>
+Enemy.prototype.shoot = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> firePosition = <span class="hljs-keyword">new</span> Point(<span class="hljs-keyword">this</span>._position.x, <span class="hljs-keyword">this</span>._position.y + <span class="hljs-number">10</span>);
+    <span class="hljs-keyword">var</span> shot = <span class="hljs-keyword">new</span> Shot(firePosition, <span class="hljs-number">2</span>);
+    <span class="hljs-keyword">return</span> shot;
+};
+</code></pre>
+<p>Y para el tipo <code>Ally</code>:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// Lo mismo para el aliado.</span>
+Ally.prototype = <span class="hljs-built_in">Object</span>.create(Ship.prototype);
+Ally.prototype.constructor = Ally;
+
+Ally.prototype.shoot = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> firePosition = <span class="hljs-keyword">new</span> Point(<span class="hljs-keyword">this</span>._position.x, <span class="hljs-keyword">this</span>._position.y - <span class="hljs-number">10</span>);
+    <span class="hljs-keyword">var</span> shot = <span class="hljs-keyword">new</span> Shot(firePosition, <span class="hljs-number">-2</span>);
+    <span class="hljs-keyword">return</span> shot;
+};
+</code></pre>
+<p>Ahora s&#xED;, ya podemos crear un enemigo y un aliado usando sus constructores:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> enemy = <span class="hljs-keyword">new</span> Enemy(<span class="hljs-string">&apos;enemy1.png&apos;</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>), <span class="hljs-number">40</span>);
+<span class="hljs-keyword">var</span> ally = <span class="hljs-keyword">new</span> Ally(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">10</span>, <span class="hljs-number">590</span>));
+
+<span class="hljs-built_in">Object</span>.getPrototypeOf(ally) === Ally.prototype;
+<span class="hljs-built_in">Object</span>.getPrototypeOf(enemy) === Enemy.prototype;
+Ally.prototype !== Enemy.prototype;
+<span class="hljs-built_in">Object</span>.getPrototypeOf(Ally.prototype) === <span class="hljs-built_in">Object</span>.getPrototypeOf(Enemy.prototype);
+<span class="hljs-built_in">Object</span>.getPrototypeOf(Ally.prototype) === Ship.prototype;
+</code></pre>
+<p>Tambi&#xE9;n podemos comprobar d&#xF3;nde est&#xE1; cada propiedad:</p>
+<pre><code class="lang-js">enemy.hasOwnProperty(<span class="hljs-string">&apos;_score&apos;</span>);
+enemy.hasOwnProperty(<span class="hljs-string">&apos;advance&apos;</span>);
+enemy.hasOwnProperty(<span class="hljs-string">&apos;moveLeft&apos;</span>);
+
+Enemy.prototype.hasOwnProperty(<span class="hljs-string">&apos;_score&apos;</span>);
+Enemy.prototype.hasOwnProperty(<span class="hljs-string">&apos;advance&apos;</span>);
+Enemy.prototype.hasOwnProperty(<span class="hljs-string">&apos;moveLeft&apos;</span>);
+
+Ship.prototype.hasOwnProperty(<span class="hljs-string">&apos;_score&apos;</span>);
+Ship.prototype.hasOwnProperty(<span class="hljs-string">&apos;advance&apos;</span>);
+Ship.prototype.hasOwnProperty(<span class="hljs-string">&apos;moveLeft&apos;</span>);
+</code></pre>
+<h2 id="polimorfismo">Polimorfismo</h2>
+<p>Las relaciones de herencia que acabamos de establecer nos permiten decir que un
+enemigo es una instancia del tipo <code>Enemy</code>, pero tambi&#xE9;n lo es del tipo <code>Ship</code>.
+Una misma instancia tiene <strong>m&#xFA;ltiples formas gracias a la herencia</strong>. En
+programaci&#xF3;n orientada a objetos a esto se lo llama <strong>polimorfismo</strong>.</p>
+<p>Alternativamente, podemos decir que un enemigo es una instancia de <code>Enemy</code>
+porque tiene la API de <code>Enemy</code>, o que es una instancia de <code>Ship</code> porque tiene
+la API de <code>Ship</code>. Esto es equivalente a decir que las propiedades <code>prototype</code>
+de <code>Enemy</code> y <code>Ship</code> est&#xE1;n en la cadena de prototipos del objeto.</p>
+<p>El operador <code>instanceof</code> devuelve verdadero si la propiedad <code>prototype</code> de la
+funci&#xF3;n a la derecha del operador est&#xE1; en la cadena de prototipos del objeto a
+la izquierda del operador.</p>
+<pre><code class="lang-js">enemy <span class="hljs-keyword">instanceof</span> Enemy;  <span class="hljs-comment">// Enemy.prototype es el primer eslab&#xF3;n.</span>
+enemy <span class="hljs-keyword">instanceof</span> Ship;   <span class="hljs-comment">// Ship.prototype es el segundo.</span>
+enemy <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Object</span>; <span class="hljs-comment">// Object.prototype, el tercero.</span>
+
+enemy <span class="hljs-keyword">instanceof</span> Ally;   <span class="hljs-comment">// Ally.prototype no est&#xE1; en la cadena.</span>
+</code></pre>
+<p>En lo referente al estado, resulta conveniente saber qu&#xE9; constructor ha
+construido el objeto para conocer de un vistazo los atributos que contendr&#xE1; el
+mismo. Esto es equivalente a determinar cu&#xE1;l es la funci&#xF3;n cuya propiedad
+<code>prototype</code> es el <strong>primer eslab&#xF3;n</strong> de la cadena de prototipos.</p>
+<p>Dado que los objetos prototipo vienen de serie con una propiedad <code>constructor</code>,
+que por defecto apunta a la funci&#xF3;n que posee al objeto prototipo, basta con
+acceder a la propiedad <code>constructor</code> a trav&#xE9;s de la instancia.</p>
+<pre><code class="lang-js">enemy.constructor;
+enemy.constructor === Enemy; <span class="hljs-comment">// fue construido por Enemy, no por Ship.</span>
+enemy.constructor !== Ship; <span class="hljs-comment">// es cierto que Ship fue utilizado, pero nada m&#xE1;s.</span>
+</code></pre>
+<h3 id="duck-typing">Duck typing</h3>
+<blockquote>
+<p>In other words, don&apos;t check whether it IS-a duck: check whether it
+QUACKS-like-a duck, WALKS-like-a duck, etc, etc, depending on exactly what
+subset of duck-like behaviour you need to play your language-games with.</p>
+</blockquote>
+<p><a href="https://groups.google.com/forum/?hl=en#!msg/comp.lang.python/CCs2oJdyuzc/NYjla5HKMOIJ" target="_blank">Alex Martelli sobre polimorfismo</a></p>
+<p>La cita se refiere a que m&#xE1;s que comprobar si algo es una instancia de un
+tipo, se deber&#xED;a comprobar si tiene la funcionalidad que es necesaria.</p>
+<p>JavaScript es tan din&#xE1;mico que el operador <code>instanceof</code> y la propiedad
+<code>constructor</code> s&#xF3;lo tienen sentido si se siguen las convenciones que acabamos de ver.</p>
+<p>Nada nos impide borrar la propiedad <code>constructor</code> de un prototipo o
+sobreescribirla en un objeto determinado. De hecho, en las nuevas versiones de
+JavaScript, el prototipo de un objeto puede cambiar despu&#xE9;s de que el objeto
+haya sido construido.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0201-poo/" class="navigation navigation-prev " aria-label="Previous page: Programación orientada a objetos">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../0203-modelo-de-ejecucion/" class="navigation navigation-next " aria-label="Next page: El modelo de ejecución de JavaScript">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"El modelo de datos de JavaScript","level":"1.3.2","depth":2,"next":{"title":"El modelo de ejecución de JavaScript","level":"1.3.3","depth":2,"path":"02-javascript/0203-modelo-de-ejecucion/index.md","ref":"02-javascript/0203-modelo-de-ejecucion/index.md","articles":[]},"previous":{"title":"Programación orientada a objetos","level":"1.3.1","depth":2,"path":"02-javascript/0201-poo/index.md","ref":"02-javascript/0201-poo/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"es","gitbook":"*"},"file":{"path":"02-javascript/0202-modelo-de-datos/index.md","mtime":"2016-11-17T11:08:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-18T14:38:31.682Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
