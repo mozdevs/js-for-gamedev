@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "styles": "mkdirp ./es/styles && cpr styles/website.css es/styles/ -o",
     "serve:es": "npm run styles && gitbook serve ./es",
+    "zip": "node scripts/generate-zips.js",
     "gitbook:es": "gitbook build ./es dist/es",
     "build:es": "npm run styles && npm run gitbook:es",
     "build:root": "mkdirp dist && cpr root dist -u -o",
-    "build": "npm run build:root && npm run build:es",
-    "styles": "mkdirp ./es/styles && cpr styles/website.css es/styles/ -o",
-    "clean": "rimraf dist ./es/styles"
+    "build": "npm run zip && npm run build:root && npm run build:es",
+    "clean": "rimraf dist ./es/styles es/**/*.zip",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -31,7 +33,9 @@
   "homepage": "https://github.com/mozdevs/js-for-gamedev#readme",
   "private": true,
   "dependencies": {
+    "archiver": "^1.2.0",
     "cpr": "^2.0.0",
+    "gh-pages": "^0.12.0",
     "gitbook-cli": "^2.3.0",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.5.4"
