@@ -8,7 +8,7 @@ La práctica consiste en implementar un cliente visual (en este caso, **una pág
 
 ![Captura de pantalla del cliente](images/screenshot.png)
 
-Como punto de partida, se ha provisto de un <a href="start-here.zip" target="_blank">esqueleto de proyecto</a> con los siguientes archivos:
+Como punto de partida, se ha provisto de un  href="start-here.zip" target="_blank">esqueleto de proyecto</a> con los siguientes archivos:
 
 - `index.html`: código HTML de partida
 - `styles.css`: hoja de estilo

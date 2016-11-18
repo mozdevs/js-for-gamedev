@@ -8,7 +8,7 @@ _Test Driven Development_ o desarrollo dirigido por tests.
 
 ## Instalación y tests
 
-Clona este repositorio y en el interior del mismo ejecuta:
+**Descarga el <a href="start-here.zip" target="_blank">esqueleto inicial del proyecto</a>** y descomprímelo. En una consola, ve a la raíz del directorio del proyecto (donde se encuentra el archivo `package.json`) y ejecuta:
 
 ```js
 npm install

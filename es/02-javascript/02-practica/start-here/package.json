@@ -1,0 +1,20 @@
+{
+  "name": "pvli2017-rpg-battle",
+  "version": "1.0.0",
+  "description": "Skeleton for practise 0 of PVLI course 2017",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "browserify export.js --standalone RPG > rpg.js",
+    "test": "node ./node_modules/gulp/bin/gulp.js test",
+    "watch": "node ./node_modules/gulp/bin/gulp.js watch"
+  },
+  "author": "Salvador de la Puente González <salva@mozilla.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-jasmine": "^2.4.2",
+    "mockery": "^2.0.0"
+  }
+}
