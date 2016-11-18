@@ -6,11 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve:es": "npm run styles && gitbook serve ./es",
-    "gitbook:es": "gitbook build ./es",
+    "gitbook:es": "gitbook build ./es dist/es",
     "build:es": "npm run styles && npm run gitbook:es",
-    "build": "npm run build:es",
+    "build:root": "mkdirp dist && cpr root dist -u -o",
+    "build": "npm run build:root && npm run build:es",
     "styles": "mkdirp ./es/styles && cpr styles/website.css es/styles/ -o",
-    "clean": "rimraf _book ./es/_book ./es/styles"
+    "clean": "rimraf dist ./es/styles"
   },
   "repository": {
     "type": "git",

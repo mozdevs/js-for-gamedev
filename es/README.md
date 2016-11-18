@@ -1,4 +1,4 @@
-# JavaScript para desarrollo de videojuegos
+# JavaScript para el desarrollo de videojuegos
 
 Esta es una guía de introducción a **JavaScript**, y está orientada al
 desarrollo de **videojuegos HTML5**.
