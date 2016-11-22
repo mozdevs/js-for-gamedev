@@ -1,7 +1,7 @@
 # Índice
 
 
-- [El entorno de trabajo](01-intro/articulo.md)
+- [El entorno de trabajo](01-intro/index.md)
 
 - JavaScript básico
     - [Programación orientada a objetos](02-javascript/0201-poo/index.md)
