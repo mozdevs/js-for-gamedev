@@ -7,10 +7,12 @@ A compilation of materials to learn JavaScript and make HTML5 games.
 This project uses **Node** and **npm scripts** to build and perform some tasks. You will need to have both Node and npm installed in your system.
 
 1. Install third-party dependencies
+
     ```sh
     npm install
     ```
 2. Build the HTML ebooks in all available languages with:
+
     ```sh
     npm run build
     ```
