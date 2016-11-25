@@ -1,0 +1,14 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "max-len": ["error", 100],
+        "max-statements": ["error", 40]
+    }
+}
