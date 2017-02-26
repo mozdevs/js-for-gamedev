@@ -1,4 +1,5 @@
 node_modules
+npm-debug.log
 _book
 .DS_Store
 es/styles
