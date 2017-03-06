@@ -264,7 +264,7 @@ para distinguirlos.
 
 ```js
 var obj = {}; // el objeto vacío es tan válido como cualquier otro.
-var arr = []; // una lista sin elementos, como te puedes imaginar.
+var arr = []; // una lista sin elementos.
 typeof obj; // será object.
 typeof arr; // será object.
 Array.isArray(obj); // será false.
