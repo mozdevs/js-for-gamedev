@@ -371,7 +371,7 @@ var obj = {};
 var sameObj = obj;
 var another = {};
 sameObj === obj; // funciona porque ambos nombres se refieren al mismo objeto.
-sameObj !== another; // insisto, distintos, pese a la forma.
+sameObj !== another; // igual que antes, distintos, pese a la forma.
 ```
 
 ## Objetos y paso de mensajes
