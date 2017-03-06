@@ -70,7 +70,7 @@ Para la mayoría de los ejemplos, puedes mantener la misma sesión abierta, pero
 si te encuentras con algo inesperado, antes de nada prueba a reiniciar la
 consola. Para reiniciar la consola tienes que **salir y volver a entrar**.
 
-Lo mejor es que se tenga este texto abierto en una ventana (o impreso), y la
+Lo mejor es que tengas este texto abierto en una ventana (o impreso), y la
 consola de Node en otra.
 
 ## Tipos primitivos
