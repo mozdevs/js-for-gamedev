@@ -402,7 +402,7 @@ var enemy = {
 };
 ```
 
-La primera limitación en JavasScript es que **no se puede restringir el acceso
+La primera limitación en JavaScript es que **no se puede restringir el acceso
 a las propiedades de un objeto** (es decir, no hay propiedades privadas). Así,
 nada nos impide poder modificar la posición directamente.
 
