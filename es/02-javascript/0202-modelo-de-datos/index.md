@@ -5,7 +5,7 @@ sintaxis, modelo de datos, modelo de ejecución y estilo.
 
 Durante esta lección, [codificarás en JavaScript lo aprendido en la lección
 anterior](
-../0201-programacion-orientada-a-objetos/articulo.md).
+../0201-poo/).
 
 No todos los lenguajes permiten una transcripción 1 a 1 de los conceptos que
 recogemos en el modelo. Por ejemplo, JavaScript no tiene un mecanismo para crear
