@@ -229,7 +229,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 // Inspecciona la lista tras cada operación.
 menu = ['Attack', 'Defense', 'Inventory'];
 menu.splice(2, 0, 'Magic'); // añade Magic antes de Inventory.
-menu.splice(2, 2, 'Ench. Inventory'); // reemplaza Magic and Inventory with Ench. Inventory.
+menu.splice(2, 2, 'Ench. Inventory'); // reemplaza Magic e Inventory con Ench. Inventory.
 menu.splice(0, 0, 'Wait'); // añade Wait al principio de la lista.
 ```
 
