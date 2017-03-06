@@ -953,7 +953,7 @@ para establecer la cadena de prototipos entre objeto y API (lo conseguimos
 automáticamente al utilizar el operador `new`).
 
 Finalmente, cuando se llama con `new`, la **función recibe como objeto de
-contexto (el `this`) el elemento que está siendo creado**, lo que nos
+contexto (`this`) el elemento que está siendo creado**, lo que nos
 permite establecer sus atributos.
 
 ```js
