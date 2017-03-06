@@ -100,7 +100,7 @@ En los modelos de objetos es más conveniente trabajar con tipos de objetos.
 Para tratar de determinar la API de los tipos de objetos puedes guíarte por
 las interacciones propias del juego.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/437Ld_rKM2s?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D1jZaIPeD5w?rel=0" frameborder="0" allowfullscreen></iframe>
 
 Un ejemplo:
 
