@@ -371,7 +371,7 @@
                                 <h1 id="el-modelo-de-datos-de-javascript">El modelo de datos de JavaScript</h1>
 <p>Conocer un lenguaje de programaci&#xF3;n se traduce b&#xE1;sicamente en conocer su
 sintaxis, modelo de datos, modelo de ejecuci&#xF3;n y estilo.</p>
-<p>Durante esta lecci&#xF3;n, <a href="../0201-programacion-orientada-a-objetos/articulo.md">codificar&#xE1;s en JavaScript lo aprendido en la lecci&#xF3;n
+<p>Durante esta lecci&#xF3;n, <a href="../0201-poo">codificar&#xE1;s en JavaScript lo aprendido en la lecci&#xF3;n
 anterior</a>.</p>
 <p>No todos los lenguajes permiten una transcripci&#xF3;n 1 a 1 de los conceptos que
 recogemos en el modelo. Por ejemplo, JavaScript no tiene un mecanismo para crear
@@ -418,7 +418,7 @@ menos que se indique lo contrario.</p>
 <p>Para la mayor&#xED;a de los ejemplos, puedes mantener la misma sesi&#xF3;n abierta, pero
 si te encuentras con algo inesperado, antes de nada prueba a reiniciar la
 consola. Para reiniciar la consola tienes que <strong>salir y volver a entrar</strong>.</p>
-<p>Lo mejor es que se tenga este texto abierto en una ventana (o impreso), y la
+<p>Lo mejor es que tengas este texto abierto en una ventana (o impreso), y la
 consola de Node en otra.</p>
 <h2 id="tipos-primitivos">Tipos primitivos</h2>
 <p>Se llaman <strong>tipos primitivos</strong> a aquellos que vienen con el lenguaje y que
@@ -518,7 +518,7 @@ usando el m&#xE9;todo <a href="https://developer.mozilla.org/en-US/docs/Web/Java
 <pre><code class="lang-js"><span class="hljs-comment">// Inspecciona la lista tras cada operaci&#xF3;n.</span>
 menu = [<span class="hljs-string">&apos;Attack&apos;</span>, <span class="hljs-string">&apos;Defense&apos;</span>, <span class="hljs-string">&apos;Inventory&apos;</span>];
 menu.splice(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;Magic&apos;</span>); <span class="hljs-comment">// a&#xF1;ade Magic antes de Inventory.</span>
-menu.splice(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;Ench. Inventory&apos;</span>); <span class="hljs-comment">// reemplaza Magic and Inventory with Ench. Inventory.</span>
+menu.splice(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&apos;Ench. Inventory&apos;</span>); <span class="hljs-comment">// reemplaza Magic e Inventory con Ench. Inventory.</span>
 menu.splice(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;Wait&apos;</span>); <span class="hljs-comment">// a&#xF1;ade Wait al principio de la lista.</span>
 </code></pre>
 <p>Como en el caso de los objetos, podemos cambiar cualquier valor en cualquier
@@ -542,7 +542,7 @@ menu.length;
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray" target="_blank"><code>Array.isArray()</code></a>
 para distinguirlos.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> obj = {}; <span class="hljs-comment">// el objeto vac&#xED;o es tan v&#xE1;lido como cualquier otro.</span>
-<span class="hljs-keyword">var</span> arr = []; <span class="hljs-comment">// una lista sin elementos, como te puedes imaginar.</span>
+<span class="hljs-keyword">var</span> arr = []; <span class="hljs-comment">// una lista sin elementos.</span>
 <span class="hljs-keyword">typeof</span> obj; <span class="hljs-comment">// ser&#xE1; object.</span>
 <span class="hljs-keyword">typeof</span> arr; <span class="hljs-comment">// ser&#xE1; object.</span>
 <span class="hljs-built_in">Array</span>.isArray(obj); <span class="hljs-comment">// ser&#xE1; false.</span>
@@ -627,7 +627,7 @@ objeto:</p>
 <span class="hljs-keyword">var</span> sameObj = obj;
 <span class="hljs-keyword">var</span> another = {};
 sameObj === obj; <span class="hljs-comment">// funciona porque ambos nombres se refieren al mismo objeto.</span>
-sameObj !== another; <span class="hljs-comment">// insisto, distintos, pese a la forma.</span>
+sameObj !== another; <span class="hljs-comment">// igual que antes, distintos, pese a la forma.</span>
 </code></pre>
 <h2 id="objetos-y-paso-de-mensajes">Objetos y paso de mensajes</h2>
 <p>Los objetos de JavaScript y el poder usar c&#xF3;digo como un valor m&#xE1;s, permiten
@@ -648,7 +648,7 @@ JavaScript.</p>
   score: <span class="hljs-number">40</span>
 };
 </code></pre>
-<p>La primera limitaci&#xF3;n en JavasScript es que <strong>no se puede restringir el acceso
+<p>La primera limitaci&#xF3;n en JavaScript es que <strong>no se puede restringir el acceso
 a las propiedades de un objeto</strong> (es decir, no hay propiedades privadas). As&#xED;,
 nada nos impide poder modificar la posici&#xF3;n directamente.</p>
 <pre><code class="lang-js">enemy.position.x = <span class="hljs-number">100</span>; <span class="hljs-comment">// perfectamente v&#xE1;lido.</span>
@@ -1060,7 +1060,7 @@ obj !== anotherObj;
 para establecer la cadena de prototipos entre objeto y API (lo conseguimos
 autom&#xE1;ticamente al utilizar el operador <code>new</code>).</p>
 <p>Finalmente, cuando se llama con <code>new</code>, la <strong>funci&#xF3;n recibe como objeto de
-contexto (el <code>this</code>) el elemento que est&#xE1; siendo creado</strong>, lo que nos
+contexto (<code>this</code>) el elemento que est&#xE1; siendo creado</strong>, lo que nos
 permite establecer sus atributos.</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Hero</span>(<span class="hljs-params">name</span>) </span>{
     <span class="hljs-keyword">this</span>.name = name;
@@ -1352,7 +1352,7 @@ haya sido construido.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"El modelo de datos de JavaScript","level":"1.3.2","depth":2,"next":{"title":"El modelo de ejecución de JavaScript","level":"1.3.3","depth":2,"path":"02-javascript/0203-modelo-de-ejecucion/index.md","ref":"02-javascript/0203-modelo-de-ejecucion/index.md","articles":[]},"previous":{"title":"Programación orientada a objetos","level":"1.3.1","depth":2,"path":"02-javascript/0201-poo/index.md","ref":"02-javascript/0201-poo/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"es","gitbook":"*"},"file":{"path":"02-javascript/0202-modelo-de-datos/index.md","mtime":"2017-03-06T15:42:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-06T16:02:56.764Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"El modelo de datos de JavaScript","level":"1.3.2","depth":2,"next":{"title":"El modelo de ejecución de JavaScript","level":"1.3.3","depth":2,"path":"02-javascript/0203-modelo-de-ejecucion/index.md","ref":"02-javascript/0203-modelo-de-ejecucion/index.md","articles":[]},"previous":{"title":"Programación orientada a objetos","level":"1.3.1","depth":2,"path":"02-javascript/0201-poo/index.md","ref":"02-javascript/0201-poo/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"es","gitbook":"*"},"file":{"path":"02-javascript/0202-modelo-de-datos/index.md","mtime":"2017-03-07T11:06:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-07T11:21:17.723Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
