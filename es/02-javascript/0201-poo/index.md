@@ -165,7 +165,7 @@ muy parecidos.
 Lo que se necesita es un mecanismo de **generación automática de objetos**. Cada
 lenguaje ofrece formas distintas de crear objetos.
 
-Un mecanismo útil es el de contar con un nuevo objeto el **contructor**, cuya
+Un mecanismo útil es el de contar con un nuevo objeto el **constructor**, cuya
 tarea es la de generar objetos de un tipo dado. Habrá pues **un constructor
 por tipo**.
 

@@ -5,7 +5,7 @@ sintaxis, modelo de datos, modelo de ejecución y estilo.
 
 Durante esta lección, [codificarás en JavaScript lo aprendido en la lección
 anterior](
-../0201-programacion-orientada-a-objetos/articulo.md).
+../0201-poo/).
 
 No todos los lenguajes permiten una transcripción 1 a 1 de los conceptos que
 recogemos en el modelo. Por ejemplo, JavaScript no tiene un mecanismo para crear
@@ -70,7 +70,7 @@ Para la mayoría de los ejemplos, puedes mantener la misma sesión abierta, pero
 si te encuentras con algo inesperado, antes de nada prueba a reiniciar la
 consola. Para reiniciar la consola tienes que **salir y volver a entrar**.
 
-Lo mejor es que se tenga este texto abierto en una ventana (o impreso), y la
+Lo mejor es que tengas este texto abierto en una ventana (o impreso), y la
 consola de Node en otra.
 
 ## Tipos primitivos
@@ -229,7 +229,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 // Inspecciona la lista tras cada operación.
 menu = ['Attack', 'Defense', 'Inventory'];
 menu.splice(2, 0, 'Magic'); // añade Magic antes de Inventory.
-menu.splice(2, 2, 'Ench. Inventory'); // reemplaza Magic and Inventory with Ench. Inventory.
+menu.splice(2, 2, 'Ench. Inventory'); // reemplaza Magic e Inventory con Ench. Inventory.
 menu.splice(0, 0, 'Wait'); // añade Wait al principio de la lista.
 ```
 
@@ -264,7 +264,7 @@ para distinguirlos.
 
 ```js
 var obj = {}; // el objeto vacío es tan válido como cualquier otro.
-var arr = []; // una lista sin elementos, como te puedes imaginar.
+var arr = []; // una lista sin elementos.
 typeof obj; // será object.
 typeof arr; // será object.
 Array.isArray(obj); // será false.
@@ -371,7 +371,7 @@ var obj = {};
 var sameObj = obj;
 var another = {};
 sameObj === obj; // funciona porque ambos nombres se refieren al mismo objeto.
-sameObj !== another; // insisto, distintos, pese a la forma.
+sameObj !== another; // igual que antes, distintos, pese a la forma.
 ```
 
 ## Objetos y paso de mensajes
@@ -402,7 +402,7 @@ var enemy = {
 };
 ```
 
-La primera limitación en JavasScript es que **no se puede restringir el acceso
+La primera limitación en JavaScript es que **no se puede restringir el acceso
 a las propiedades de un objeto** (es decir, no hay propiedades privadas). Así,
 nada nos impide poder modificar la posición directamente.
 
@@ -953,7 +953,7 @@ para establecer la cadena de prototipos entre objeto y API (lo conseguimos
 automáticamente al utilizar el operador `new`).
 
 Finalmente, cuando se llama con `new`, la **función recibe como objeto de
-contexto (el `this`) el elemento que está siendo creado**, lo que nos
+contexto (`this`) el elemento que está siendo creado**, lo que nos
 permite establecer sus atributos.
 
 ```js
