@@ -54,8 +54,8 @@ implementación en `src/CharactersView.js`. Puedes continuar por ahí.
 ## 4. El grupo de opciones
 
 El grupo de opciones representa las opciones que se pueden elegir en un momento
-dado. La especificación está en `spec/CharactersView.js` y la implementación,
-casi completa, en `src/CharactersView.js`. Fíjate cómo el tipo `Options`
+dado. La especificación está en `spec/Options.js` y la implementación,
+casi completa, en `src/Options.js`. Fíjate cómo el tipo `Options`
 extiende `EventEmitter`. Tu misión será implementar el método `.select()` para
 que al llamarlo se emita un evento acorde con la especificación.
 
