@@ -32,7 +32,7 @@ los tipos `Item`, `Weapon` y `Scroll` que encontrarás en `spec/entities.js`.
 
 Tienes que crear algunos personajes, armas y pergaminos por defecto para que
 otras prácticas puedan usarlos. La _suite_ _built-in entities_ en
-`spec/entities.js` incluye incluye todas las espectativas de estas entidades.
+`spec/entities.js` incluye todas las expectativas de estas entidades.
 
 Ve al archivo `src/entities.js` y completa las que falten. Fíjate que las
 propiedades son _getters_ para que cada acceso a las propiedades te devuelvan
