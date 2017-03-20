@@ -141,7 +141,7 @@ un test pase, crea una rama para esa tarea y cuando termines mézclala con la
 rama estable.
 
 Cuando encuentres un error, intenta seguir los siguientes pasos:
-  1. Desactiva los tests asíncronos que estén tardando rápido. **Necesitas un
+  1. Desactiva los tests asíncronos que estén tardando demasiado. **Necesitas un
   ciclo de desarrollo rápido.**
   2. **¡¡Lee el error!!**.
   3. Busca en la traza el lugar donde se original el error:
