@@ -113,7 +113,7 @@ _timeout_ no es un resultado positivo. El problema de los _timeouts_ es que
 pueden ralentizar toda la suite así que la recomendación en estos casos es
 afrontarlos uno a uno, desactivando el resto y activándolos poco a poco.
 
-Reconocerás un test asíncrono porque lleva un parámetros `done` como en el
+Reconocerás un test asíncrono porque lleva un parámetro `done` como en el
 ejemplo:
 
 ```js
