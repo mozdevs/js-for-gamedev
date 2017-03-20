@@ -404,7 +404,7 @@ typeof module.exports;
 module.exports;
 ```
 
-Ahora podemos ahora **importar ese módulo** desde otro:
+Ahora podemos **importar ese módulo** desde otro:
 
 ```js
 // En cthulhuRpg.js
