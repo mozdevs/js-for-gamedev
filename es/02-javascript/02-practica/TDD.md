@@ -13,7 +13,7 @@ y pueden llevar código de inicialización. En general, la API de Jasmine es muy
 clara y no necesita mayor explicación. De todas formas, aquí tienes un ejemplo:
 
 ```js
-describe('Los suites en Jasmine', function () {
+describe('Las suites en Jasmine', function () {
 
   describe('pueden anidarse', function () {
 
@@ -60,7 +60,7 @@ Los tests y las suites pueden desactivarse añadiendo el prefijo `x`. Por
 ejemplo:
 
 ```js
-describe('Los suites en Jasmine', function () {
+describe('Las suites en Jasmine', function () {
 
   describe('pueden anidarse', function () {
 
