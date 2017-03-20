@@ -229,7 +229,7 @@ La batalla tendrá los siguientes métodos:
 
 Además la batalla expone los siguientes atributos:
   + `characters` para inspeccionar el estado de los personajes.
-  + `scrolls` para inspeccionar el estado de los personajes.
+  + `scrolls` para inspeccionar el estado de los hechizos.
   + `options` para controlar la batalla.
 
 La batalla emitirá los siguientes eventos:
