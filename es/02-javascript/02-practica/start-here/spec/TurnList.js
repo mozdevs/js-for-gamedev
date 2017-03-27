@@ -25,13 +25,13 @@ xdescribe('The TurnList type', function () {
     turnList.reset(characters);
   });
 
-  it('accepts a set of characters and sort them by inititative.', function () {
+  it('accepts a set of characters and sorts them by inititative.', function () {
     expect(turnList.turnNumber).toBe(0);
     expect(turnList.activeCharacterId).toBe(null);
     expect(turnList.list).toEqual(['c', 'b', 'a']);
   });
 
-  it('accepts a set of characters and sort them by inititative.', function () {
+  it('can play the next turn.', function () {
     var turn = turnList.next();
 
     expect(turn.number).toBe(1);
