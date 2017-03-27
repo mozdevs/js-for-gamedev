@@ -46,7 +46,7 @@ describe('Entities library', function () {
 
   xdescribe('Effect type', function () {
 
-    it('allows specify arbitrary feature alterations.', function () {
+    it('allows to specify arbitrary feature alterations.', function () {
       var effect = new Effect({
         hp: 5,
         mp: -5
@@ -160,7 +160,7 @@ describe('Entities library', function () {
         });
       });
 
-      it('does not applie an effect if the effect comes from a foe but ' +
+      it('does not apply an effect if the effect comes from a foe but ' +
       'defense roll passed.',
       function () {
         var isAlly = false;
