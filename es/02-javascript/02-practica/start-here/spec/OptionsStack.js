@@ -39,7 +39,7 @@ xdescribe('OptionsStack type', function () {
     expect(optionsStack.current).toBe(group);
   });
 
-  it('adds an options group by assigning a object to current.', function () {
+  it('adds an options group by assigning an object to current.', function () {
     var group = { a: 1, b: 2};
     optionsStack.current = group;
     expect(MockOptions).toHaveBeenCalledWith(group);
