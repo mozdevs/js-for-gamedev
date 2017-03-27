@@ -1,6 +1,6 @@
 var samples = require('./samplelib');
 
-xdescribe('CharactesView type', function () {
+xdescribe('CharactersView type', function () {
   'use strict';
 
   var CharactersView = require('../src/CharactersView');
