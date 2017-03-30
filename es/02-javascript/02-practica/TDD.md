@@ -13,7 +13,7 @@ y pueden llevar código de inicialización. En general, la API de Jasmine es muy
 clara y no necesita mayor explicación. De todas formas, aquí tienes un ejemplo:
 
 ```js
-describe('Los suites en Jasmine', function () {
+describe('Las suites en Jasmine', function () {
 
   describe('pueden anidarse', function () {
 
@@ -60,7 +60,7 @@ Los tests y las suites pueden desactivarse añadiendo el prefijo `x`. Por
 ejemplo:
 
 ```js
-describe('Los suites en Jasmine', function () {
+describe('Las suites en Jasmine', function () {
 
   describe('pueden anidarse', function () {
 
@@ -113,7 +113,7 @@ _timeout_ no es un resultado positivo. El problema de los _timeouts_ es que
 pueden ralentizar toda la suite así que la recomendación en estos casos es
 afrontarlos uno a uno, desactivando el resto y activándolos poco a poco.
 
-Reconocerás un test asíncrono porque lleva un parámetros `done` como en el
+Reconocerás un test asíncrono porque lleva un parámetro `done` como en el
 ejemplo:
 
 ```js
@@ -141,7 +141,7 @@ un test pase, crea una rama para esa tarea y cuando termines mézclala con la
 rama estable.
 
 Cuando encuentres un error, intenta seguir los siguientes pasos:
-  1. Desactiva los tests asíncronos que estén tardando rápido. **Necesitas un
+  1. Desactiva los tests asíncronos que estén tardando demasiado. **Necesitas un
   ciclo de desarrollo rápido.**
   2. **¡¡Lee el error!!**.
   3. Busca en la traza el lugar donde se original el error:

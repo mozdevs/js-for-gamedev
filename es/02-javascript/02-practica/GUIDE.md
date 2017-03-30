@@ -32,7 +32,7 @@ los tipos `Item`, `Weapon` y `Scroll` que encontrarás en `spec/entities.js`.
 
 Tienes que crear algunos personajes, armas y pergaminos por defecto para que
 otras prácticas puedan usarlos. La _suite_ _built-in entities_ en
-`spec/entities.js` incluye incluye todas las espectativas de estas entidades.
+`spec/entities.js` incluye todas las expectativas de estas entidades.
 
 Ve al archivo `src/entities.js` y completa las que falten. Fíjate que las
 propiedades son _getters_ para que cada acceso a las propiedades te devuelvan
@@ -54,8 +54,8 @@ implementación en `src/CharactersView.js`. Puedes continuar por ahí.
 ## 4. El grupo de opciones
 
 El grupo de opciones representa las opciones que se pueden elegir en un momento
-dado. La especificación está en `spec/CharactersView.js` y la implementación,
-casi completa, en `src/CharactersView.js`. Fíjate cómo el tipo `Options`
+dado. La especificación está en `spec/Options.js` y la implementación,
+casi completa, en `src/Options.js`. Fíjate cómo el tipo `Options`
 extiende `EventEmitter`. Tu misión será implementar el método `.select()` para
 que al llamarlo se emita un evento acorde con la especificación.
 

@@ -1,6 +1,7 @@
 # JavaScript for game development
 
 A compilation of materials to learn JavaScript and make HTML5 games.
+You can also [find it online](https://mozdevs.github.io/js-for-gamedev/es/).
 
 ## Build the ebook
 

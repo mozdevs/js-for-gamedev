@@ -156,7 +156,7 @@ La **defensa** establece la probabilidad (de 0 a 100) de que un
 
 Los **puntos de maná** sirven para pagar los costes mágicos de los hechizos y
 los **puntos de vida** indican cuánto daño es capaz de resistir el personaje
-antes de ser morir (puntos de vida a 0). Ambas características están ligadas a
+antes de morir (puntos de vida a 0). Ambas características están ligadas a
 unos valores máximos **puntos de maná máximos** y **puntos de vida máximos**
 respectivamente que no pueden sobrepasar.
 
@@ -229,7 +229,7 @@ La batalla tendrá los siguientes métodos:
 
 Además la batalla expone los siguientes atributos:
   + `characters` para inspeccionar el estado de los personajes.
-  + `scrolls` para inspeccionar el estado de los personajes.
+  + `scrolls` para inspeccionar el estado de los hechizos.
   + `options` para controlar la batalla.
 
 La batalla emitirá los siguientes eventos:

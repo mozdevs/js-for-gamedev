@@ -676,7 +676,7 @@ var d20 = die.bind(obj, 20);
 d20();
 ```
 
-La usarrás de esta otra forma:
+La usarás de esta otra forma:
 
 ```js
 function die(sides) {
